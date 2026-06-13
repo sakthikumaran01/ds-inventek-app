@@ -78,7 +78,6 @@ export default function RootLayout({ children }) {
         <FloatingWhatsApp />
         <BackToTop />
         <CustomCursor />
-        <SpeedInsights />
       </body>
     </html>
   );
