@@ -4,6 +4,7 @@
   cursor: pointer;
   padding: 2.5rem !important;
   min-height: 420px;
+  text-decoration: none;
 }
 
 .cardImageContainer {

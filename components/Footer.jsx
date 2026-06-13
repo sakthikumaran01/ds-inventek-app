@@ -5,11 +5,16 @@ import GovBadges from "./GovBadges";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://linkedin.com/company/ds-inventek";
+  const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/ds_inventek";
+  const youtubeUrl = process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://youtube.com/@dsinventek";
+  const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://wa.me/919943336712";
 
   const footerLinks = {
     company: [
       { label: "About Us", href: "/about" },
       { label: "Contact Us", href: "/contact" },
+      { label: "Careers", href: "/careers" },
     ],
     services: [
       { label: "EduTech Curriculum", href: "/services#curriculum" },
@@ -20,10 +25,9 @@ export default function Footer() {
     courses: [
       { label: "Basic Electronics", href: "/courses#basic-electronics" },
       { label: "Quad Bot", href: "/courses#quad-bot" },
-      { label: "Self Balancing Robot", href: "/courses#self-balancing-robot" },
       { label: "Robotic Arm", href: "/courses#robotic-arm" },
       { label: "Drone Technology", href: "/courses#drone-technology" },
-      { label: "AI & ML Robotics", href: "/courses#ai-ml-robotics" },
+      { label: "View all courses →", href: "/courses" },
     ],
   };
 
@@ -38,7 +42,10 @@ export default function Footer() {
             </Link>
             <p>Powering the next generation of innovators — from Chennai to the world stage.</p>
             <p style={{ fontSize: "0.8rem", marginTop: "0.5rem", color: "var(--text-muted)" }}>
-              📧 <a href="mailto:info@dsinventek.com" style={{ color: "var(--primary-light)", textDecoration: "none" }}>info@dsinventek.com</a>
+              <span aria-hidden="true">📧</span> <a href="mailto:info@dsinventek.com" style={{ color: "var(--primary-light)", textDecoration: "none" }}>info@dsinventek.com</a>
+            </p>
+            <p style={{ fontSize: "0.8rem", marginTop: "0.4rem", color: "var(--text-muted)" }}>
+              <span aria-hidden="true">📞</span> <a href="tel:+919943336712" style={{ color: "var(--primary-light)", textDecoration: "none" }}>+91 99433 36712</a>
             </p>
           </div>
 
@@ -83,13 +90,21 @@ export default function Footer() {
 
         <div className={styles.footerBottom}>
           <p>© {currentYear} DS Inventek Pvt. Ltd. All rights reserved. · Chennai, Tamil Nadu, India</p>
-          <div style={{ display: "flex", gap: "1.25rem", alignItems: "center" }}>
-            <a href="https://linkedin.com/company/ds-inventek" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.9rem" }} title="LinkedIn">LinkedIn</a>
-            <a href="https://instagram.com/ds_inventek" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.9rem" }} title="Instagram">Instagram</a>
-            <a href="https://youtube.com/@dsinventek" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.9rem" }} title="YouTube">YouTube</a>
-            <a href="https://wa.me/919943336712" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.9rem" }} title="WhatsApp">WhatsApp</a>
+          <div className={styles.socialIcons}>
+            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className={styles.socialIconLink} title="LinkedIn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className={styles.socialIconLink} title="Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" className={styles.socialIconLink} title="YouTube" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className={styles.socialIconLink} title="WhatsApp" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.004 0C5.378 0 0 5.376 0 12.001c0 2.112.551 4.167 1.597 5.979L0 24l6.196-1.625c1.752.955 3.72 1.458 5.804 1.46h.004c6.627 0 12.002-5.377 12.002-12.003C24.006 5.376 18.63 0 12.004 0zm0 22.001h-.003c-1.815 0-3.593-.487-5.14-1.408l-.369-.219-3.821.996 1.018-3.709-.241-.383C2.524 16.033 2 14.07 2 12.001 2 6.478 6.486 2 12.004 2c5.518 0 10.002 4.478 10.002 10.001 0 5.522-4.484 10-10.002 10z"/></svg>
+            </a>
           </div>
-          <p className={styles.footerBadge}>World Champions 🏆 Games of the Future 2024</p>
+          <p className={styles.footerBadge}>World Champions <span aria-hidden="true">🏆</span> Games of the Future 2024</p>
         </div>
       </div>
     </footer>

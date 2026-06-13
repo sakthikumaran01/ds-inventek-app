@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import BackgroundOrbs from "@/components/BackgroundOrbs";
 import ScrollReveal from "@/components/ScrollReveal";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import BackToTop from "@/components/BackToTop";
+import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,20 +26,32 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ds-inventek-i5u5etfv0-sakthisk.vercel.app';
+
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "DS Inventek — Robotics & AI Education | World Champion Team",
   description: "India's leading robotics education company founded by World Champions. Providing hands-on STEM robotics courses, school/college lab setups, and interactive experience zones.",
   keywords: "robotics education, artificial intelligence training, STEM robotics school, next-generation AI robotics, school robotics lab setup, CBSE robotics curriculum, World Champion robotics team, robotics Chennai, robotics Pondicherry, Bitva Robotov, Games of the Future champion, STEM India",
   authors: [{ name: "DS Inventek Team" }],
   creator: "DS Inventek",
   publisher: "DS Inventek",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "DS Inventek — Robotics & AI Education | World Champion Team",
     description: "India's leading robotics education company founded by World Champions. Providing hands-on STEM robotics courses, school/college lab setups, and interactive experience zones.",
-    url: "http://localhost:3002",
+    url: siteUrl,
     siteName: "DS Inventek",
     locale: "en_US",
     type: "website",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'DS Inventek — Robotics Education' }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -62,8 +76,11 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <FloatingWhatsApp />
+        <BackToTop />
+        <CustomCursor />
       </body>
     </html>
   );
 }
+
 

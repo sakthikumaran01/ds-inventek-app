@@ -2,6 +2,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import ServiceCard from "@/components/ServiceCard";
 import GovBadges from "@/components/GovBadges";
+import CtaBanner from "@/components/CtaBanner";
 import styles from "./services.module.css";
 
 export const metadata = {
@@ -13,32 +14,32 @@ export const metadata = {
 export default function ServicesPage() {
   const services = [
     {
-      id: "curriculum",
+      id: "edutech-curriculum",
       icon: "📚",
       title: "EduTech Curriculum",
       audience: "Schools · CBSE / State Board",
-      price: "Starting from ₹X per academic year",
-      desc: "Structured robotics curriculum designed for CBSE and state board integration — from Grades 6 to 12. Industry-aligned pedagogy with hands-on labs.",
+      price: "Starting from ₹1,50,000 per academic year",
+      desc: "Give your school a competitive edge — a CBSE-aligned robotics curriculum with full teacher training and lab support.",
       features: ["6-12 grade curriculum", "CBSE aligned", "Hands-on projects", "Teacher training"],
       image: "/images/service-curriculum.png",
     },
     {
-      id: "lab-setup",
+      id: "robotics-lab-setup",
       icon: "🖥️",
       title: "Robotics Lab Setup",
       audience: "Schools · Colleges · Makerspaces",
-      price: "Starting from ₹X (turnkey)",
-      desc: "End-to-end robotics lab design, equipment procurement, and installation for institutions of every size.",
+      price: "Starting from ₹3,50,000 (turnkey)",
+      desc: "From empty classroom to fully operational robotics lab — we handle design, sourcing, and setup.",
       features: ["Complete consultation", "Equipment sourcing", "Installation & setup", "Staff training"],
       image: "/images/service-lab.png",
     },
     {
-      id: "experience-zones",
+      id: "experience-zone",
       icon: "✨",
       title: "Experience Zone Setup",
       audience: "Malls · Museums · Venues",
       price: "Custom Quotation — Request Brief",
-      desc: "Interactive robotics experience zones that engage the public and create unforgettable brand moments.",
+      desc: "Turn footfall into fascination — robotics experience zones for malls, museums, and public venues.",
       features: ["Custom design", "Interactive demos", "Maintenance support", "Visitor engagement"],
       image: "/images/service-experience.png",
     },
@@ -47,7 +48,7 @@ export default function ServicesPage() {
       icon: "🌐",
       title: "Online Courses (B2C)",
       audience: "Students · Hobbyists · All India",
-      price: "Starting from ₹X per module",
+      price: "Starting from ₹2,499 per module",
       desc: "Self-paced and live online robotics courses accessible from anywhere in India — beginner to advanced.",
       features: ["Self-paced learning", "Live sessions", "Beginner to advanced", "Certificate included"],
       image: "/images/service-online.png",
@@ -57,17 +58,17 @@ export default function ServicesPage() {
       icon: "👥",
       title: "In-Person Training Centers",
       audience: "Students · Professionals",
-      price: "Starting from ₹X per session",
+      price: "Starting from ₹1,200 per session",
       desc: "Hands-on robotics workshops and long-format programs at our Chennai and Pondicherry centers.",
       features: ["Location: Chennai", "Location: Pondicherry", "Weekend batches", "Corporate training"],
       image: "/images/service-inperson.png",
     },
     {
-      id: "certification",
+      id: "trainer-certification",
       icon: "🏅",
       title: "Trainer Certification",
       audience: "Educators · Trainers · Institutions",
-      price: "Starting from ₹X per cohort",
+      price: "Starting from ₹15,000 per cohort",
       desc: "Certify your educators with our DS Inventek Robotics Trainer Program — industry-recognised credentials.",
       features: ["Industry recognized", "2-week intensive", "Lifetime support", "Job placement"],
       image: "/images/service-certification.png",
@@ -104,10 +105,7 @@ export default function ServicesPage() {
         subtitle="Seven vertical integration points designed to deliver robotics education at every stage of the journey."
       />
 
-      {/* Services Intro / GovBadges */}
-      <div className="container" style={{ marginTop: "2rem" }}>
-        <GovBadges />
-      </div>
+
 
       {/* Services Grid */}
       <section className="section">
@@ -240,7 +238,7 @@ export default function ServicesPage() {
                 className={`glass-card ${styles.whyCard} reveal-item`}
                 style={{ transitionDelay: `${(idx % 3) * 0.1}s` }}
               >
-                <div className={styles.whyIcon}>{item.icon}</div>
+                <div className={styles.whyIcon} aria-hidden="true">{item.icon}</div>
                 <h3 className={styles.whyTitle}>{item.title}</h3>
                 <p className={styles.whyDesc}>{item.desc}</p>
               </div>
@@ -252,24 +250,15 @@ export default function ServicesPage() {
       <div className="divider"></div>
 
       {/* CTA */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2 id="cta-title" className="ctaTitle reveal-item">
-            Ready to get started?
-          </h2>
-          <p id="cta-sub" className="ctaSub reveal-item">
-            Contact us to discuss which service fits your needs perfectly.
-          </p>
-          <div id="cta-btns" className="ctaBtns reveal-item">
-            <Link href="/contact" className="btn-primary">
-              Contact Us →
-            </Link>
-            <Link href="/" className="btn-ghost">
-              Back Home
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CtaBanner
+        title="Ready to get started?"
+        subtitle="Contact us to discuss which service fits your needs perfectly."
+        primaryText="Contact Us →"
+        primaryHref="/contact"
+        secondaryText="Back Home"
+        secondaryHref="/"
+        primaryBtnClass="btn-primary"
+      />
     </div>
   );
 }

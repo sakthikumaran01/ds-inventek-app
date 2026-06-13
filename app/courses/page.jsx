@@ -2,6 +2,7 @@ import PageHero from "@/components/PageHero";
 import CoursesGrid from "@/components/CoursesGrid";
 import Testimonials from "@/components/Testimonials";
 import Link from "next/link";
+import CtaBanner from "@/components/CtaBanner";
 import styles from "./courses.module.css";
 
 export const metadata = {
@@ -96,14 +97,14 @@ export default function CoursesPage() {
   return (
     <div>
       <PageHero
-        title="Robotics Courses"
-        subtitle="From beginner to advanced — hands-on robotics courses that ship real projects."
+        title="Courses That Ship Real Projects"
+        subtitle="Every course ends with hardware you built yourself."
       />
 
       {/* Courses Grid Container */}
       <section className="section">
         <div className="container">
-          <CoursesGrid courses={courses} />
+          <CoursesGrid courses={courses} showFilter={true} />
         </div>
       </section>
 
@@ -207,24 +208,15 @@ export default function CoursesPage() {
       <div className="divider"></div>
 
       {/* FAQ CTA */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2 id="cta-title" className="ctaTitle reveal-item">
-            Ready to start building?
-          </h2>
-          <p id="cta-sub" className="ctaSub reveal-item">
-            Choose a course above or contact us to find the perfect fit for your skill level.
-          </p>
-          <div id="cta-btns" className="ctaBtns reveal-item">
-            <Link href="/contact" className="btn-primary">
-              Enroll Now →
-            </Link>
-            <Link href="/" className="btn-ghost">
-              Back Home
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CtaBanner
+        title="Ready to start building?"
+        subtitle="Choose a course above or contact us to find the perfect fit for your skill level."
+        primaryText="Enroll Now →"
+        primaryHref="/contact"
+        secondaryText="Back Home"
+        secondaryHref="/"
+        primaryBtnClass="btn-primary"
+      />
     </div>
   );
 }

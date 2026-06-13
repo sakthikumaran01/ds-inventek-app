@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .courseCardImage {
@@ -115,9 +116,9 @@
 
 .coursePrice {
   font-family: var(--font-mono), monospace;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--secondary);
 }
 
 .courseView {
@@ -197,9 +198,37 @@
   text-decoration: none;
   font-size: 0.9rem;
   transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-inter), sans-serif;
+  width: 100%;
+  text-align: center;
 }
 
 .enrollBtn:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 20px var(--glow);
 }
+
+.trustSignals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0.8rem;
+  font-size: 0.75rem;
+  color: #34d399;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.securePrompt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.85rem;
+  text-align: center;
+}
+

@@ -1,0 +1,62 @@
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.controlBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(15, 10, 35, 0.6);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.22, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.controlBtn:hover {
+  background: rgba(124, 58, 237, 0.25);
+  border-color: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 0 15px var(--glow);
+}
+
+.sliderViewport {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  gap: 1.5rem;
+  padding: 0.5rem 0.25rem 2rem;
+  scroll-snap-type: x mandatory;
+}
+
+.sliderViewport::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.slide {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 640px) {
+  .slide {
+    flex: 0 0 280px;
+  }
+}

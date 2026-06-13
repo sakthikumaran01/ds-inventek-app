@@ -2,10 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./ServiceCard.module.css";
 
-export default function ServiceCard({ icon, title, badge, desc, image, delay, id, features, price }) {
+export default function ServiceCard({ icon, title, badge, desc, image, delay, id, features, price, slug }) {
   return (
-    <div
+    <Link
       id={id}
+      href={`/services/${slug || id}`}
       className={`glass-card ${styles.serviceCard} reveal-item`}
       style={{ transitionDelay: delay }}
     >
@@ -14,10 +15,10 @@ export default function ServiceCard({ icon, title, badge, desc, image, delay, id
           src={image}
           alt={title}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className={styles.cardImage}
         />
-        <div className={styles.cardIconBadge}>{icon}</div>
+        <div className={styles.cardIconBadge} aria-hidden="true">{icon}</div>
       </div>
       <span className={styles.serviceBadge}>{badge}</span>
       <h3 className={styles.serviceTitle}>{title}</h3>
@@ -35,9 +36,9 @@ export default function ServiceCard({ icon, title, badge, desc, image, delay, id
         </div>
       )}
 
-      <Link href="/contact" className={styles.serviceBtn}>
+      <div className={styles.serviceBtn}>
         Get More Info →
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
