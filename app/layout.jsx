@@ -24,7 +24,6 @@ const mono = JetBrains_Mono({
   variable: "--font-mono",
   display: "swap",
 });
-=======
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
