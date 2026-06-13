@@ -1,0 +1,137 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(167, 139, 250, 0.18);
+  padding: 3rem 2rem 2rem;
+}
+
+.footerInner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLogo {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.footerLogo:hover {
+  color: var(--primary-light);
+  text-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+}
+
+.logoIcon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 2.5px;
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerLogo:hover .logoIcon {
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.5);
+  transform: scale(1.05);
+}
+
+.footerLogo span {
+  color: var(--primary-light);
+}
+
+.footerBrand p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 260px;
+}
+
+.footerColTitle {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.footerLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerLinks a {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: var(--primary-light);
+  transform: translateX(4px);
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerBottom p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footerBadge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--primary-light);
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+}

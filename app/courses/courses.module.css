@@ -1,0 +1,394 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: 8rem 2rem 4rem;
+  margin-top: 60px;
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.05) 0%, transparent 100%);
+}
+
+.heroTitle {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.heroSub {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.courseCard {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.courseCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px var(--glow);
+}
+
+.courseCardBg {
+  min-height: 230px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(167, 139, 250, 0.18);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.courseCardImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.courseCardBg:hover .courseCardImage {
+  transform: scale(1.08);
+}
+
+.courseCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 4, 15, 0.55) 0%,
+    rgba(6, 4, 15, 0.25) 45%,
+    rgba(6, 4, 15, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.courseCardContent {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.75rem;
+}
+
+.courseLevel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border-radius: 6px;
+  width: fit-content;
+  margin-bottom: auto;
+}
+
+.levelBeginner {
+  background: rgba(5, 150, 105, 0.3);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.5);
+}
+
+.levelIntermediate {
+  background: rgba(217, 119, 6, 0.3);
+  color: #fcd34d;
+  border: 1px solid rgba(252, 211, 77, 0.5);
+}
+
+.levelAdvanced {
+  background: rgba(124, 58, 237, 0.4);
+  color: #c4b5fd;
+  border: 1px solid rgba(196, 181, 253, 0.5);
+}
+
+.courseName {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.courseMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.courseDuration {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.coursePrice {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.courseDetails {
+  padding: 2rem !important;
+  border-radius: 0 0 16px 16px;
+  border-top: none;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+.courseDesc {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.modules h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-light);
+}
+
+.modules ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modules li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.modules li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.enrollBtn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.enrollBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--glow);
+}
+
+.pathContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.pathCard {
+  padding: 2.5rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pathStage {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--primary-light);
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.pathTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pathDesc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.pathCourses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.courseBadge {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--secondary);
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.faqCard {
+  padding: 2rem !important;
+}
+
+.faqQ {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.faqA {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.ctaBanner {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ctaBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(76, 29, 149, 0.6) 0%, rgba(124, 58, 237, 0.4) 50%, rgba(6, 182, 212, 0.2) 100%);
+  z-index: 0;
+}
+
+.ctaBanner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 0;
+}
+
+.ctaInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaTitle {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ctaSub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pathContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .coursesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaBtns {
+    flex-direction: column;
+  }
+
+  .ctaBtns a {
+    width: 100%;
+  }
+}

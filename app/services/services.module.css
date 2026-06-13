@@ -1,0 +1,262 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: 8rem 2rem 4rem;
+  margin-top: 60px;
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.05) 0%, transparent 100%);
+}
+
+.heroTitle {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.heroSub {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 2.5rem !important;
+  min-height: 420px;
+}
+
+.cardImageContainer {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 1;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.serviceCard:hover .cardImage {
+  transform: scale(1.06);
+}
+
+.cardIconBadge {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  background: rgba(6, 4, 15, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.serviceBadge {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  color: var(--secondary);
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.serviceTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.serviceDesc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.featureBullet {
+  color: var(--primary-light);
+  font-weight: 700;
+}
+
+.serviceBtn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  width: fit-content;
+}
+
+.serviceBtn:hover {
+  gap: 0.8rem;
+  text-shadow: 0 0 12px rgba(167, 139, 250, 0.5);
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.whyCard {
+  text-align: center;
+  padding: 2rem !important;
+}
+
+.whyIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.whyTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.whyDesc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.ctaBanner {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ctaBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(76, 29, 149, 0.6) 0%, rgba(124, 58, 237, 0.4) 50%, rgba(6, 182, 212, 0.2) 100%);
+  z-index: 0;
+}
+
+.ctaBanner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 0;
+}
+
+.ctaInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaTitle {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ctaSub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .whyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaBtns {
+    flex-direction: column;
+  }
+
+  .ctaBtns a {
+    width: 100%;
+  }
+}
