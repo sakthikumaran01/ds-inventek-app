@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackgroundOrbs from "@/components/BackgroundOrbs";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "DS Inventek — Robotics Education for the Next Generation",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
