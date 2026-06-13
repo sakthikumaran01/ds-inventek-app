@@ -3,6 +3,7 @@ import { Inter, Orbitron, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackgroundOrbs from "@/components/BackgroundOrbs";
+
 import ScrollReveal from "@/components/ScrollReveal";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
@@ -23,6 +24,8 @@ const mono = JetBrains_Mono({
   variable: "--font-mono",
   display: "swap",
 });
+=======
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "DS Inventek — Robotics & AI Education | World Champion Team",
@@ -62,6 +65,8 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <FloatingWhatsApp />
+        <SpeedInsights />
+
       </body>
     </html>
   );
