@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
@@ -31,7 +32,7 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.navInner}>
         <Link href="/" className={styles.navLogo}>
-          <img src="/logo.png" alt="DS Inventek" className={styles.logoIcon} />
+          <Image src="/logo.png" alt="DS Inventek" width={36} height={36} className={styles.logoIcon} />
           DS <span>INVENTEK</span>
         </Link>
 

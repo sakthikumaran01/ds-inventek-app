@@ -7,7 +7,7 @@
 }
 
 .heroTitle {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--font-orbitron), sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 900;
   line-height: 1.1;
@@ -64,7 +64,7 @@
 }
 
 .responseTimeLabel {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono), monospace;
   font-size: 0.7rem;
   color: var(--primary-light);
   letter-spacing: 0.1em;
@@ -103,103 +103,6 @@
   background: rgba(124, 58, 237, 0.2);
   transform: translateY(-4px);
   border-color: var(--primary-light);
-}
-
-.contactForm {
-  padding: 2.5rem !important;
-}
-
-.successMessage {
-  text-align: center;
-  padding: 2rem;
-  background: rgba(52, 211, 153, 0.1);
-  border: 1px solid rgba(52, 211, 153, 0.3);
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  animation: slideDown 0.4s ease;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.successIcon {
-  font-size: 2rem;
-  color: #34d399;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.successMessage p {
-  color: #34d399;
-  font-weight: 600;
-}
-
-.formRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-.formGroup {
-  margin-bottom: 1.25rem;
-}
-
-.formGroup label {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.formGroup input,
-.formGroup select,
-.formGroup textarea {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--glass-border);
-  border-radius: 10px;
-  padding: 0.8rem 1rem;
-  color: var(--text-primary);
-  font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  outline: none;
-}
-
-.formGroup input:focus,
-.formGroup select:focus,
-.formGroup textarea:focus {
-  border-color: var(--primary-light);
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.formGroup select option {
-  background: var(--bg-dark);
-  color: var(--text-primary);
-}
-
-.formGroup textarea {
-  resize: vertical;
-  min-height: 140px;
-}
-
-.formSubmit {
-  width: 100%;
-  padding: 1rem;
-  font-size: 0.95rem;
 }
 
 .quickGrid {
@@ -248,10 +151,6 @@
   }
 
   .contactLayout {
-    grid-template-columns: 1fr;
-  }
-
-  .formRow {
     grid-template-columns: 1fr;
   }
 

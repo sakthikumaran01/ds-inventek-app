@@ -1,29 +1,15 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import PageHero from "@/components/PageHero";
+import GovBadges from "@/components/GovBadges";
 import styles from "./about.module.css";
 
+export const metadata = {
+  title: "About Our World Champion Robotics Team | DS Inventek",
+  description: "Meet the founders and team behind DS Inventek. Born from competition, built for education. World Champions at Games of the Future 2024.",
+  keywords: "robotics founders Chennai, robotics world champions India, Games of the Future 2024 Kazan, Bitva Robotov team, Chennai robotics school founders",
+};
+
 export default function AboutPage() {
-  const [reveal, setReveal] = useState([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setReveal((prev) => [...new Set([...prev, entry.target.id])]);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll(".reveal-item").forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
   const timeline = [
     {
       year: "2023",
@@ -61,73 +47,83 @@ export default function AboutPage() {
     {
       initials: "SM",
       name: "Sanjidhan M",
-      role: "CEO",
-      focus: "Vision · Strategy · BD",
+      role: "Chief Executive Officer (CEO)",
+      bio: "Bio coming soon. Sanjidhan drives the strategic direction and institutional business development of DS Inventek.",
+      experience: "10 Years in Robotics",
+      specialization: "Strategy & Growth",
       gradient: "linear-gradient(135deg, #7C3AED, #4C1D95)",
     },
     {
       initials: "SD",
       name: "Sakthikumaran D",
-      role: "CFO & CPO",
-      focus: "Finance · Product · Compliance",
+      role: "Chief Financial & Product Officer (CFO & CPO)",
+      bio: "Bio coming soon. Sakthikumaran heads the educational product catalog development and corporate finance.",
+      experience: "8 Years in Product Design",
+      specialization: "Hardware Architecture",
       gradient: "linear-gradient(135deg, #06B6D4, #0E7490)",
     },
     {
       initials: "VM",
       name: "VelMurugan",
-      role: "COO & CTO",
-      focus: "Operations · Technology",
+      role: "Chief Operating & Technology Officer (COO & CTO)",
+      bio: "Bio coming soon. VelMurugan leads our technological architecture and deployment pipelines.",
+      experience: "9 Years in Engineering",
+      specialization: "Automation & Control Systems",
       gradient: "linear-gradient(135deg, #059669, #065F46)",
     },
     {
       initials: "VB",
       name: "Vijay Baskar",
-      role: "COO",
-      focus: "Operations Management",
+      role: "Chief Operating Officer (COO)",
+      bio: "Bio coming soon. Vijay manages project implementation, logistics, and onsite school workshop deliveries.",
+      experience: "7 Years in Operations",
+      specialization: "Workshop Management",
       gradient: "linear-gradient(135deg, #D97706, #92400E)",
     },
     {
       initials: "MV",
       name: "Mukesh V",
-      role: "CMO",
-      focus: "Marketing · Brand · Growth",
+      role: "Chief Marketing Officer (CMO)",
+      bio: "Bio coming soon. Mukesh designs high-impact outreach strategies and drives public relations.",
+      experience: "6 Years in Brand Growth",
+      specialization: "Digital Growth",
       gradient: "linear-gradient(135deg, #DB2777, #9D174D)",
     },
     {
       initials: "NK",
       name: "Nakeeran",
-      role: "CTO",
-      focus: "Technical Development",
+      role: "Chief Technology Officer (CTO)",
+      bio: "Bio coming soon. Nakeeran architected the online student portal and supervises academic research.",
+      experience: "8 Years in Software Dev",
+      specialization: "Software Engineering",
       gradient: "linear-gradient(135deg, #7C3AED, #06B6D4)",
     },
   ];
 
   return (
     <div>
-      {/* Hero */}
-      <section className={styles.hero}>
-        <div className="container">
-          <div id="hero-title" className={`${styles.heroTitle} reveal-item ${reveal.includes("hero-title") ? "visible" : ""}`}>
-            About DS Inventek
-          </div>
-          <p id="hero-sub" className={`${styles.heroSub} reveal-item ${reveal.includes("hero-sub") ? "visible" : ""}`}>
-            Born from competition. Built for education. Backed by world championship excellence.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="About DS Inventek"
+        subtitle="Born from competition. Built for education. Backed by world championship excellence. Headquartered in Puducherry, with a presence in Chennai."
+      />
 
       {/* Mission & Vision */}
       <section className="section">
         <div className="container">
           <div className={styles.missionGrid}>
-            <div id="mission" className={`glass-card ${styles.missionCard} reveal-item ${reveal.includes("mission") ? "visible" : ""}`} style={{ borderLeft: "3px solid var(--primary-light)" }}>
+            <div id="mission" className={`glass-card ${styles.missionCard} reveal-item`} style={{ borderLeft: "3px solid var(--primary-light)" }}>
               <div className={styles.cardLabel}>Our Mission</div>
               <p className={styles.cardText}>To make robotics education accessible, hands-on, and world-class for every student in India.</p>
             </div>
-            <div id="vision" className={`glass-card ${styles.missionCard} reveal-item ${reveal.includes("vision") ? "visible" : ""}`} style={{ borderLeft: "3px solid var(--secondary)", transitionDelay: "0.1s" }}>
+            <div id="vision" className={`glass-card ${styles.missionCard} reveal-item`} style={{ borderLeft: "3px solid var(--secondary)", transitionDelay: "0.1s" }}>
               <div className={styles.cardLabel} style={{ color: "var(--secondary)" }}>Our Vision</div>
               <p className={styles.cardText}>To position India as a global leader in youth robotics innovation by 2030.</p>
             </div>
+          </div>
+          
+          {/* Government Recognition Badges */}
+          <div style={{ marginTop: "3rem" }}>
+            <GovBadges />
           </div>
         </div>
       </section>
@@ -137,16 +133,16 @@ export default function AboutPage() {
       {/* Timeline */}
       <section className="section">
         <div className="container">
-          <p id="timeline-eyebrow" className={`section-eyebrow reveal-item ${reveal.includes("timeline-eyebrow") ? "visible" : ""}`}>
+          <p id="timeline-eyebrow" className="section-eyebrow reveal-item">
             Our Journey
           </p>
-          <h2 id="timeline-title" className={`section-title reveal-item ${reveal.includes("timeline-title") ? "visible" : ""}`}>
+          <h2 id="timeline-title" className="section-title reveal-item">
             Born from Competition<br />Built for Education
           </h2>
 
           <div className={styles.timeline}>
             {timeline.map((item, idx) => (
-              <div key={idx} id={`timeline-${idx}`} className={`${styles.timelineItem} reveal-item ${reveal.includes(`timeline-${idx}`) ? "visible" : ""}`} style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <div key={idx} id={`timeline-${idx}`} className={`${styles.timelineItem} reveal-item`} style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <div className={`${styles.timelineDot} ${item.type === "champion" ? styles.champion : item.type === "podium" ? styles.podium : ""}`}></div>
                 <div className="glass-card" style={{ flex: 1 }}>
                   <div className={styles.timelineYear}>{item.year}</div>
@@ -164,10 +160,10 @@ export default function AboutPage() {
       {/* Team */}
       <section className="section">
         <div className="container">
-          <p id="team-eyebrow" className={`section-eyebrow reveal-item ${reveal.includes("team-eyebrow") ? "visible" : ""}`}>
+          <p id="team-eyebrow" className="section-eyebrow reveal-item">
             The Founding Team
           </p>
-          <h2 id="team-title" className={`section-title reveal-item ${reveal.includes("team-title") ? "visible" : ""}`}>
+          <h2 id="team-title" className="section-title reveal-item">
             The Six Who Started It
           </h2>
 
@@ -176,7 +172,7 @@ export default function AboutPage() {
               <div
                 key={idx}
                 id={`team-${idx}`}
-                className={`glass-card ${styles.teamCard} reveal-item ${reveal.includes(`team-${idx}`) ? "visible" : ""}`}
+                className={`glass-card ${styles.teamCard} reveal-item`}
                 style={{ transitionDelay: `${(idx % 3) * 0.1}s` }}
               >
                 <div className={styles.teamAvatar} style={{ background: member.gradient }}>
@@ -184,7 +180,11 @@ export default function AboutPage() {
                 </div>
                 <div className={styles.teamRole}>{member.role}</div>
                 <div className={styles.teamName}>{member.name}</div>
-                <div className={styles.teamFocus}>{member.focus}</div>
+                <p className={styles.teamBio}>{member.bio}</p>
+                <div className={styles.teamTags}>
+                  <span className={`${styles.teamTag} ${styles.tagExperience}`}>{member.experience}</span>
+                  <span className={`${styles.teamTag} ${styles.tagSpecialization}`}>{member.specialization}</span>
+                </div>
               </div>
             ))}
           </div>
@@ -196,7 +196,7 @@ export default function AboutPage() {
       {/* Why Us */}
       <section className="section">
         <div className="container">
-          <h2 id="why-title" className={`section-title reveal-item ${reveal.includes("why-title") ? "visible" : ""}`} style={{ textAlign: "center", marginBottom: "3rem" }}>
+          <h2 id="why-title" className="section-title reveal-item" style={{ textAlign: "center", marginBottom: "3rem" }}>
             Why DS Inventek
           </h2>
 
@@ -221,7 +221,7 @@ export default function AboutPage() {
               <div
                 key={idx}
                 id={`why-${idx}`}
-                className={`glass-card ${styles.whyCard} reveal-item ${reveal.includes(`why-${idx}`) ? "visible" : ""}`}
+                className={`glass-card ${styles.whyCard} reveal-item`}
                 style={{ transitionDelay: `${idx * 0.1}s` }}
               >
                 <div className={styles.whyIcon}>{item.icon}</div>
@@ -238,13 +238,13 @@ export default function AboutPage() {
       {/* CTA */}
       <section className={styles.ctaBanner}>
         <div className={styles.ctaInner}>
-          <h2 id="cta-title" className={`${styles.ctaTitle} reveal-item ${reveal.includes("cta-title") ? "visible" : ""}`}>
+          <h2 id="cta-title" className="ctaTitle reveal-item">
             Join the Revolution
           </h2>
-          <p id="cta-sub" className={`${styles.ctaSub} reveal-item ${reveal.includes("cta-sub") ? "visible" : ""}`}>
+          <p id="cta-sub" className="ctaSub reveal-item">
             Be part of the team building the future of robotics education in India.
           </p>
-          <div id="cta-btns" className={`${styles.ctaBtns} reveal-item ${reveal.includes("cta-btns") ? "visible" : ""}`}>
+          <div id="cta-btns" className="ctaBtns reveal-item">
             <Link href="/services" className="btn-primary">
               Explore Services →
             </Link>
