@@ -27,7 +27,6 @@ const mono = JetBrains_Mono({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ds-inventek-i5u5etfv0-sakthisk.vercel.app';
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -79,8 +78,8 @@ export default function RootLayout({ children }) {
         <FloatingWhatsApp />
         <BackToTop />
         <CustomCursor />
-      </body>
-    </html>
+      </body >
+    </html >
   );
 }
 
