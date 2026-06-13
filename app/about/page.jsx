@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import GovBadges from "@/components/GovBadges";
+import CtaBanner from "@/components/CtaBanner";
 import styles from "./about.module.css";
 
 export const metadata = {
@@ -146,7 +147,19 @@ export default function AboutPage() {
                 <div className={`${styles.timelineDot} ${item.type === "champion" ? styles.champion : item.type === "podium" ? styles.podium : ""}`}></div>
                 <div className="glass-card" style={{ flex: 1 }}>
                   <div className={styles.timelineYear}>{item.year}</div>
-                  <div className={`${styles.timelineEvent} ${item.type === "champion" ? styles.championText : ""}`}>{item.event}</div>
+                  <div className={`${styles.timelineEvent} ${item.type === "champion" ? styles.championText : ""}`}>
+                    {item.event.startsWith("🏆") ? (
+                      <>
+                        <span aria-hidden="true">🏆</span> {item.event.replace("🏆", "").trim()}
+                      </>
+                    ) : item.event.startsWith("🥉") ? (
+                      <>
+                        <span aria-hidden="true">🥉</span> {item.event.replace("🥉", "").trim()}
+                      </>
+                    ) : (
+                      item.event
+                    )}
+                  </div>
                   <div className={styles.timelineResult}>{item.result}</div>
                 </div>
               </div>
@@ -224,7 +237,7 @@ export default function AboutPage() {
                 className={`glass-card ${styles.whyCard} reveal-item`}
                 style={{ transitionDelay: `${idx * 0.1}s` }}
               >
-                <div className={styles.whyIcon}>{item.icon}</div>
+                <div className={styles.whyIcon} aria-hidden="true">{item.icon}</div>
                 <h3 className={styles.whyTitle}>{item.title}</h3>
                 <p className={styles.whyDesc}>{item.desc}</p>
               </div>
@@ -236,24 +249,15 @@ export default function AboutPage() {
       <div className="divider"></div>
 
       {/* CTA */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2 id="cta-title" className="ctaTitle reveal-item">
-            Join the Revolution
-          </h2>
-          <p id="cta-sub" className="ctaSub reveal-item">
-            Be part of the team building the future of robotics education in India.
-          </p>
-          <div id="cta-btns" className="ctaBtns reveal-item">
-            <Link href="/services" className="btn-primary">
-              Explore Services →
-            </Link>
-            <Link href="/contact" className="btn-ghost">
-              Get in Touch
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CtaBanner
+        title="Join the Revolution"
+        subtitle="Be part of the team building the future of robotics education in India."
+        primaryText="Explore Services →"
+        primaryHref="/services"
+        secondaryText="Get in Touch"
+        secondaryHref="/contact"
+        primaryBtnClass="btn-primary"
+      />
     </div>
   );
 }

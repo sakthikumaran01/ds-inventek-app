@@ -24,7 +24,7 @@ export default function ContactPage() {
             {/* Left: Info */}
             <div id="contact-info" className="reveal-item">
               <div className={styles.contactInfoItem}>
-                <div className={styles.contactIcon}>✉️</div>
+                <div className={styles.contactIcon} aria-hidden="true">✉️</div>
                 <div>
                   <div className={styles.contactLabel}>Email</div>
                   <div className={styles.contactValue}>
@@ -34,7 +34,17 @@ export default function ContactPage() {
               </div>
 
               <div className={styles.contactInfoItem}>
-                <div className={styles.contactIcon}>📍</div>
+                <div className={styles.contactIcon} aria-hidden="true">📞</div>
+                <div>
+                  <div className={styles.contactLabel}>Phone / WhatsApp</div>
+                  <div className={styles.contactValue}>
+                    <a href="tel:+919943336712" style={{ color: "inherit", textDecoration: "none" }}>+91 99433 36712</a>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.contactInfoItem}>
+                <div className={styles.contactIcon} aria-hidden="true">📍</div>
                 <div>
                   <div className={styles.contactLabel}>Puducherry Centre</div>
                   <div className={styles.contactValue} style={{ fontSize: "0.85rem", fontWeight: "normal", color: "var(--text-muted)", marginTop: "0.25rem" }}>
@@ -45,7 +55,7 @@ export default function ContactPage() {
               </div>
 
               <div className={styles.contactInfoItem}>
-                <div className={styles.contactIcon}>📍</div>
+                <div className={styles.contactIcon} aria-hidden="true">📍</div>
                 <div>
                   <div className={styles.contactLabel}>Chennai Centre</div>
                   <div className={styles.contactValue} style={{ fontSize: "0.85rem", fontWeight: "normal", color: "var(--text-muted)", marginTop: "0.25rem" }}>
@@ -56,7 +66,7 @@ export default function ContactPage() {
               </div>
 
               <div className={styles.contactInfoItem}>
-                <div className={styles.contactIcon}>⏱️</div>
+                <div className={styles.contactIcon} aria-hidden="true">⏱️</div>
                 <div>
                   <div className={styles.contactLabel}>Operating Hours</div>
                   <div className={styles.contactValue} style={{ fontSize: "0.85rem", fontWeight: "normal", color: "var(--text-muted)", marginTop: "0.25rem" }}>
@@ -75,9 +85,9 @@ export default function ContactPage() {
 
               <div className={styles.socialLinks} style={{ marginTop: "1.5rem" }}>
                 <a href="https://linkedin.com/company/ds-inventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="LinkedIn">in</a>
-                <a href="https://instagram.com/ds_inventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="Instagram">📷</a>
-                <a href="https://youtube.com/@dsinventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="YouTube">▶</a>
-                <a href="https://wa.me/919943336712" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="WhatsApp">💬</a>
+                <a href="https://instagram.com/ds_inventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="Instagram" aria-label="Instagram"><span aria-hidden="true">📷</span></a>
+                <a href="https://youtube.com/@dsinventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="YouTube" aria-label="YouTube"><span aria-hidden="true">▶</span></a>
+                <a href="https://wa.me/919943336712" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="WhatsApp" aria-label="WhatsApp"><span aria-hidden="true">💬</span></a>
               </div>
               
               {/* Map embed */}

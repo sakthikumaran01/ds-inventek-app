@@ -1,8 +1,9 @@
 import Link from "next/link";
 import ServiceCard from "@/components/ServiceCard";
-import CourseCard from "@/components/CourseCard";
+import CourseSlider from "@/components/CourseSlider";
 import GovBadges from "@/components/GovBadges";
 import Testimonials from "@/components/Testimonials";
+import CtaBanner from "@/components/CtaBanner";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -16,50 +17,73 @@ export default function Home() {
     {
       icon: "📚",
       title: "EduTech Curriculum",
-      desc: "Structured robotics curriculum designed for CBSE and state board integration.",
+      desc: "Give your school a competitive edge — a CBSE-aligned robotics curriculum with full teacher training and lab support.",
       badge: "Schools · CBSE",
       image: "/images/service-curriculum.png",
+      slug: "edutech-curriculum",
     },
     {
       icon: "🖥️",
       title: "Robotics Lab Setup",
-      desc: "End-to-end robotics lab design, equipment procurement, and installation.",
+      desc: "From empty classroom to fully operational robotics lab — we handle design, sourcing, and setup.",
       badge: "Schools · Colleges",
       image: "/images/service-lab.png",
+      slug: "robotics-lab-setup",
     },
     {
       icon: "✨",
       title: "Experience Zone Setup",
-      desc: "Interactive robotics experience zones that engage the public.",
+      desc: "Turn footfall into fascination — robotics experience zones for malls, museums, and public venues.",
       badge: "Malls · Museums",
       image: "/images/service-experience.png",
+      slug: "experience-zone",
     },
   ];
 
   const featuredCourses = [
     {
+      id: "basic-electronics",
       name: "Basic Electronics",
       level: "Beginner",
       duration: "8 hrs",
+      price: "₹2,499",
+      desc: "Learn electronics fundamentals with hands-on circuit building.",
+      modules: ["Ohm's Law", "Resistors & Capacitors", "LEDs & Diodes", "Circuit Assembly"],
       image: "/images/course-electronics.png",
+      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Basic+Electronics+course",
     },
     {
+      id: "quad-bot",
       name: "Quad Bot",
       level: "Beginner",
       duration: "12 hrs",
+      price: "₹3,999",
+      desc: "Build and program a four-legged walking robot.",
+      modules: ["Robot Assembly", "Motor Control", "Programming", "Testing & Calibration"],
       image: "/images/course-quadbot.png",
+      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Quad+Bot+course",
     },
     {
+      id: "self-balancing-robot",
       name: "Self Balancing Robot",
       level: "Intermediate",
       duration: "16 hrs",
+      price: "₹5,999",
+      desc: "Create an advanced self-balancing two-wheeled robot using PID control.",
+      modules: ["Sensor Integration", "PID Control", "Advanced Programming", "Real-World Applications"],
       image: "/images/course-balancing.png",
+      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Self+Balancing+Robot+course",
     },
     {
+      id: "robotic-arm",
       name: "Robotic Arm",
       level: "Intermediate",
       duration: "20 hrs",
+      price: "₹7,999",
+      desc: "Design and control a multi-joint robotic arm with precision.",
+      modules: ["Mechanical Design", "Motor Control", "Forward/Inverse Kinematics", "Automation"],
       image: "/images/course-arm.png",
+      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Robotic+Arm+course",
     },
   ];
 
@@ -70,7 +94,7 @@ export default function Home() {
         <div className={styles.heroGrid}></div>
         <div className={styles.heroContent}>
           <div id="hero-eyebrow" className={`${styles.heroEyebrow} reveal-item`}>
-            🌍 World Champions — Games of the Future 2024, Kazan
+            <span aria-hidden="true">🌍</span> World Champions — Games of the Future 2024, Kazan
           </div>
           <h1 id="hero-title" className={`${styles.heroTitle} reveal-item`}>
             <span className={styles.line1}>World Champions in Robotics.</span>
@@ -90,7 +114,7 @@ export default function Home() {
 
           <div className={styles.heroBadge}>
             <div className={`glass-card ${styles.championshipBadge}`} style={{ textAlign: "center", width: "260px" }}>
-              <div className={styles.trophyIcon}>🏆</div>
+              <div className={styles.trophyIcon} aria-hidden="true">🏆</div>
               <div className={styles.trophyTitle}>World Champions</div>
               <div className={styles.trophySub}>
                 Games of the Future
@@ -114,16 +138,16 @@ export default function Home() {
 
       {/* ── GOVT RECOGNITION BADGES ── */}
       <div className="container" style={{ marginTop: "1rem" }}>
-        <GovBadges />
+        <GovBadges limit={3} />
       </div>
 
       {/* ── STATS ── */}
       <section className={styles.stats}>
         <div className={styles.statsInner}>
           {[
-            { num: "10", label: "Years of Excellence" },
             { num: "5,000", label: "Students Trained" },
             { num: "300", label: "Competition Wins" },
+            { num: "10", label: "Years of Excellence" },
             { num: "7", label: "Business Verticals" },
           ].map((stat, idx) => (
             <div
@@ -136,6 +160,60 @@ export default function Home() {
               <span className={styles.statLabel}>{stat.label}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── AUDIENCE SEGMENTATION ── */}
+      <section className={styles.segmentation}>
+        <div className="container">
+          <div className={styles.segmentationGrid}>
+            <div className={`glass-card ${styles.segmentCard} ${styles.studentCard} reveal-item`}>
+              <div className={styles.segmentIcon} aria-hidden="true">⚡</div>
+              <h3 className={styles.segmentTitle}>For Students</h3>
+              <p className={styles.segmentDesc}>
+                Learn robotics by building real, physical projects. Go from basic circuits to advanced autonomous flight.
+              </p>
+              <Link href="/courses" className="btn-primary">
+                Explore Courses →
+              </Link>
+            </div>
+            <div className={`glass-card ${styles.segmentCard} ${styles.institutionCard} reveal-item`}>
+              <div className={styles.segmentIcon} aria-hidden="true">🏛️</div>
+              <h3 className={styles.segmentTitle}>For Institutions</h3>
+              <p className={styles.segmentDesc}>
+                Equip your school or college with turnkey labs, CBSE-aligned curriculum, and world-class certification.
+              </p>
+              <Link href="/contact" className="btn-secondary">
+                Get a Quotation →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider"></div>
+
+      {/* ── FEATURED COURSES ── */}
+      <section className={styles.featuredCourses}>
+        <div className="container">
+          <p id="courses-eyebrow" className="section-eyebrow reveal-item">
+            Learn by Building
+          </p>
+          <h2 id="courses-title" className="section-title reveal-item">
+            Courses That Ship<br />
+            Real Projects
+          </h2>
+          <p id="courses-subtitle" className="section-subtitle reveal-item">
+            Every course ends with hardware you built yourself. No simulations. No shortcuts.
+          </p>
+
+          <CourseSlider courses={featuredCourses} />
+
+          <div style={{ textAlign: "center", marginTop: "3rem" }}>
+            <Link href="/courses" className="btn-primary">
+              Browse All Courses →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -166,6 +244,7 @@ export default function Home() {
                 badge={service.badge}
                 image={service.image}
                 delay={`${idx * 0.1}s`}
+                slug={service.slug}
               />
             ))}
           </div>
@@ -180,68 +259,20 @@ export default function Home() {
 
       <div className="divider"></div>
 
-      {/* ── FEATURED COURSES ── */}
-      <section className={styles.featuredCourses}>
-        <div className="container">
-          <p id="courses-eyebrow" className="section-eyebrow reveal-item">
-            Learn by Building
-          </p>
-          <h2 id="courses-title" className="section-title reveal-item">
-            Courses That Ship<br />
-            Real Projects
-          </h2>
-          <p id="courses-subtitle" className="section-subtitle reveal-item">
-            Every course ends with hardware you built yourself. No simulations. No shortcuts.
-          </p>
-
-          <div className={styles.coursesGrid}>
-            {featuredCourses.map((course, idx) => (
-              <CourseCard
-                key={idx}
-                id={`course-${idx}`}
-                name={course.name}
-                level={course.level}
-                duration={course.duration}
-                image={course.image}
-                delay={`${idx * 0.1}s`}
-              />
-            ))}
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: "3rem" }}>
-            <Link href="/courses" className="btn-primary">
-              Browse All Courses →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <div className="divider"></div>
-
       {/* ── TESTIMONIALS ── */}
       <Testimonials />
 
       <div className="divider"></div>
 
       {/* ── CTA BANNER ── */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaInner}>
-          <h2 id="cta-title" className={`${styles.ctaTitle} reveal-item`}>
-            Ready to build your first robot?
-          </h2>
-          <p id="cta-sub" className={`${styles.ctaSub} reveal-item`}>
-            Join 5,000+ students who've gone from curious to capable with DS Inventek.
-          </p>
-          <div id="cta-btns" className={`${styles.ctaBtns} reveal-item`}>
-            <Link href="/courses" className="btn-white">
-              Explore Courses
-            </Link>
-            <Link href="/contact" className="btn-ghost">
-              Talk to Us
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CtaBanner
+        title="Ready to build your first robot?"
+        subtitle="Join 5,000+ students who've gone from curious to capable with DS Inventek."
+        primaryText="Explore Courses"
+        primaryHref="/courses"
+        secondaryText="Talk to Us"
+        secondaryHref="/contact"
+      />
     </div>
   );
 }

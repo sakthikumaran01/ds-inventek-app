@@ -53,10 +53,6 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
-        
-        <div style={{ textAlign: "center", marginTop: "2rem", fontSize: "0.8rem", color: "var(--text-muted)", fontFamily: "var(--font-mono), monospace" }}>
-          ℹ️ Note: Official parent and school reviews are being aggregated and will be updated soon.
-        </div>
       </div>
     </section>
   );

@@ -10,24 +10,22 @@ export default function CourseCard({
   image,
   delay,
   id,
-  onClick,
-  isExpanded,
-  desc,
-  modules,
-  enrollUrl,
+  slug,
 }) {
+  const targetSlug = slug || id;
+
   return (
     <div
       id={id}
       className={`${styles.courseCard} reveal-item`}
       style={{ transitionDelay: delay }}
     >
-      <div className={styles.courseCardBg} onClick={onClick}>
+      <Link href={`/courses/${targetSlug}`} className={styles.courseCardBg}>
         <Image
           src={image}
           alt={name}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className={styles.courseCardImage}
         />
         <div className={styles.courseCardOverlay}></div>
@@ -41,40 +39,22 @@ export default function CourseCard({
                 : styles.levelAdvanced
             }`}
           >
-            {level === "Beginner" ? "⚡" : level === "Intermediate" ? "◈" : "▲"} {level}
+            <span aria-hidden="true">
+              {level === "Beginner" ? "⚡" : level === "Intermediate" ? "◈" : "▲"}
+            </span>{" "}
+            {level}
           </span>
           <div>
             <h3 className={styles.courseName}>{name}</h3>
             <div className={styles.courseMeta}>
-              <span className={styles.courseDuration}>⏱ {duration}</span>
-              {price ? (
-                <span className={styles.coursePrice}>{price}</span>
-              ) : (
-                <Link href="/courses" className={styles.courseView}>
-                  Enroll →
-                </Link>
-              )}
+              <span className={styles.courseDuration}>
+                <span aria-hidden="true">⏱</span> {duration}
+              </span>
+              {price && <span className={styles.coursePrice}>{price}</span>}
             </div>
           </div>
         </div>
-      </div>
-
-      {isExpanded && (
-        <div className={`glass-card ${styles.courseDetails}`}>
-          <p className={styles.courseDesc}>{desc}</p>
-          <div className={styles.modules}>
-            <h4>What You'll Learn:</h4>
-            <ul>
-              {modules.map((module, midx) => (
-                <li key={midx}>{module}</li>
-              ))}
-            </ul>
-          </div>
-          <a href={enrollUrl || "/contact"} target="_blank" rel="noopener noreferrer" className={styles.enrollBtn}>
-            Enroll Now →
-          </a>
-        </div>
-      )}
+      </Link>
     </div>
   );
 }
