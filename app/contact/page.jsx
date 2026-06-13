@@ -1,210 +1,100 @@
-"use client";
-
+import PageHero from "@/components/PageHero";
+import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import styles from "./contact.module.css";
 
+export const metadata = {
+  title: "Contact Us for Robotics Lab Setup & Courses | DS Inventek",
+  description: "Get in touch with us to discuss school robotics curriculums, college lab setups, student workshops, and partnership opportunities. We respond within 24 hours.",
+  keywords: "contact robotics India, partner school STEM lab, register robotics workshop Chennai, school lab setups Chennai, robotics course registration, Chennai robotics",
+};
+
 export default function ContactPage() {
-  const [reveal, setReveal] = useState([]);
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    subject: "",
-    message: "",
-    source: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setReveal((prev) => [...new Set([...prev, entry.target.id])]);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll(".reveal-item").forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      alert("Please fill in all required fields");
-      return;
-    }
-    
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          subject: "",
-          message: "",
-          source: "",
-        });
-        setTimeout(() => setSubmitted(false), 3000);
-      } else {
-        const errorData = await response.json();
-        const errorMessage = errorData.details || "Failed to send message. Please try again.";
-        alert(errorMessage);
-        console.error("API Error:", errorData);
-      }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("Error sending message. Please check console for details.");
-    }
-  };
-
   return (
     <div>
-      {/* Hero */}
-      <section className={styles.hero}>
-        <div className="container">
-          <div id="hero-title" className={`${styles.heroTitle} reveal-item ${reveal.includes("hero-title") ? "visible" : ""}`}>
-            Get in Touch
-          </div>
-          <p id="hero-sub" className={`${styles.heroSub} reveal-item ${reveal.includes("hero-sub") ? "visible" : ""}`}>
-            Let's build something amazing together. We're here to answer your questions.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Get in Touch"
+        subtitle="Let's build something amazing together. We're here to answer your questions."
+      />
 
       {/* Contact Section */}
       <section className="section">
         <div className="container">
           <div className={styles.contactLayout}>
             {/* Left: Info */}
-            <div id="contact-info" className={`reveal-item ${reveal.includes("contact-info") ? "visible" : ""}`}>
+            <div id="contact-info" className="reveal-item">
               <div className={styles.contactInfoItem}>
                 <div className={styles.contactIcon}>✉️</div>
                 <div>
                   <div className={styles.contactLabel}>Email</div>
-                  <div className={styles.contactValue}>sakthikumaran.dsinventek@gmail.com</div>
+                  <div className={styles.contactValue}>
+                    <a href="mailto:info@dsinventek.com" style={{ color: "inherit", textDecoration: "none" }}>info@dsinventek.com</a>
+                  </div>
                 </div>
               </div>
 
               <div className={styles.contactInfoItem}>
                 <div className={styles.contactIcon}>📍</div>
                 <div>
-                  <div className={styles.contactLabel}>Location</div>
-                  <div className={styles.contactValue}>Chennai / Pondicherry, Tamil Nadu, India</div>
+                  <div className={styles.contactLabel}>Puducherry Centre</div>
+                  <div className={styles.contactValue} style={{ fontSize: "0.85rem", fontWeight: "normal", color: "var(--text-muted)", marginTop: "0.25rem" }}>
+                    [Puducherry Centre Address - coming soon]<br />
+                    Puducherry, India
+                  </div>
                 </div>
               </div>
 
               <div className={styles.contactInfoItem}>
-                <div className={styles.contactIcon}>🤝</div>
+                <div className={styles.contactIcon}>📍</div>
                 <div>
-                  <div className={styles.contactLabel}>Partnerships</div>
-                  <div className={styles.contactValue}>Open to schools, colleges & institutions</div>
+                  <div className={styles.contactLabel}>Chennai Centre</div>
+                  <div className={styles.contactValue} style={{ fontSize: "0.85rem", fontWeight: "normal", color: "var(--text-muted)", marginTop: "0.25rem" }}>
+                    [Chennai Centre Address - coming soon]<br />
+                    Chennai, Tamil Nadu, India
+                  </div>
                 </div>
               </div>
 
-              <div className="glass-card" style={{ marginTop: "2rem", padding: "1.5rem" }}>
+              <div className={styles.contactInfoItem}>
+                <div className={styles.contactIcon}>⏱️</div>
+                <div>
+                  <div className={styles.contactLabel}>Operating Hours</div>
+                  <div className={styles.contactValue} style={{ fontSize: "0.85rem", fontWeight: "normal", color: "var(--text-muted)", marginTop: "0.25rem" }}>
+                    Monday – Saturday: 9:00 AM – 6:00 PM<br />
+                    Sunday: Closed
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-card" style={{ marginTop: "1.5rem", padding: "1.5rem" }}>
                 <div className={styles.responseTimeLabel}>Response Time</div>
                 <p className={styles.responseTimeText}>
-                  We typically respond within <strong>24 hours</strong> on business days. For urgent inquiries, use "Urgent" in the subject.
+                  We typically respond within <strong>24 hours</strong> on business days. For urgent inquiries, email us or chat via WhatsApp.
                 </p>
               </div>
 
-              <div className={styles.socialLinks}>
-                <Link href="#" className={styles.socialLink} title="LinkedIn">
-                  in
-                </Link>
-                <Link href="#" className={styles.socialLink} title="Instagram">
-                  📷
-                </Link>
-                <Link href="#" className={styles.socialLink} title="YouTube">
-                  ▶
-                </Link>
-                <Link href="#" className={styles.socialLink} title="WhatsApp">
-                  💬
-                </Link>
+              <div className={styles.socialLinks} style={{ marginTop: "1.5rem" }}>
+                <a href="https://linkedin.com/company/ds-inventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="LinkedIn">in</a>
+                <a href="https://instagram.com/ds_inventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="Instagram">📷</a>
+                <a href="https://youtube.com/@dsinventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="YouTube">▶</a>
+                <a href="https://wa.me/919943336712" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="WhatsApp">💬</a>
+              </div>
+              
+              {/* Map embed */}
+              <div style={{ marginTop: "2rem", overflow: "hidden", borderRadius: "12px", border: "1px solid var(--glass-border)" }}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.4137260570383!2d79.82902631533036!3d11.933221991542617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a536166113dc73d%3A0x8cfef1a95e6cf1e4!2sPuducherry!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0, display: "block" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                ></iframe>
               </div>
             </div>
 
-            {/* Right: Form */}
-            <div id="contact-form" className={`glass-card ${styles.contactForm} reveal-item ${reveal.includes("contact-form") ? "visible" : ""}`}>
-              {submitted && (
-                <div className={styles.successMessage}>
-                  <div className={styles.successIcon}>✓</div>
-                  <p>Message sent successfully! We'll respond within 24 hours.</p>
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit}>
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="name">Full Name *</label>
-                    <input type="text" id="name" name="name" placeholder="Your full name" value={formData.name} onChange={handleChange} required />
-                  </div>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="10-digit mobile" value={formData.phone} onChange={handleChange} />
-                  </div>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="email">Email Address *</label>
-                  <input type="email" id="email" name="email" placeholder="your@email.com" value={formData.email} onChange={handleChange} required />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="subject">Subject *</label>
-                  <select id="subject" name="subject" value={formData.subject} onChange={handleChange} required>
-                    <option value="">Select a subject</option>
-                    <option>General Inquiry</option>
-                    <option>Service Enquiry</option>
-                    <option>Course Enquiry</option>
-                    <option>Partnership</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="message">Message *</label>
-                  <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..." value={formData.message} onChange={handleChange} required></textarea>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="source">How did you hear about us?</label>
-                  <select id="source" name="source" value={formData.source} onChange={handleChange}>
-                    <option value="">Select an option</option>
-                    <option>Social Media</option>
-                    <option>Google</option>
-                    <option>Word of Mouth</option>
-                    <option>School / College</option>
-                    <option>Event</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                <button type="submit" className={`btn-primary ${styles.formSubmit}`}>
-                  Send Message →
-                </button>
-              </form>
-            </div>
+            {/* Right: Form Component */}
+            <ContactForm />
           </div>
         </div>
       </section>
@@ -214,7 +104,7 @@ export default function ContactPage() {
       {/* Quick Links */}
       <section className="section">
         <div className="container">
-          <h2 id="quick-title" className={`section-title reveal-item ${reveal.includes("quick-title") ? "visible" : ""}`} style={{ textAlign: "center", marginBottom: "3rem" }}>
+          <h2 id="quick-title" className="section-title reveal-item" style={{ textAlign: "center", marginBottom: "3rem" }}>
             Explore More
           </h2>
 
@@ -242,7 +132,7 @@ export default function ContactPage() {
               <Link
                 key={idx}
                 href={item.link}
-                className={`glass-card ${styles.quickCard} reveal-item ${reveal.includes(`quick-${idx}`) ? "visible" : ""}`}
+                className={`glass-card ${styles.quickCard} reveal-item`}
                 id={`quick-${idx}`}
                 style={{ transitionDelay: `${idx * 0.1}s` }}
               >

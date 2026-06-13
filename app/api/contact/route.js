@@ -74,7 +74,7 @@ export async function POST(request) {
 
           <p style="line-height: 1.6; margin-bottom: 1.5rem;">
             For urgent inquiries, you can reach us at:<br/>
-            📧 Email: sakthikumaran.dsinventek@gmail.com<br/>
+            📧 Email: info@dsinventek.com<br/>
             📍 Location: Chennai / Pondicherry, Tamil Nadu, India
           </p>
 

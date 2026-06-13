@@ -1,0 +1,87 @@
+.badgesWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.5rem 0;
+  width: 100%;
+}
+
+.badgesLabel {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.badgesRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.badgePill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: 44px;
+  min-width: 180px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 100px;
+  padding: 0 1.25rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.badgePill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(124, 58, 237, 0.15);
+  border-color: var(--primary-light);
+}
+
+.badgeIcon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.badgeText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.badgeTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.badgeSub {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.6rem;
+  color: #64748b;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .badgesRow {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 0.75rem;
+    scrollbar-width: thin;
+  }
+  
+  .badgePill {
+    flex-shrink: 0;
+  }
+}

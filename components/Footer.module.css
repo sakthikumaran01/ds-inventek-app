@@ -23,7 +23,7 @@
 }
 
 .footerLogo {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--font-orbitron), sans-serif;
   font-size: 1.1rem;
   font-weight: 900;
   color: var(--text-primary);
@@ -70,7 +70,7 @@
 }
 
 .footerColTitle {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--font-orbitron), sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -114,7 +114,7 @@
 }
 
 .footerBadge {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono), monospace;
   font-size: 0.72rem;
   color: var(--primary-light);
 }
