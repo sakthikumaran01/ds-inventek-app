@@ -61,7 +61,6 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
         body: JSON.stringify({
           ...formData,
           courseName: course.name,
-          coursePrice: course.price,
         }),
       });
 
@@ -113,7 +112,6 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
             <div className={styles.courseSummary}>
               <span className={styles.courseLabel}>Selected Course:</span>
               <strong className={styles.courseName}>{course.name}</strong>
-              <span className={styles.coursePrice}>{course.price}</span>
             </div>
 
             <div className={styles.inputGroup}>

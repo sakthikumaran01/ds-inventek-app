@@ -1,9 +1,10 @@
 "use client";
 
+import content from "@/data/content.json";
 import styles from "./FloatingWhatsApp.module.css";
 
 export default function FloatingWhatsApp() {
-  const whatsappNumber = "919943336712"; // DS Inventek configured number
+  const whatsappNumber = content.company.whatsappNumber;
   const message = "Hello, I'd like to get more information about DS Inventek robotics setups and courses.";
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

@@ -3,109 +3,23 @@ import PageHero from "@/components/PageHero";
 import GovBadges from "@/components/GovBadges";
 import CtaBanner from "@/components/CtaBanner";
 import styles from "./about.module.css";
+import content from "@/data/content.json";
 
 export const metadata = {
-  title: "About Our World Champion Robotics Team | DS Inventek",
-  description: "Meet the founders and team behind DS Inventek. Born from competition, built for education. World Champions at Games of the Future 2024.",
-  keywords: "robotics founders Chennai, robotics world champions India, Games of the Future 2024 Kazan, Bitva Robotov team, Chennai robotics school founders",
+  title: content.meta.about.title,
+  description: content.meta.about.description,
+  keywords: content.meta.about.keywords,
 };
 
 export default function AboutPage() {
-  const timeline = [
-    {
-      year: "2023",
-      event: "Robot Battle — Bitva Robotov",
-      result: "Runner-up — Godspeed reached the grand final",
-      type: "milestone",
-    },
-    {
-      year: "2023",
-      event: "🏆 Bitva Robotov Super Final",
-      result: "Champion — defeated DADDY in the final",
-      type: "champion",
-    },
-    {
-      year: "Feb 2024",
-      event: "🏆 Games of the Future — Kazan, Russia",
-      result: "World Champion — defeated Daddy Bots in the grand final",
-      type: "champion",
-    },
-    {
-      year: "2024",
-      event: "Bitva Robotov 2024",
-      result: "Eliminated in opening rounds — returned stronger",
-      type: "milestone",
-    },
-    {
-      year: "2025",
-      event: "🥉 Games of the Future 2025",
-      result: "3rd Place — won the playoff against DADDY",
-      type: "podium",
-    },
-  ];
-
-  const team = [
-    {
-      initials: "SM",
-      name: "Sanjidhan M",
-      role: "Chief Executive Officer (CEO)",
-      bio: "Bio coming soon. Sanjidhan drives the strategic direction and institutional business development of DS Inventek.",
-      experience: "10 Years in Robotics",
-      specialization: "Strategy & Growth",
-      gradient: "linear-gradient(135deg, #7C3AED, #4C1D95)",
-    },
-    {
-      initials: "SD",
-      name: "Sakthikumaran D",
-      role: "Chief Financial & Product Officer (CFO & CPO)",
-      bio: "Bio coming soon. Sakthikumaran heads the educational product catalog development and corporate finance.",
-      experience: "8 Years in Product Design",
-      specialization: "Hardware Architecture",
-      gradient: "linear-gradient(135deg, #06B6D4, #0E7490)",
-    },
-    {
-      initials: "VM",
-      name: "VelMurugan",
-      role: "Chief Operating & Technology Officer (COO & CTO)",
-      bio: "Bio coming soon. VelMurugan leads our technological architecture and deployment pipelines.",
-      experience: "9 Years in Engineering",
-      specialization: "Automation & Control Systems",
-      gradient: "linear-gradient(135deg, #059669, #065F46)",
-    },
-    {
-      initials: "VB",
-      name: "Vijay Baskar",
-      role: "Chief Operating Officer (COO)",
-      bio: "Bio coming soon. Vijay manages project implementation, logistics, and onsite school workshop deliveries.",
-      experience: "7 Years in Operations",
-      specialization: "Workshop Management",
-      gradient: "linear-gradient(135deg, #D97706, #92400E)",
-    },
-    {
-      initials: "MV",
-      name: "Mukesh V",
-      role: "Chief Marketing Officer (CMO)",
-      bio: "Bio coming soon. Mukesh designs high-impact outreach strategies and drives public relations.",
-      experience: "6 Years in Brand Growth",
-      specialization: "Digital Growth",
-      gradient: "linear-gradient(135deg, #DB2777, #9D174D)",
-    },
-    {
-      initials: "NK",
-      name: "Nakeeran",
-      role: "Chief Technology Officer (CTO)",
-      bio: "Bio coming soon. Nakeeran architected the online student portal and supervises academic research.",
-      experience: "8 Years in Software Dev",
-      specialization: "Software Engineering",
-      gradient: "linear-gradient(135deg, #7C3AED, #06B6D4)",
-    },
-  ];
+  const timeline = content.about.timeline;
+  const team = content.about.team;
 
   return (
     <div>
       <PageHero
-        title="About DS Inventek"
-        subtitle="Born from competition. Built for education. Backed by world championship excellence. Headquartered in Puducherry, with a presence in Chennai."
+        title={content.about.hero.title}
+        subtitle={content.about.hero.subtitle}
       />
 
       {/* Mission & Vision */}
@@ -113,12 +27,12 @@ export default function AboutPage() {
         <div className="container">
           <div className={styles.missionGrid}>
             <div id="mission" className={`glass-card ${styles.missionCard} reveal-item`} style={{ borderLeft: "3px solid var(--primary-light)" }}>
-              <div className={styles.cardLabel}>Our Mission</div>
-              <p className={styles.cardText}>To make robotics education accessible, hands-on, and world-class for every student in India.</p>
+              <div className={styles.cardLabel}>{content.about.mission.label}</div>
+              <p className={styles.cardText}>{content.about.mission.text}</p>
             </div>
             <div id="vision" className={`glass-card ${styles.missionCard} reveal-item`} style={{ borderLeft: "3px solid var(--secondary)", transitionDelay: "0.1s" }}>
-              <div className={styles.cardLabel} style={{ color: "var(--secondary)" }}>Our Vision</div>
-              <p className={styles.cardText}>To position India as a global leader in youth robotics innovation by 2030.</p>
+              <div className={styles.cardLabel} style={{ color: "var(--secondary)" }}>{content.about.vision.label}</div>
+              <p className={styles.cardText}>{content.about.vision.text}</p>
             </div>
           </div>
           
@@ -135,10 +49,12 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <p id="timeline-eyebrow" className="section-eyebrow reveal-item">
-            Our Journey
+            {content.about.timelineEyebrow}
           </p>
           <h2 id="timeline-title" className="section-title reveal-item">
-            Born from Competition<br />Built for Education
+            {content.about.timelineTitle.split('\n').map((line, idx) => (
+              <span key={idx}>{line}{idx === 0 && <br />}</span>
+            ))}
           </h2>
 
           <div className={styles.timeline}>
@@ -174,10 +90,10 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <p id="team-eyebrow" className="section-eyebrow reveal-item">
-            The Founding Team
+            {content.about.teamEyebrow}
           </p>
           <h2 id="team-title" className="section-title reveal-item">
-            The Six Who Started It
+            {content.about.teamTitle}
           </h2>
 
           <div className={styles.teamGrid}>
@@ -210,27 +126,11 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <h2 id="why-title" className="section-title reveal-item" style={{ textAlign: "center", marginBottom: "3rem" }}>
-            Why DS Inventek
+            {content.about.whyUsTitle}
           </h2>
 
           <div className={styles.whyGrid}>
-            {[
-              {
-                icon: "🌍",
-                title: "World-Class Expertise",
-                desc: "Our founders are literally world champions. We don't teach theory — we teach what we've done at the highest level.",
-              },
-              {
-                icon: "🔧",
-                title: "Hands-On Learning",
-                desc: "Every course ends with hardware you built yourself. Real components, real soldering, real robots that work.",
-              },
-              {
-                icon: "🏅",
-                title: "Industry-Certified",
-                desc: "Our trainers are certified through our rigorous program — the same program we offer to schools nationwide.",
-              },
-            ].map((item, idx) => (
+            {content.about.whyUs.map((item, idx) => (
               <div
                 key={idx}
                 id={`why-${idx}`}
@@ -250,12 +150,12 @@ export default function AboutPage() {
 
       {/* CTA */}
       <CtaBanner
-        title="Join the Revolution"
-        subtitle="Be part of the team building the future of robotics education in India."
-        primaryText="Explore Services →"
-        primaryHref="/services"
-        secondaryText="Get in Touch"
-        secondaryHref="/contact"
+        title={content.about.cta.title}
+        subtitle={content.about.cta.subtitle}
+        primaryText={content.about.cta.primaryText}
+        primaryHref={content.about.cta.primaryHref}
+        secondaryText={content.about.cta.secondaryText}
+        secondaryHref={content.about.cta.secondaryHref}
         primaryBtnClass="btn-primary"
       />
     </div>

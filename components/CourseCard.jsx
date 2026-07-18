@@ -32,15 +32,15 @@ export default function CourseCard({
         <div className={styles.courseCardContent}>
           <span
             className={`${styles.courseLevel} ${
-              level === "Beginner"
+              level.toLowerCase().includes("1") || level.toLowerCase().includes("beginner")
                 ? styles.levelBeginner
-                : level === "Intermediate"
+                : level.toLowerCase().includes("2") || level.toLowerCase().includes("intermediate")
                 ? styles.levelIntermediate
                 : styles.levelAdvanced
             }`}
           >
             <span aria-hidden="true">
-              {level === "Beginner" ? "⚡" : level === "Intermediate" ? "◈" : "▲"}
+              {level.toLowerCase().includes("1") || level.toLowerCase().includes("beginner") ? "⚡" : level.toLowerCase().includes("2") || level.toLowerCase().includes("intermediate") ? "◈" : "▲"}
             </span>{" "}
             {level}
           </span>
@@ -50,7 +50,6 @@ export default function CourseCard({
               <span className={styles.courseDuration}>
                 <span aria-hidden="true">⏱</span> {duration}
               </span>
-              {price && <span className={styles.coursePrice}>{price}</span>}
             </div>
           </div>
         </div>

@@ -7,6 +7,10 @@
   overflow: hidden;
   z-index: 1;
   margin-top: 60px;
+  background-image: linear-gradient(to right, rgba(6, 4, 15, 0.92) 35%, rgba(6, 4, 15, 0.5) 75%, rgba(6, 4, 15, 0.85) 100%), 
+                    url('/images/homescreen.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
 .heroGrid {
@@ -16,6 +20,7 @@
     linear-gradient(90deg, rgba(124, 58, 237, 0.06) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 80%);
+  pointer-events: none;
 }
 
 .heroContent {

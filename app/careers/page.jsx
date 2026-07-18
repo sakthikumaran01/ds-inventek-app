@@ -3,6 +3,7 @@
 import { useState } from "react";
 import PageHero from "@/components/PageHero";
 import styles from "./careers.module.css";
+import content from "@/data/content.json";
 
 export default function CareersPage() {
   const [formData, setFormData] = useState({
@@ -17,30 +18,7 @@ export default function CareersPage() {
   const [status, setStatus] = useState({ type: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
 
-  const openPositions = [
-    {
-      title: "Robotics Instructor (Chennai & Puducherry)",
-      type: "Full-Time / Part-Time",
-      desc: "Educate and inspire students by delivering CBSE-aligned and advanced robotics curriculums.",
-      reqs: [
-        "Strong fundamentals in basic electronics, Arduino, and sensors",
-        "Excellent communication skills and passion for teaching children & young adults",
-        "Prior experience teaching STEM / Robotics is a plus",
-        "Willingness to travel to partner schools in Chennai/Puducherry",
-      ],
-    },
-    {
-      title: "Embedded Systems Developer",
-      type: "Full-Time",
-      desc: "Design and build our next-generation proprietary learning kits, microcontroller boards, and robotic controller systems.",
-      reqs: [
-        "Proficiency in C/C++ programming for ESP32, STM32, or Arduino architectures",
-        "Hands-on experience with hardware debugging, oscilloscope, and soldering",
-        "Understanding of I2C, SPI, UART communication protocols",
-        "Basic knowledge of PCB design tools (EasyEDA, KiCad, or Eagle) is preferred",
-      ],
-    },
-  ];
+  const openPositions = content.careers.openPositions;
 
   const handleChange = (e) => {
     setFormData({

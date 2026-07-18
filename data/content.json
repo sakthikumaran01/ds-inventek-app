@@ -1,0 +1,628 @@
+{
+  "company": {
+    "name": "DS Inventek",
+    "email": "info@dsinventek.com",
+    "phone": "+91 98946 64933",
+    "phoneRaw": "+919894664933",
+    "whatsappNumber": "919894664933",
+    "operatingHours": "Monday – Saturday: 9:00 AM – 6:00 PM\nSunday: Closed",
+    "responseTimeLabel": "Response Time",
+    "responseTimeText": "We typically respond within 24 hours on business days. For urgent inquiries, email us or chat via WhatsApp.",
+    "addresses": {
+      "puducherry": {
+        "label": "Puducherry Centre",
+        "value": "[Puducherry Centre Address - coming soon]",
+        "city": "Puducherry, India"
+      },
+      "chennai": {
+        "label": "Chennai Centre",
+        "value": "[Chennai Centre Address - coming soon]",
+        "city": "Chennai, Tamil Nadu, India"
+      }
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/company/ds-inventek",
+      "instagram": "https://instagram.com/ds_inventek",
+      "youtube": "https://youtube.com/@dsinventek",
+      "whatsapp": "https://wa.me/919894664933"
+    }
+  },
+  "navigation": {
+    "navLinks": [
+      { "href": "/", "label": "Home" },
+      { "href": "/services", "label": "Services" },
+      { "href": "/courses", "label": "Courses" },
+      { "href": "/about", "label": "About" },
+      { "href": "/contact", "label": "Contact" }
+    ]
+  },
+  "footer": {
+    "desc": "Powering the next generation of innovators — from Chennai to the world stage.",
+    "copyright": "© {year} DS Inventek Pvt. Ltd. All rights reserved. · Chennai, Tamil Nadu, India",
+    "links": {
+      "company": [
+        { "label": "About Us", "href": "/about" },
+        { "label": "Contact Us", "href": "/contact" },
+        { "label": "Careers", "href": "/careers" }
+      ],
+      "services": [
+        { "label": "EduTech Curriculum", "href": "/services#edutech-curriculum" },
+        { "label": "Lab Setup", "href": "/services#robotics-lab-setup" },
+        { "label": "Experience Zones", "href": "/services#experience-zone" },
+        { "label": "Certification", "href": "/services#trainer-certification" }
+      ]
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Robotics & AI Education Chennai & Pondicherry | DS Inventek",
+      "description": "DS Inventek offers world-class hands-on robotics courses, school/college lab setups, and interactive experience zones. Founded by World Champion engineers.",
+      "keywords": "robotics training Chennai, AI robotics courses, STEM robotics school India, school robotics lab setup CBSE, next-generation AI robotics Chennai, Games of the Future champion"
+    },
+    "courses": {
+      "title": "Hands-on Robotics & AI Courses | DS Inventek",
+      "description": "Learn robotics by building real hardware. From Basic Electronics, Quad Bots to STM32 Autonomous Gyro Bots. Industry-certified pathways.",
+      "keywords": "robotics courses Chennai, AI courses India, build robot Chennai, Arduino training, quad bot assembly, PID control sensor courses, STEM courses Pondicherry"
+    },
+    "services": {
+      "title": "Robotics Services & Lab Setup CBSE | DS Inventek",
+      "description": "Explore our B2B integration points including CBSE EduTech curriculum, complete school/college robotics lab setups, and interactive experience zones. Founded by World Champions.",
+      "keywords": "robotics lab setup CBSE, school robotics curriculum, B2B robotics lab India, robotics experience zone setup, trainer certification program"
+    },
+    "about": {
+      "title": "About Our World Champion Robotics Team | DS Inventek",
+      "description": "Meet the founders and team behind DS Inventek. Born from competition, built for education. World Champions at Games of the Future 2024.",
+      "keywords": "robotics founders Chennai, robotics world champions India, Games of the Future 2024 Kazan, Bitva Robotov team, Chennai robotics school founders"
+    },
+    "careers": {
+      "title": "Careers at DS Inventek | Build Next-Gen Robotics Pathways",
+      "description": "Join our growing team of world-champion engineers and STEM educators. Explore open positions for instructors, developers, and designers.",
+      "keywords": "robotics instructor jobs, embedded systems job Chennai, STEM educator vacancy Pondicherry, edtech career India"
+    },
+    "contact": {
+      "title": "Contact Us for Robotics Lab Setup & Courses | DS Inventek",
+      "description": "Get in touch with us to discuss school robotics curriculums, college lab setups, student workshops, and partnership opportunities. We respond within 24 hours.",
+      "keywords": "contact robotics India, partner school STEM lab, register robotics workshop Chennai, school lab setups Chennai, robotics course registration, Chennai robotics"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "World Champions — Games of the Future 2024, Kazan",
+      "titleLine1": "World Champions in Robotics.",
+      "titleLine2": "Now Building India's Next Generation of Engineers.",
+      "subtitle": "Kazan 2024 World Champions · 300+ Competition Wins · 5,000+ Students Trained across India",
+      "championshipBadge": {
+        "trophyIcon": "🏆",
+        "title": "World Champions",
+        "location": "Games of the Future\nKazan, Russia",
+        "year": "2024",
+        "caption": "Kazan 2024 · First Lego League · World Champions"
+      }
+    },
+    "stats": [
+      { "num": "5,000", "label": "Students Trained" },
+      { "num": "300", "label": "Competition Wins" },
+      { "num": "10", "label": "Years of Excellence" },
+      { "num": "7", "label": "Business Verticals" }
+    ],
+    "segmentation": [
+      {
+        "icon": "⚡",
+        "title": "For Students",
+        "desc": "Learn robotics by building real, physical projects. Go from basic circuits to advanced autonomous flight.",
+        "ctaText": "Explore Courses →",
+        "ctaHref": "/courses"
+      },
+      {
+        "icon": "🏛️",
+        "title": "For Institutions",
+        "desc": "Equip your school or college with turnkey labs, CBSE-aligned curriculum, and world-class certification.",
+        "ctaText": "Get a Quotation →",
+        "ctaHref": "/contact"
+      }
+    ],
+    "featuredCourses": {
+      "eyebrow": "Learn by Building",
+      "title": "Courses That Ship\nReal Projects",
+      "subtitle": "Every course ends with hardware you built yourself. No simulations. No shortcuts."
+    },
+    "featuredServices": {
+      "eyebrow": "What We Offer",
+      "title": "Ways We\nEmpower Innovators",
+      "subtitle": "From school curriculum integration to turnkey labs — we have a vertical for every stage of the journey."
+    },
+    "cta": {
+      "title": "Ready to build your first robot?",
+      "subtitle": "Join 5,000+ students who've gone from curious to capable with DS Inventek.",
+      "primaryText": "Explore Courses",
+      "primaryHref": "/courses",
+      "secondaryText": "Talk to Us",
+      "secondaryHref": "/contact"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About DS Inventek",
+      "subtitle": "Born from competition. Built for education. Backed by world championship excellence. Headquartered in Puducherry, with a presence in Chennai."
+    },
+    "mission": {
+      "label": "Our Mission",
+      "text": "To make robotics education accessible, hands-on, and world-class for every student in India."
+    },
+    "vision": {
+      "label": "Our Vision",
+      "text": "To position India as a global leader in youth robotics innovation by 2030."
+    },
+    "timelineEyebrow": "Our Journey",
+    "timelineTitle": "Born from Competition\nBuilt for Education",
+    "timeline": [
+      {
+        "year": "2023",
+        "event": "Robot Battle — Bitva Robotov",
+        "result": "Runner-up — Godspeed reached the grand final",
+        "type": "milestone"
+      },
+      {
+        "year": "2023",
+        "event": "🏆 Bitva Robotov Super Final",
+        "result": "Champion — defeated DADDY in the final",
+        "type": "champion"
+      },
+      {
+        "year": "Feb 2024",
+        "event": "🏆 Games of the Future — Kazan, Russia",
+        "result": "World Champion — defeated Daddy Bots in the grand final",
+        "type": "champion"
+      },
+      {
+        "year": "2024",
+        "event": "Bitva Robotov 2024",
+        "result": "Eliminated in opening rounds — returned stronger",
+        "type": "milestone"
+      },
+      {
+        "year": "2025",
+        "event": "🥉 Games of the Future 2025",
+        "result": "3rd Place — won the playoff against DADDY",
+        "type": "podium"
+      }
+    ],
+    "teamEyebrow": "The Founding Team",
+    "teamTitle": "The Six Who Started It",
+    "team": [
+      {
+        "initials": "SM",
+        "name": "Sanjidhan M",
+        "role": "Chief Executive Officer (CEO)",
+        "bio": "Bio coming soon. Sanjidhan drives the strategic direction and institutional business development of DS Inventek.",
+        "experience": "10 Years in Robotics",
+        "specialization": "Strategy & Growth",
+        "gradient": "linear-gradient(135deg, #7C3AED, #4C1D95)"
+      },
+      {
+        "initials": "SD",
+        "name": "Sakthikumaran D",
+        "role": "Chief Financial & Product Officer (CFO & CPO)",
+        "bio": "Bio coming soon. Sakthikumaran heads the educational product catalog development and corporate finance.",
+        "experience": "8 Years in Product Design",
+        "specialization": "Hardware Architecture",
+        "gradient": "linear-gradient(135deg, #06B6D4, #0E7490)"
+      },
+      {
+        "initials": "VM",
+        "name": "VelMurugan",
+        "role": "Chief Operating & Technology Officer (COO & CTO)",
+        "bio": "Bio coming soon. VelMurugan leads our technological architecture and deployment pipelines.",
+        "experience": "9 Years in Engineering",
+        "specialization": "Automation & Control Systems",
+        "gradient": "linear-gradient(135deg, #059669, #065F46)"
+      },
+      {
+        "initials": "VB",
+        "name": "Vijay Baskar",
+        "role": "Chief Operating Officer (COO)",
+        "bio": "Bio coming soon. Vijay manages project implementation, logistics, and onsite school workshop deliveries.",
+        "experience": "7 Years in Operations",
+        "specialization": "Workshop Management",
+        "gradient": "linear-gradient(135deg, #D97706, #92400E)"
+      },
+      {
+        "initials": "MV",
+        "name": "Mukesh V",
+        "role": "Chief Marketing Officer (CMO)",
+        "bio": "Bio coming soon. Mukesh designs high-impact outreach strategies and drives public relations.",
+        "experience": "6 Years in Brand Growth",
+        "specialization": "Digital Growth",
+        "gradient": "linear-gradient(135deg, #DB2777, #9D174D)"
+      },
+      {
+        "initials": "NK",
+        "name": "Nakeeran",
+        "role": "Chief Technology Officer (CTO)",
+        "bio": "Bio coming soon. Nakeeran architected the online student portal and supervises academic research.",
+        "experience": "8 Years in Software Dev",
+        "specialization": "Software Engineering",
+        "gradient": "linear-gradient(135deg, #7C3AED, #06B6D4)"
+      }
+    ],
+    "whyUsTitle": "Why DS Inventek",
+    "whyUs": [
+      {
+        "icon": "🌍",
+        "title": "World-Class Expertise",
+        "desc": "Our founders are literally world champions. We don't teach theory — we teach what we've done at the highest level."
+      },
+      {
+        "icon": "🔧",
+        "title": "Hands-On Learning",
+        "desc": "Every course ends with hardware you built yourself. Real components, real soldering, real robots that work."
+      },
+      {
+        "icon": "🏅",
+        "title": "Industry-Certified",
+        "desc": "Our trainers are certified through our rigorous program — the same program we offer to schools nationwide."
+      }
+    ],
+    "cta": {
+      "title": "Join the Revolution",
+      "subtitle": "Be part of the team building the future of robotics education in India.",
+      "primaryText": "Explore Services →",
+      "primaryHref": "/services",
+      "secondaryText": "Get in Touch",
+      "secondaryHref": "/contact"
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Seven vertical integration points designed to deliver robotics education at every stage of the journey."
+    },
+    "caseStudy": {
+      "title": "What Schools Say",
+      "eyebrow": "Case Study",
+      "school": "Case Study Coming Soon",
+      "meta": "Puducherry · Lab Setup",
+      "quote": "\"The turn-key robotics laboratory setup was completed on-time. The curriculum and staff training have empowered our students to begin building real hardware projects in their first semester.\"",
+      "outcome": "🏆 Outcome: School robotics enrollment increased by 40% in Year 1"
+    },
+    "whyChooseUs": {
+      "eyebrow": "Why Choose Us",
+      "title": "Industry-Leading Excellence",
+      "list": [
+        {
+          "icon": "🏆",
+          "title": "World Champions",
+          "desc": "Our team literally won the World Championship in robotics. We teach real-world competition strategies and techniques."
+        },
+        {
+          "icon": "📊",
+          "title": "5,000+ Students",
+          "desc": "Over 5,000 students have trained with us. Our methodologies are battle-tested with measurable outcomes."
+        },
+        {
+          "icon": "🌍",
+          "title": "Global Recognition",
+          "desc": "Certified trainers. Industry partnerships. International competition experience at every level."
+        },
+        {
+          "icon": "🛠️",
+          "title": "Hands-On Hardware",
+          "desc": "No simulations. Every course involves real robotics hardware that you build and control yourself."
+        },
+        {
+          "icon": "🎓",
+          "title": "Structured Learning",
+          "desc": "Beginner to advanced pathways. Each course builds on previous skills with clear progression."
+        },
+        {
+          "icon": "💼",
+          "title": "Career Ready",
+          "desc": "Our programs align with industry needs. Graduates are ready for college robotics teams and STEM careers."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "Contact us to discuss which service fits your needs perfectly.",
+      "primaryText": "Contact Us →",
+      "primaryHref": "/contact",
+      "secondaryText": "Back Home",
+      "secondaryHref": "/"
+    },
+    "process": [
+      {
+        "step": "Step 1",
+        "title": "Submit Your Brief",
+        "desc": "Fill the contact form or WhatsApp us with your school name, student count, and which service you're exploring."
+      },
+      {
+        "step": "Step 2",
+        "title": "Consultation Call",
+        "desc": "Our team schedules a 30-minute call to understand your curriculum needs, existing infrastructure, and budget range."
+      },
+      {
+        "step": "Step 3",
+        "title": "Proposal & Demo",
+        "desc": "We send a detailed proposal within 48 hours and arrange an in-person or virtual demo at your convenience."
+      },
+      {
+        "step": "Step 4",
+        "title": "Implementation",
+        "desc": "On agreement, we deploy the lab setup, curriculum, or workshop with full onboarding support included."
+      }
+    ],
+    "list": [
+      {
+        "id": "edutech-curriculum",
+        "icon": "📚",
+        "title": "EduTech Curriculum",
+        "audience": "Schools · CBSE / State Board",
+        "priceInfo": "Starting from ₹1,50,000 per academic year",
+        "desc": "Give your school a competitive edge — a CBSE-aligned robotics curriculum with full teacher training and lab support.",
+        "longDesc": "Integrate robotics directly into your school's curriculum. We provide a complete textbook set, hands-on lab kits, teacher training, and ongoing assessment systems that make school-level STEM education structured, fun, and highly effective. Fully CBSE-compliant and customized for Grades 6 to 12.",
+        "features": [
+          "Grade 6-12 structured curriculum",
+          "CBSE & state-board aligned syllabus",
+          "Term-wise textbook sets & digital resources",
+          "Regular assessments & report cards",
+          "Annual STEM science-fair support",
+          "Continuous trainer workshops"
+        ],
+        "image": "/images/service-curriculum.png"
+      },
+      {
+        "id": "robotics-lab-setup",
+        "icon": "🖥️",
+        "title": "Robotics Lab Setup",
+        "audience": "Schools · Colleges · Makerspaces",
+        "priceInfo": "Starting from ₹3,50,000 (turnkey)",
+        "desc": "From empty classroom to fully operational robotics lab — we handle design, sourcing, and setup.",
+        "longDesc": "Equip your institution with a state-of-the-art robotics laboratory. From high-quality components, tools, microcontrollers, and sensors to custom benches and storage systems — our turnkey solutions cover it all. Complete with on-site installation and trainer onboarding.",
+        "features": [
+          "End-to-end laboratory workspace design",
+          "Turnkey hardware & component procurement",
+          "3D printers, laser cutters, & soldering setups",
+          "On-site installation & hardware test runs",
+          "Trainer certification & operating manual",
+          "1-year comprehensive hardware maintenance"
+        ],
+        "image": "/images/service-lab.png"
+      },
+      {
+        "id": "experience-zone",
+        "icon": "✨",
+        "title": "Experience Zone Setup",
+        "audience": "Malls · Museums · Venues",
+        "priceInfo": "Custom Quotation — Request Brief",
+        "desc": "Turn footfall into fascination — robotics experience zones for malls, museums, and public venues.",
+        "longDesc": "Design and install an interactive robotics zone that attracts, engages, and educates the public. Perfect for malls, science centers, museums, and private educational hubs. Includes automated robot combat arenas, robotic claws, and AI-vision games.",
+        "features": [
+          "Custom layout design matching brand aesthetic",
+          "Interactive robot combat arenas & controls",
+          "AI computer vision demonstration setups",
+          "Operator training & handbook guidelines",
+          "Weekly/monthly safety audit inspections",
+          "Regular bot updates & repairs"
+        ],
+        "image": "/images/service-experience.png"
+      },
+      {
+        "id": "online-courses",
+        "icon": "🌐",
+        "title": "Online Courses (B2C)",
+        "audience": "Students · Hobbyists · All India",
+        "priceInfo": "Starting from ₹2,499 per module",
+        "desc": "Self-paced and live online robotics courses accessible from anywhere in India — beginner to advanced.",
+        "longDesc": "Accessible from anywhere in India, our online courses feature real hardware kits shipped directly to your doorstep. Learn circuit design, Arduino programming, PID control, and AI integration via video tutorials and weekly live interactive code review sessions.",
+        "features": [
+          "Hands-on hardware kits delivered to your door",
+          "Live interactive doubt clearing sessions",
+          "Self-paced learning platform dashboard",
+          "Curriculum designed by World Champion engineers",
+          "Project submission reviews & feedback",
+          "Verified course completion certificate"
+        ],
+        "image": "/images/service-online.png"
+      },
+      {
+        "id": "inperson-training",
+        "icon": "👥",
+        "title": "In-Person Training Centers",
+        "audience": "Students · Professionals",
+        "priceInfo": "Starting from ₹1,200 per session",
+        "desc": "Hands-on robotics workshops and long-format programs at our Chennai and Pondicherry centers.",
+        "longDesc": "Get face-to-face mentorship from champion robotics engineers. Our Chennai and Pondicherry training centers are fully equipped with advanced fabrication tools, test areas, and specialized sensors for students who want to build complex autonomous bots.",
+        "features": [
+          "Dedicated workspace desks at Chennai & Pondicherry",
+          "Direct coaching from World Champion mentors",
+          "Work with professional grade fabrication tools",
+          "Weekend & summer bootcamp scheduling batches",
+          "Mock robotics competitions & trials",
+          "Access to advanced parts library"
+        ],
+        "image": "/images/service-inperson.png"
+      },
+      {
+        "id": "trainer-certification",
+        "icon": "🏅",
+        "title": "Trainer Certification",
+        "audience": "Educators · Trainers · Institutions",
+        "priceInfo": "Starting from ₹15,000 per cohort",
+        "desc": "Certify your educators with our DS Inventek Robotics Trainer Program — industry-recognised credentials.",
+        "longDesc": "Empower your instructors or start your own tutoring career. Our Trainer Certification program teaches coding, physics, electronics, mechanical design, and classroom management techniques to ensure high-quality STEM instruction.",
+        "features": [
+          "Industry recognized",
+          "2-week intensive",
+          "Lifetime support",
+          "Job placement"
+        ],
+        "image": "/images/service-certification.png"
+      }
+    ]
+  },
+  "courses": {
+    "hero": {
+      "title": "Courses That Ship Real Projects",
+      "subtitle": "Every course ends with hardware you built yourself."
+    },
+    "learningPath": {
+      "eyebrow": "Your Learning Journey",
+      "title": "Progressive Skill Building",
+      "stages": [
+        {
+          "stage": "Level 1",
+          "title": "Foundations",
+          "courses": ["Basic Electronics & Robotics Foundation"],
+          "desc": "Master the basics of circuits, sensors, and simple robotics with hardware you build yourself."
+        },
+        {
+          "stage": "Level 2",
+          "title": "Smart Controls",
+          "courses": ["Quad Bot – ESP32 Smart Robotics"],
+          "desc": "Build walking robotics systems with advanced wireless IoT microcontroller control."
+        },
+        {
+          "stage": "Level 3",
+          "title": "Autonomous Systems",
+          "courses": ["Gyro Bot – STM32 Autonomous Robotics"],
+          "desc": "Design and build self-balancing autonomous robots with closed-loop PID control."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "list": [
+        {
+          "q": "Do I need prior robotics experience?",
+          "a": "Not at all! Our beginner Level 1 course starts from the absolute fundamentals and assumes no prior experience."
+        },
+        {
+          "q": "Are materials included?",
+          "a": "Yes, all course materials, microcontrollers, and components are fully included."
+        },
+        {
+          "q": "Will I get a certificate?",
+          "a": "Yes, completion of any Level course gets you an industry-recognized DS Inventek certificate."
+        },
+        {
+          "q": "Can I attend classes in person?",
+          "a": "Yes! We offer both online and in-person classes at our Chennai and Pondicherry centers."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to start building?",
+      "subtitle": "Choose a course above or contact us to find the perfect fit for your skill level.",
+      "primaryText": "Enroll Now →",
+      "primaryHref": "/contact",
+      "secondaryText": "Back Home",
+      "secondaryHref": "/"
+    },
+    "list": [
+      {
+        "id": "basic-electronics",
+        "name": "Basic Electronics & Robotics Foundation",
+        "level": "Level 1",
+        "duration": "40 hrs",
+        "desc": "Learn electronics and robotics fundamentals with hands-on circuit building.",
+        "longDesc": "This program introduces children to the fascinating world of electronics through a fully hands-on, project-based journey. Rather than focusing on complicated theory, students learn by doing — building real circuits, wiring their own gadgets and watching their creations come to life. Over 9 progressive modules, they will construct 20 exciting projects including automatic night lamps, motion detectors, and solar-powered devices, gaining practical engineering confidence.",
+        "modules": [
+          "Module 1: Getting Started with Electronics & Safety",
+          "Module 2: Understanding Electricity & Circuits (Voltage, Current, Resistance)",
+          "Module 3: Building Circuits on Breadboards (Wiring Diagrams)",
+          "Module 4: Working with Everyday Components (LEDs, Switches, Buzzers)",
+          "Module 5: Sensors & Smart Electronics (Infrared, Temperature, Light, Moisture)",
+          "Module 6: Motors & Motion (Fan speeds, Direction, Moving vehicle base)",
+          "Module 7: Advanced Components (Capacitors, Diodes, Transistors, Relays)",
+          "Module 8: Timing & Control Systems (Integrated Circuits, 555 Timer, Traffic lights)",
+          "Module 9: Renewable Energy & Capstone Projects (Solar panels, Solar cars)"
+        ],
+        "image": "/images/course-electronics.png"
+      },
+      {
+        "id": "quad-bot",
+        "name": "Quad Bot – ESP32 Smart Robotics",
+        "level": "Level 2",
+        "duration": "60 hrs",
+        "desc": "Build and program a four-legged walking robot using ESP32 with wireless control.",
+        "longDesc": "This smart robotics program focuses on legged locomotion and modern wireless integrations. Taught using the ESP32 platform, students will build a four-legged walking robot. They will cover five advanced project configurations: driving the robot via Infrared remote controller signals, implementing ultrasonic obstacle avoidance, configuring Wi-Fi hosting server control from smartphones, and programming voice-command operations and wireless motion-gesture glove controls (using the MPU6050 sensor).",
+        "modules": [
+          "Module 1: Quad Bot Chassis Assembly, Mechanical Linkages & Servo Calibration",
+          "Module 2: IR Remote Control Smart Robot (ESP32 remote signal decoding)",
+          "Module 3: Obstacle Avoidance Smart Robot (Ultrasonic sound wave navigation)",
+          "Module 4: Wi-Fi Controlled Smart Robot (Smartphone web server integration)",
+          "Module 5: Voice & Speech Controlled Smart Robot (Speech command algorithms)",
+          "Module 6: Gesture & Motion Controlled Smart Robot (MPU6050 wireless glove control)"
+        ],
+        "image": "/images/course-quadbot.png"
+      },
+      {
+        "id": "gyro-bot",
+        "name": "Gyro Bot – STM32 Autonomous Robotics",
+        "level": "Level 3",
+        "duration": "100 hrs",
+        "desc": "Master autonomous self-balancing and navigation using STM32 microcontrollers and gyroscopic sensors.",
+        "longDesc": "An advanced, embedded systems and control engineering curriculum built on the STM32 microcontroller and Yahboom SBR-STM32 platform. Over 10 modules, students learn professional workflows (Keil MDK, STM32CubeIDE, and VSCode) and embedded C programming. They will implement PID control algorithms,Complementary/Kalman filtering, app controls, K210 AI computer vision (for colour, QR-code, and number tracking), Lidar spatial navigation (obstacle avoidance and wall-tracking), and trace schematics to understand PCB hardware design.",
+        "modules": [
+          "Module 1: Getting Started & Professional STM32 Toolchain (Keil MDK & CubeIDE)",
+          "Module 2: STM32 Embedded Programming Foundations (GPIO, Interrupts, Timers, PWM, I2C, SPI)",
+          "Module 3: Actuators, DC Motors, Wheel Encoders & MPU6050 Gyroscopic Readouts",
+          "Module 4: Control Theory & PID Tuning (Position vs. Incremental PID, Cascade loops)",
+          "Module 5: The Science of Dynamic Self-Balancing (MPU6050 DMP, Kalman & Complementary fusion)",
+          "Module 6: Autonomous Behaviours & Bluetooth Smartphone App Controls",
+          "Module 7: Intelligent Perception & K210 Edge AI Vision (QR-code, Colour, & Object Recognition)",
+          "Module 8: Lidar Navigation (Obstacle avoidance, Guarding, Patrolling, Wall-tracking)",
+          "Module 9: LQR Optimal Control Theory, Balance Mathematics & Hardware Circuit Analysis",
+          "Module 10: Capstone Project: Autonomous Driving Self-Balancing Smart Car"
+        ],
+        "image": "/images/course-balancing.png"
+      }
+    ]
+  },
+  "careers": {
+    "openPositions": [
+      {
+        "title": "Robotics Instructor (Chennai & Puducherry)",
+        "type": "Full-Time / Part-Time",
+        "desc": "Educate and inspire students by delivering CBSE-aligned and advanced robotics curriculums.",
+        "reqs": [
+          "Strong fundamentals in basic electronics, Arduino, and sensors",
+          "Excellent communication skills and passion for teaching children & young adults",
+          "Prior experience teaching STEM / Robotics is a plus",
+          "Willingness to travel to partner schools in Chennai/Puducherry"
+        ]
+      },
+      {
+        "title": "Embedded Systems Developer",
+        "type": "Full-Time",
+        "desc": "Design and build our next-generation proprietary learning kits, microcontroller boards, and robotic controller systems.",
+        "reqs": [
+          "Proficiency in C/C++ programming for ESP32, STM32, or Arduino architectures",
+          "Hands-on experience with hardware debugging, oscilloscope, and soldering",
+          "Understanding of I2C, SPI, UART communication protocols",
+          "Basic knowledge of PCB design tools (EasyEDA, KiCad, or Eagle) is preferred"
+        ]
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "My son learned the basics of circuit design and built his first project here. The instructors are extremely patient and know how to keep children engaged.",
+      "name": "Rajesh Kumar",
+      "city": "Chennai",
+      "program": "Basic Electronics"
+    },
+    {
+      "quote": "Highly structured STEM curriculum. The practical lab setup support for our school has transformed our physics and computer labs completely.",
+      "name": "Sister Mary D'Souza",
+      "city": "Puducherry",
+      "program": "School Lab Setup Partner"
+    },
+    {
+      "quote": "Coaching from World Champions is a game changer. The insights on motors and structural layout helped our team secure a podium finish in national level events.",
+      "name": "Sanjay Sen",
+      "city": "Chennai",
+      "program": "Competition Training"
+    }
+  ]
+}

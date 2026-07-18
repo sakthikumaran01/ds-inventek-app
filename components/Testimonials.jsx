@@ -1,26 +1,8 @@
 import styles from "./Testimonials.module.css";
+import content from "@/data/content.json";
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      quote: "My son learned the basics of circuit design and built his first project here. The instructors are extremely patient and know how to keep children engaged.",
-      name: "Rajesh Kumar",
-      city: "Chennai",
-      program: "Basic Electronics",
-    },
-    {
-      quote: "Highly structured STEM curriculum. The practical lab setup support for our school has transformed our physics and computer labs completely.",
-      name: "Sister Mary D'Souza",
-      city: "Puducherry",
-      program: "School Lab Setup Partner",
-    },
-    {
-      quote: "Coaching from World Champions is a game changer. The insights on motors and structural layout helped our team secure a podium finish in national level events.",
-      name: "Sanjay Sen",
-      city: "Chennai",
-      program: "Competition Training",
-    },
-  ];
+  const testimonials = content.testimonials;
 
   return (
     <section className={styles.testimonialsSection}>

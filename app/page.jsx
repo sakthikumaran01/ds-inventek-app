@@ -5,87 +5,25 @@ import GovBadges from "@/components/GovBadges";
 import Testimonials from "@/components/Testimonials";
 import CtaBanner from "@/components/CtaBanner";
 import styles from "./page.module.css";
+import content from "@/data/content.json";
 
 export const metadata = {
-  title: "Robotics & AI Education Chennai & Pondicherry | DS Inventek",
-  description: "DS Inventek offers world-class hands-on robotics courses, school/college lab setups, and interactive experience zones. Founded by World Champion engineers.",
-  keywords: "robotics training Chennai, AI robotics courses, STEM robotics school India, school robotics lab setup CBSE, next-generation AI robotics Chennai, Games of the Future champion",
+  title: content.meta.home.title,
+  description: content.meta.home.description,
+  keywords: content.meta.home.keywords,
 };
 
 export default function Home() {
-  const featuredServices = [
-    {
-      icon: "📚",
-      title: "EduTech Curriculum",
-      desc: "Give your school a competitive edge — a CBSE-aligned robotics curriculum with full teacher training and lab support.",
-      badge: "Schools · CBSE",
-      image: "/images/service-curriculum.png",
-      slug: "edutech-curriculum",
-    },
-    {
-      icon: "🖥️",
-      title: "Robotics Lab Setup",
-      desc: "From empty classroom to fully operational robotics lab — we handle design, sourcing, and setup.",
-      badge: "Schools · Colleges",
-      image: "/images/service-lab.png",
-      slug: "robotics-lab-setup",
-    },
-    {
-      icon: "✨",
-      title: "Experience Zone Setup",
-      desc: "Turn footfall into fascination — robotics experience zones for malls, museums, and public venues.",
-      badge: "Malls · Museums",
-      image: "/images/service-experience.png",
-      slug: "experience-zone",
-    },
-  ];
+  const featuredServices = content.services.list.slice(0, 3).map(s => ({
+    icon: s.icon,
+    title: s.title,
+    desc: s.desc,
+    badge: s.audience.split(" · ")[0],
+    image: s.image,
+    slug: s.id,
+  }));
 
-  const featuredCourses = [
-    {
-      id: "basic-electronics",
-      name: "Basic Electronics",
-      level: "Beginner",
-      duration: "8 hrs",
-      price: "₹2,499",
-      desc: "Learn electronics fundamentals with hands-on circuit building.",
-      modules: ["Ohm's Law", "Resistors & Capacitors", "LEDs & Diodes", "Circuit Assembly"],
-      image: "/images/course-electronics.png",
-      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Basic+Electronics+course",
-    },
-    {
-      id: "quad-bot",
-      name: "Quad Bot",
-      level: "Beginner",
-      duration: "12 hrs",
-      price: "₹3,999",
-      desc: "Build and program a four-legged walking robot.",
-      modules: ["Robot Assembly", "Motor Control", "Programming", "Testing & Calibration"],
-      image: "/images/course-quadbot.png",
-      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Quad+Bot+course",
-    },
-    {
-      id: "self-balancing-robot",
-      name: "Self Balancing Robot",
-      level: "Intermediate",
-      duration: "16 hrs",
-      price: "₹5,999",
-      desc: "Create an advanced self-balancing two-wheeled robot using PID control.",
-      modules: ["Sensor Integration", "PID Control", "Advanced Programming", "Real-World Applications"],
-      image: "/images/course-balancing.png",
-      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Self+Balancing+Robot+course",
-    },
-    {
-      id: "robotic-arm",
-      name: "Robotic Arm",
-      level: "Intermediate",
-      duration: "20 hrs",
-      price: "₹7,999",
-      desc: "Design and control a multi-joint robotic arm with precision.",
-      modules: ["Mechanical Design", "Motor Control", "Forward/Inverse Kinematics", "Automation"],
-      image: "/images/course-arm.png",
-      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Robotic+Arm+course",
-    },
-  ];
+  const featuredCourses = content.courses.list;
 
   return (
     <div>
@@ -94,14 +32,14 @@ export default function Home() {
         <div className={styles.heroGrid}></div>
         <div className={styles.heroContent}>
           <div id="hero-eyebrow" className={`${styles.heroEyebrow} reveal-item`}>
-            <span aria-hidden="true">🌍</span> World Champions — Games of the Future 2024, Kazan
+            <span aria-hidden="true">🌍</span> {content.home.hero.eyebrow}
           </div>
           <h1 id="hero-title" className={`${styles.heroTitle} reveal-item`}>
-            <span className={styles.line1}>World Champions in Robotics.</span>
-            <span className={styles.line2}>Now Building India's Next Generation of Engineers.</span>
+            <span className={styles.line1}>{content.home.hero.titleLine1}</span>
+            <span className={styles.line2}>{content.home.hero.titleLine2}</span>
           </h1>
           <p id="hero-sub" className={`${styles.heroSub} reveal-item`}>
-            Kazan 2024 World Champions · 300+ Competition Wins · 5,000+ Students Trained across India
+            {content.home.hero.subtitle}
           </p>
           <div id="hero-ctas" className={`${styles.heroCtas} reveal-item`}>
             <Link href="/courses" className="btn-primary">
@@ -114,16 +52,16 @@ export default function Home() {
 
           <div className={styles.heroBadge}>
             <div className={`glass-card ${styles.championshipBadge}`} style={{ textAlign: "center", width: "260px" }}>
-              <div className={styles.trophyIcon} aria-hidden="true">🏆</div>
-              <div className={styles.trophyTitle}>World Champions</div>
+              <div className={styles.trophyIcon} aria-hidden="true">{content.home.hero.championshipBadge.trophyIcon}</div>
+              <div className={styles.trophyTitle}>{content.home.hero.championshipBadge.title}</div>
               <div className={styles.trophySub}>
-                Games of the Future
-                <br />
-                Kazan, Russia
+                {content.home.hero.championshipBadge.location.split('\n').map((line, idx) => (
+                  <span key={idx}>{line}{idx === 0 && <br />}</span>
+                ))}
               </div>
-              <div className={styles.trophyYear}>2024</div>
+              <div className={styles.trophyYear}>{content.home.hero.championshipBadge.year}</div>
               <div className={styles.trophyCaption}>
-                Kazan 2024 · First Lego League · World Champions
+                {content.home.hero.championshipBadge.caption}
               </div>
             </div>
           </div>
@@ -144,12 +82,7 @@ export default function Home() {
       {/* ── STATS ── */}
       <section className={styles.stats}>
         <div className={styles.statsInner}>
-          {[
-            { num: "5,000", label: "Students Trained" },
-            { num: "300", label: "Competition Wins" },
-            { num: "10", label: "Years of Excellence" },
-            { num: "7", label: "Business Verticals" },
-          ].map((stat, idx) => (
+          {content.home.stats.map((stat, idx) => (
             <div
               key={idx}
               id={`stat-${idx}`}
@@ -167,26 +100,16 @@ export default function Home() {
       <section className={styles.segmentation}>
         <div className="container">
           <div className={styles.segmentationGrid}>
-            <div className={`glass-card ${styles.segmentCard} ${styles.studentCard} reveal-item`}>
-              <div className={styles.segmentIcon} aria-hidden="true">⚡</div>
-              <h3 className={styles.segmentTitle}>For Students</h3>
-              <p className={styles.segmentDesc}>
-                Learn robotics by building real, physical projects. Go from basic circuits to advanced autonomous flight.
-              </p>
-              <Link href="/courses" className="btn-primary">
-                Explore Courses →
-              </Link>
-            </div>
-            <div className={`glass-card ${styles.segmentCard} ${styles.institutionCard} reveal-item`}>
-              <div className={styles.segmentIcon} aria-hidden="true">🏛️</div>
-              <h3 className={styles.segmentTitle}>For Institutions</h3>
-              <p className={styles.segmentDesc}>
-                Equip your school or college with turnkey labs, CBSE-aligned curriculum, and world-class certification.
-              </p>
-              <Link href="/contact" className="btn-secondary">
-                Get a Quotation →
-              </Link>
-            </div>
+            {content.home.segmentation.map((seg, idx) => (
+              <div key={idx} className={`glass-card ${styles.segmentCard} ${idx === 0 ? styles.studentCard : styles.institutionCard} reveal-item`}>
+                <div className={styles.segmentIcon} aria-hidden="true">{seg.icon}</div>
+                <h3 className={styles.segmentTitle}>{seg.title}</h3>
+                <p className={styles.segmentDesc}>{seg.desc}</p>
+                <Link href={seg.ctaHref} className={idx === 0 ? "btn-primary" : "btn-secondary"}>
+                  {seg.ctaText}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -197,14 +120,15 @@ export default function Home() {
       <section className={styles.featuredCourses}>
         <div className="container">
           <p id="courses-eyebrow" className="section-eyebrow reveal-item">
-            Learn by Building
+            {content.home.featuredCourses.eyebrow}
           </p>
           <h2 id="courses-title" className="section-title reveal-item">
-            Courses That Ship<br />
-            Real Projects
+            {content.home.featuredCourses.title.split('\n').map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </h2>
           <p id="courses-subtitle" className="section-subtitle reveal-item">
-            Every course ends with hardware you built yourself. No simulations. No shortcuts.
+            {content.home.featuredCourses.subtitle}
           </p>
 
           <CourseSlider courses={featuredCourses} />
@@ -223,14 +147,15 @@ export default function Home() {
       <section className={styles.featured}>
         <div className="container">
           <p id="services-eyebrow" className="section-eyebrow reveal-item">
-            What We Offer
+            {content.home.featuredServices.eyebrow}
           </p>
           <h2 id="services-title" className="section-title reveal-item">
-            Seven Ways We<br />
-            Empower Innovators
+            {content.home.featuredServices.title.split('\n').map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </h2>
           <p id="services-subtitle" className="section-subtitle reveal-item">
-            From school curriculum integration to world-class robotics competitions — we have a vertical for every stage of the journey.
+            {content.home.featuredServices.subtitle}
           </p>
 
           <div className={styles.servicesGrid}>
@@ -266,12 +191,12 @@ export default function Home() {
 
       {/* ── CTA BANNER ── */}
       <CtaBanner
-        title="Ready to build your first robot?"
-        subtitle="Join 5,000+ students who've gone from curious to capable with DS Inventek."
-        primaryText="Explore Courses"
-        primaryHref="/courses"
-        secondaryText="Talk to Us"
-        secondaryHref="/contact"
+        title={content.home.cta.title}
+        subtitle={content.home.cta.subtitle}
+        primaryText={content.home.cta.primaryText}
+        primaryHref={content.home.cta.primaryHref}
+        secondaryText={content.home.cta.secondaryText}
+        secondaryHref={content.home.cta.secondaryHref}
       />
     </div>
   );

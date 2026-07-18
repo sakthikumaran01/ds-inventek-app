@@ -2,11 +2,12 @@ import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
 import styles from "./contact.module.css";
+import content from "@/data/content.json";
 
 export const metadata = {
-  title: "Contact Us for Robotics Lab Setup & Courses | DS Inventek",
-  description: "Get in touch with us to discuss school robotics curriculums, college lab setups, student workshops, and partnership opportunities. We respond within 24 hours.",
-  keywords: "contact robotics India, partner school STEM lab, register robotics workshop Chennai, school lab setups Chennai, robotics course registration, Chennai robotics",
+  title: content.meta.contact.title,
+  description: content.meta.contact.description,
+  keywords: content.meta.contact.keywords,
 };
 
 export default function ContactPage() {
@@ -28,7 +29,7 @@ export default function ContactPage() {
                 <div>
                   <div className={styles.contactLabel}>Email</div>
                   <div className={styles.contactValue}>
-                    <a href="mailto:info@dsinventek.com" style={{ color: "inherit", textDecoration: "none" }}>info@dsinventek.com</a>
+                    <a href={`mailto:${content.company.email}`} style={{ color: "inherit", textDecoration: "none" }}>{content.company.email}</a>
                   </div>
                 </div>
               </div>
@@ -38,7 +39,7 @@ export default function ContactPage() {
                 <div>
                   <div className={styles.contactLabel}>Phone / WhatsApp</div>
                   <div className={styles.contactValue}>
-                    <a href="tel:+919943336712" style={{ color: "inherit", textDecoration: "none" }}>+91 99433 36712</a>
+                    <a href={`tel:${content.company.phoneRaw}`} style={{ color: "inherit", textDecoration: "none" }}>{content.company.phone}</a>
                   </div>
                 </div>
               </div>
@@ -46,10 +47,10 @@ export default function ContactPage() {
               <div className={styles.contactInfoItem}>
                 <div className={styles.contactIcon} aria-hidden="true">📍</div>
                 <div>
-                  <div className={styles.contactLabel}>Puducherry Centre</div>
+                  <div className={styles.contactLabel}>{content.company.addresses.puducherry.label}</div>
                   <div className={styles.contactValue} style={{ fontSize: "0.85rem", fontWeight: "normal", color: "var(--text-muted)", marginTop: "0.25rem" }}>
-                    [Puducherry Centre Address - coming soon]<br />
-                    Puducherry, India
+                    {content.company.addresses.puducherry.value}<br />
+                    {content.company.addresses.puducherry.city}
                   </div>
                 </div>
               </div>
@@ -57,10 +58,10 @@ export default function ContactPage() {
               <div className={styles.contactInfoItem}>
                 <div className={styles.contactIcon} aria-hidden="true">📍</div>
                 <div>
-                  <div className={styles.contactLabel}>Chennai Centre</div>
+                  <div className={styles.contactLabel}>{content.company.addresses.chennai.label}</div>
                   <div className={styles.contactValue} style={{ fontSize: "0.85rem", fontWeight: "normal", color: "var(--text-muted)", marginTop: "0.25rem" }}>
-                    [Chennai Centre Address - coming soon]<br />
-                    Chennai, Tamil Nadu, India
+                    {content.company.addresses.chennai.value}<br />
+                    {content.company.addresses.chennai.city}
                   </div>
                 </div>
               </div>
@@ -70,24 +71,25 @@ export default function ContactPage() {
                 <div>
                   <div className={styles.contactLabel}>Operating Hours</div>
                   <div className={styles.contactValue} style={{ fontSize: "0.85rem", fontWeight: "normal", color: "var(--text-muted)", marginTop: "0.25rem" }}>
-                    Monday – Saturday: 9:00 AM – 6:00 PM<br />
-                    Sunday: Closed
+                    {content.company.operatingHours.split('\n').map((line, i) => (
+                      <span key={i}>{line}{i === 0 && <br />}</span>
+                    ))}
                   </div>
                 </div>
               </div>
 
               <div className="glass-card" style={{ marginTop: "1.5rem", padding: "1.5rem" }}>
-                <div className={styles.responseTimeLabel}>Response Time</div>
+                <div className={styles.responseTimeLabel}>{content.company.responseTimeLabel}</div>
                 <p className={styles.responseTimeText}>
-                  We typically respond within <strong>24 hours</strong> on business days. For urgent inquiries, email us or chat via WhatsApp.
+                  {content.company.responseTimeText}
                 </p>
               </div>
 
               <div className={styles.socialLinks} style={{ marginTop: "1.5rem" }}>
-                <a href="https://linkedin.com/company/ds-inventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="LinkedIn">in</a>
-                <a href="https://instagram.com/ds_inventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="Instagram" aria-label="Instagram"><span aria-hidden="true">📷</span></a>
-                <a href="https://youtube.com/@dsinventek" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="YouTube" aria-label="YouTube"><span aria-hidden="true">▶</span></a>
-                <a href="https://wa.me/919943336712" target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="WhatsApp" aria-label="WhatsApp"><span aria-hidden="true">💬</span></a>
+                <a href={content.company.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="LinkedIn">in</a>
+                <a href={content.company.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="Instagram" aria-label="Instagram"><span aria-hidden="true">📷</span></a>
+                <a href={content.company.socialLinks.youtube} target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="YouTube" aria-label="YouTube"><span aria-hidden="true">▶</span></a>
+                <a href={content.company.socialLinks.whatsapp} target="_blank" rel="noopener noreferrer" className={styles.socialLink} title="WhatsApp" aria-label="WhatsApp"><span aria-hidden="true">💬</span></a>
               </div>
               
               {/* Map embed */}
