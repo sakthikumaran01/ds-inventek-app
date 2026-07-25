@@ -24,7 +24,7 @@ export default function CoursesGrid({ courses, showFilter = false }) {
     <div className={styles.gridContainer}>
       {showFilter && (
         <div className={styles.filterBar}>
-          {["All", "Beginner", "Intermediate", "Advanced"].map((level) => (
+          {["All", "Level 1", "Level 2", "Level 3"].map((level) => (
             <button
               key={level}
               onClick={() => setActiveFilter(level)}

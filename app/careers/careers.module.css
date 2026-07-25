@@ -7,9 +7,9 @@
 
 .sectionHeading {
   font-family: var(--font-orbitron), sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 

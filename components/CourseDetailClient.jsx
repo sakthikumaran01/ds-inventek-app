@@ -3,7 +3,7 @@
 import { useState } from "react";
 import EnrollmentModal from "./EnrollmentModal";
 
-export default function CourseDetailClient({ courseName, coursePrice }) {
+export default function CourseDetailClient({ courseName }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -19,7 +19,7 @@ export default function CourseDetailClient({ courseName, coursePrice }) {
       <EnrollmentModal 
         isOpen={modalOpen} 
         onClose={() => setModalOpen(false)} 
-        course={{ name: courseName, price: coursePrice }}
+        course={{ name: courseName }}
       />
     </>
   );

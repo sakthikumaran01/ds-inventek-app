@@ -1,139 +1,118 @@
-import Link from "next/link";
-import ServiceCard from "@/components/ServiceCard";
-import CourseSlider from "@/components/CourseSlider";
-import GovBadges from "@/components/GovBadges";
-import Testimonials from "@/components/Testimonials";
-import CtaBanner from "@/components/CtaBanner";
-import styles from "./page.module.css";
+"use client";
 
-export const metadata = {
-  title: "Robotics & AI Education Chennai & Pondicherry | DS Inventek",
-  description: "DS Inventek offers world-class hands-on robotics courses, school/college lab setups, and interactive experience zones. Founded by World Champion engineers.",
-  keywords: "robotics training Chennai, AI robotics courses, STEM robotics school India, school robotics lab setup CBSE, next-generation AI robotics Chennai, Games of the Future champion",
+import Link from "next/link";
+import { motion } from "framer-motion";
+import ServicesSlider from "@/components/sections/ServicesSlider";
+import CourseSlider from "@/components/sections/CourseSlider";
+import GovBadges from "@/components/sections/GovBadges";
+import Testimonials from "@/components/sections/Testimonials";
+import CtaBanner from "@/components/sections/CtaBanner";
+import CircuitPattern from "@/components/ui/CircuitPattern";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
+import styles from "./page.module.css";
+import content from "@/data/content.json";
+
+// Animation variants
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+  }
 };
 
 export default function Home() {
-  const featuredServices = [
-    {
-      icon: "📚",
-      title: "EduTech Curriculum",
-      desc: "Give your school a competitive edge — a CBSE-aligned robotics curriculum with full teacher training and lab support.",
-      badge: "Schools · CBSE",
-      image: "/images/service-curriculum.png",
-      slug: "edutech-curriculum",
-    },
-    {
-      icon: "🖥️",
-      title: "Robotics Lab Setup",
-      desc: "From empty classroom to fully operational robotics lab — we handle design, sourcing, and setup.",
-      badge: "Schools · Colleges",
-      image: "/images/service-lab.png",
-      slug: "robotics-lab-setup",
-    },
-    {
-      icon: "✨",
-      title: "Experience Zone Setup",
-      desc: "Turn footfall into fascination — robotics experience zones for malls, museums, and public venues.",
-      badge: "Malls · Museums",
-      image: "/images/service-experience.png",
-      slug: "experience-zone",
-    },
-  ];
+  const featuredServices = content.services.list.slice(0, 3).map(s => ({
+    icon: s.icon,
+    title: s.title,
+    desc: s.desc,
+    badge: s.audience.split(" · ")[0],
+    image: s.image,
+    slug: s.id,
+    ctaBadge: s.ctaBadge,
+  }));
 
-  const featuredCourses = [
-    {
-      id: "basic-electronics",
-      name: "Basic Electronics",
-      level: "Beginner",
-      duration: "8 hrs",
-      price: "₹2,499",
-      desc: "Learn electronics fundamentals with hands-on circuit building.",
-      modules: ["Ohm's Law", "Resistors & Capacitors", "LEDs & Diodes", "Circuit Assembly"],
-      image: "/images/course-electronics.png",
-      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Basic+Electronics+course",
-    },
-    {
-      id: "quad-bot",
-      name: "Quad Bot",
-      level: "Beginner",
-      duration: "12 hrs",
-      price: "₹3,999",
-      desc: "Build and program a four-legged walking robot.",
-      modules: ["Robot Assembly", "Motor Control", "Programming", "Testing & Calibration"],
-      image: "/images/course-quadbot.png",
-      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Quad+Bot+course",
-    },
-    {
-      id: "self-balancing-robot",
-      name: "Self Balancing Robot",
-      level: "Intermediate",
-      duration: "16 hrs",
-      price: "₹5,999",
-      desc: "Create an advanced self-balancing two-wheeled robot using PID control.",
-      modules: ["Sensor Integration", "PID Control", "Advanced Programming", "Real-World Applications"],
-      image: "/images/course-balancing.png",
-      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Self+Balancing+Robot+course",
-    },
-    {
-      id: "robotic-arm",
-      name: "Robotic Arm",
-      level: "Intermediate",
-      duration: "20 hrs",
-      price: "₹7,999",
-      desc: "Design and control a multi-joint robotic arm with precision.",
-      modules: ["Mechanical Design", "Motor Control", "Forward/Inverse Kinematics", "Automation"],
-      image: "/images/course-arm.png",
-      enrollUrl: "https://wa.me/919943336712?text=I'd+like+to+enrol+in+Robotic+Arm+course",
-    },
-  ];
+  const featuredCourses = content.courses.list;
 
   return (
     <div>
       {/* ── HERO ── */}
       <section className={styles.hero}>
-        <div className={styles.heroGrid}></div>
+        <div className={styles.heroGrid} />
+        <CircuitPattern opacity={0.08} />
+        
         <div className={styles.heroContent}>
-          <div id="hero-eyebrow" className={`${styles.heroEyebrow} reveal-item`}>
-            <span aria-hidden="true">🌍</span> World Champions — Games of the Future 2024, Kazan
-          </div>
-          <h1 id="hero-title" className={`${styles.heroTitle} reveal-item`}>
-            <span className={styles.line1}>World Champions in Robotics.</span>
-            <span className={styles.line2}>Now Building India's Next Generation of Engineers.</span>
-          </h1>
-          <p id="hero-sub" className={`${styles.heroSub} reveal-item`}>
-            Kazan 2024 World Champions · 300+ Competition Wins · 5,000+ Students Trained across India
-          </p>
-          <div id="hero-ctas" className={`${styles.heroCtas} reveal-item`}>
-            <Link href="/courses" className="btn-primary">
-              Explore Courses →
-            </Link>
-            <Link href="/contact" className="btn-ghost">
-              Set Up a Robotics Lab
-            </Link>
-          </div>
+          <motion.div 
+            id="hero-eyebrow" 
+            className={styles.heroEyebrow}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <span aria-hidden="true" className={styles.globeIcon}>🌍</span> 
+            {content.home.hero.eyebrow}
+          </motion.div>
 
-          <div className={styles.heroBadge}>
-            <div className={`glass-card ${styles.championshipBadge}`} style={{ textAlign: "center", width: "260px" }}>
-              <div className={styles.trophyIcon} aria-hidden="true">🏆</div>
-              <div className={styles.trophyTitle}>World Champions</div>
-              <div className={styles.trophySub}>
-                Games of the Future
-                <br />
-                Kazan, Russia
-              </div>
-              <div className={styles.trophyYear}>2024</div>
-              <div className={styles.trophyCaption}>
-                Kazan 2024 · First Lego League · World Champions
-              </div>
-            </div>
-          </div>
+          <motion.h1 
+            id="hero-title" 
+            className={styles.heroTitle}
+            initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <span className={styles.line1}>{content.home.hero.titleLine1}</span>
+            <span className={styles.line2}>{content.home.hero.titleLine2}</span>
+          </motion.h1>
+
+          <motion.p 
+            id="hero-sub" 
+            className={styles.heroSub}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            {content.home.hero.subtitle}
+          </motion.p>
+
+          <motion.div 
+            id="hero-ctas" 
+            className={styles.heroCtas}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <Link href={content.home.hero.primaryCta.href} className="btn-primary">
+              {content.home.hero.primaryCta.text}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </Link>
+            <Link href={content.home.hero.secondaryCta.href} className="btn-ghost">
+              {content.home.hero.secondaryCta.text}
+            </Link>
+          </motion.div>
         </div>
-        <div className={styles.scrollIndicator}>
+
+        <motion.div 
+          className={styles.scrollIndicator}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.6 }}
+        >
           <div className={styles.scrollMouse}>
-            <div className={styles.scrollWheel}></div>
+            <motion.div 
+              className={styles.scrollWheel}
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            />
           </div>
           <span>Scroll</span>
-        </div>
+        </motion.div>
       </section>
 
       {/* ── GOVT RECOGNITION BADGES ── */}
@@ -143,51 +122,69 @@ export default function Home() {
 
       {/* ── STATS ── */}
       <section className={styles.stats}>
-        <div className={styles.statsInner}>
-          {[
-            { num: "5,000", label: "Students Trained" },
-            { num: "300", label: "Competition Wins" },
-            { num: "10", label: "Years of Excellence" },
-            { num: "7", label: "Business Verticals" },
-          ].map((stat, idx) => (
-            <div
+        <motion.div 
+          className={styles.statsInner}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {content.home.stats.map((stat, idx) => (
+            <motion.div
               key={idx}
               id={`stat-${idx}`}
-              className={`glass-card ${styles.statCard} reveal-item`}
-              style={{ transitionDelay: `${idx * 0.1}s` }}
+              className={`glass-card ${styles.statCard}`}
+              variants={fadeUp}
+              transition={{ duration: 0.5 }}
+              whileHover={{ y: -8, scale: 1.02 }}
             >
-              <span className={styles.statNum}>{stat.num}{stat.num !== "7" ? "+" : ""}</span>
+              <span className={styles.statNum}>
+                <AnimatedCounter 
+                  end={parseInt(stat.num.replace(/[^0-9]/g, '')) || 0} 
+                  suffix={stat.num.includes('+') || stat.num !== "7" ? "+" : ""}
+                  duration={2}
+                />
+              </span>
               <span className={styles.statLabel}>{stat.label}</span>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* ── AUDIENCE SEGMENTATION ── */}
       <section className={styles.segmentation}>
         <div className="container">
-          <div className={styles.segmentationGrid}>
-            <div className={`glass-card ${styles.segmentCard} ${styles.studentCard} reveal-item`}>
-              <div className={styles.segmentIcon} aria-hidden="true">⚡</div>
-              <h3 className={styles.segmentTitle}>For Students</h3>
-              <p className={styles.segmentDesc}>
-                Learn robotics by building real, physical projects. Go from basic circuits to advanced autonomous flight.
-              </p>
-              <Link href="/courses" className="btn-primary">
-                Explore Courses →
-              </Link>
-            </div>
-            <div className={`glass-card ${styles.segmentCard} ${styles.institutionCard} reveal-item`}>
-              <div className={styles.segmentIcon} aria-hidden="true">🏛️</div>
-              <h3 className={styles.segmentTitle}>For Institutions</h3>
-              <p className={styles.segmentDesc}>
-                Equip your school or college with turnkey labs, CBSE-aligned curriculum, and world-class certification.
-              </p>
-              <Link href="/contact" className="btn-secondary">
-                Get a Quotation →
-              </Link>
-            </div>
-          </div>
+          <motion.div 
+            className={styles.segmentationGrid}
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {content.home.segmentation.map((seg, idx) => (
+              <motion.div 
+                key={idx} 
+                className={`glass-card ${styles.segmentCard} ${idx === 0 ? styles.studentCard : styles.institutionCard}`}
+                variants={fadeUp}
+                transition={{ duration: 0.5 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+              >
+                <motion.div 
+                  className={styles.segmentIcon} 
+                  aria-hidden="true"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {seg.icon}
+                </motion.div>
+                <h3 className={styles.segmentTitle}>{seg.title}</h3>
+                <p className={styles.segmentDesc}>{seg.desc}</p>
+                <Link href={seg.ctaHref} className={idx === 0 ? "btn-primary" : "btn-secondary"}>
+                  {seg.ctaText}
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -196,24 +193,55 @@ export default function Home() {
       {/* ── FEATURED COURSES ── */}
       <section className={styles.featuredCourses}>
         <div className="container">
-          <p id="courses-eyebrow" className="section-eyebrow reveal-item">
-            Learn by Building
-          </p>
-          <h2 id="courses-title" className="section-title reveal-item">
-            Courses That Ship<br />
-            Real Projects
-          </h2>
-          <p id="courses-subtitle" className="section-subtitle reveal-item">
-            Every course ends with hardware you built yourself. No simulations. No shortcuts.
-          </p>
+          <motion.p 
+            id="courses-eyebrow" 
+            className="section-eyebrow"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            {content.home.featuredCourses.eyebrow}
+          </motion.p>
+          <motion.h2 
+            id="courses-title" 
+            className="section-title"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            {content.home.featuredCourses.title.split('\n').map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
+          </motion.h2>
+          <motion.p 
+            id="courses-subtitle" 
+            className="section-subtitle"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {content.home.featuredCourses.subtitle}
+          </motion.p>
 
           <CourseSlider courses={featuredCourses} />
 
-          <div style={{ textAlign: "center", marginTop: "3rem" }}>
+          <motion.div 
+            style={{ textAlign: "center", marginTop: "3rem" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             <Link href="/courses" className="btn-primary">
-              Browse All Courses →
+              {content.home.browseAllCourses}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -222,38 +250,55 @@ export default function Home() {
       {/* ── FEATURED SERVICES ── */}
       <section className={styles.featured}>
         <div className="container">
-          <p id="services-eyebrow" className="section-eyebrow reveal-item">
-            What We Offer
-          </p>
-          <h2 id="services-title" className="section-title reveal-item">
-            Seven Ways We<br />
-            Empower Innovators
-          </h2>
-          <p id="services-subtitle" className="section-subtitle reveal-item">
-            From school curriculum integration to world-class robotics competitions — we have a vertical for every stage of the journey.
-          </p>
-
-          <div className={styles.servicesGrid}>
-            {featuredServices.map((service, idx) => (
-              <ServiceCard
-                key={idx}
-                id={`service-card-${idx}`}
-                icon={service.icon}
-                title={service.title}
-                desc={service.desc}
-                badge={service.badge}
-                image={service.image}
-                delay={`${idx * 0.1}s`}
-                slug={service.slug}
-              />
+          <motion.p 
+            id="services-eyebrow" 
+            className="section-eyebrow"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            {content.home.featuredServices.eyebrow}
+          </motion.p>
+          <motion.h2 
+            id="services-title" 
+            className="section-title"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            {content.home.featuredServices.title.split('\n').map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
             ))}
-          </div>
+          </motion.h2>
+          <motion.p 
+            id="services-subtitle" 
+            className="section-subtitle"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {content.home.featuredServices.subtitle}
+          </motion.p>
 
-          <div style={{ textAlign: "center", marginTop: "3rem" }}>
+          <ServicesSlider services={featuredServices} />
+
+          <motion.div 
+            style={{ textAlign: "center", marginTop: "3rem" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             <Link href="/services" className="btn-primary">
-              View All Services →
+              {content.home.viewAllServices}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -266,12 +311,12 @@ export default function Home() {
 
       {/* ── CTA BANNER ── */}
       <CtaBanner
-        title="Ready to build your first robot?"
-        subtitle="Join 5,000+ students who've gone from curious to capable with DS Inventek."
-        primaryText="Explore Courses"
-        primaryHref="/courses"
-        secondaryText="Talk to Us"
-        secondaryHref="/contact"
+        title={content.home.cta.title}
+        subtitle={content.home.cta.subtitle}
+        primaryText={content.home.cta.primaryText}
+        primaryHref={content.home.cta.primaryHref}
+        secondaryText={content.home.cta.secondaryText}
+        secondaryHref={content.home.cta.secondaryHref}
       />
     </div>
   );

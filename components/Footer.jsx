@@ -2,33 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Footer.module.css";
 import GovBadges from "./GovBadges";
+import content from "@/data/content.json";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://linkedin.com/company/ds-inventek";
-  const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/ds_inventek";
-  const youtubeUrl = process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://youtube.com/@dsinventek";
-  const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://wa.me/919943336712";
+  const linkedinUrl = content.company.socialLinks.linkedin;
+  const instagramUrl = content.company.socialLinks.instagram;
+  const youtubeUrl = content.company.socialLinks.youtube;
+  const whatsappUrl = content.company.socialLinks.whatsapp;
 
   const footerLinks = {
-    company: [
-      { label: "About Us", href: "/about" },
-      { label: "Contact Us", href: "/contact" },
-      { label: "Careers", href: "/careers" },
-    ],
-    services: [
-      { label: "EduTech Curriculum", href: "/services#curriculum" },
-      { label: "Lab Setup", href: "/services#lab-setup" },
-      { label: "Experience Zones", href: "/services#experience-zones" },
-      { label: "Certification", href: "/services#certification" },
-    ],
-    courses: [
-      { label: "Basic Electronics", href: "/courses#basic-electronics" },
-      { label: "Quad Bot", href: "/courses#quad-bot" },
-      { label: "Robotic Arm", href: "/courses#robotic-arm" },
-      { label: "Drone Technology", href: "/courses#drone-technology" },
-      { label: "View all courses →", href: "/courses" },
-    ],
+    company: content.footer.links.company,
+    services: content.footer.links.services,
+    courses: content.courses.list.map(c => ({
+      label: c.name.replace(/ – .*/, "").replace(/ & .*/, ""),
+      href: `/courses#${c.id}`
+    })).concat([{ label: "View all courses →", href: "/courses" }]),
   };
 
   return (
@@ -40,12 +29,12 @@ export default function Footer() {
               <Image src="/logo.png" alt="DS Inventek" width={30} height={30} className={styles.logoIcon} />
               DS <span>INVENTEK</span>
             </Link>
-            <p>Powering the next generation of innovators — from Chennai to the world stage.</p>
+            <p>{content.footer.desc}</p>
             <p style={{ fontSize: "0.8rem", marginTop: "0.5rem", color: "var(--text-muted)" }}>
-              <span aria-hidden="true">📧</span> <a href="mailto:info@dsinventek.com" style={{ color: "var(--primary-light)", textDecoration: "none" }}>info@dsinventek.com</a>
+              <span aria-hidden="true">📧</span> <a href={`mailto:${content.company.email}`} style={{ color: "var(--primary-light)", textDecoration: "none" }}>{content.company.email}</a>
             </p>
             <p style={{ fontSize: "0.8rem", marginTop: "0.4rem", color: "var(--text-muted)" }}>
-              <span aria-hidden="true">📞</span> <a href="tel:+919943336712" style={{ color: "var(--primary-light)", textDecoration: "none" }}>+91 99433 36712</a>
+              <span aria-hidden="true">📞</span> <a href={`tel:${content.company.phoneRaw}`} style={{ color: "var(--primary-light)", textDecoration: "none" }}>{content.company.phone}</a>
             </p>
           </div>
 
@@ -89,7 +78,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.footerBottom}>
-          <p>© {currentYear} DS Inventek Pvt. Ltd. All rights reserved. · Chennai, Tamil Nadu, India</p>
+          <p>{content.footer.copyright.replace("{year}", currentYear)}</p>
           <div className={styles.socialIcons}>
             <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className={styles.socialIconLink} title="LinkedIn" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>

@@ -3,15 +3,24 @@
   z-index: 1;
   padding: 8rem 2rem 4rem;
   margin-top: 60px;
-  background: linear-gradient(180deg, rgba(124, 58, 237, 0.05) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(13, 27, 46, 0.4) 0%, transparent 100%);
 }
 
 .heroTitle {
-  font-family: var(--font-orbitron), sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 900;
-  line-height: 1.1;
+  font-family: var(--font-orbitron), system-ui, sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.heroSub {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.75;
 }
 
 .heroSub {

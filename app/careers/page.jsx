@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import PageHero from "@/components/PageHero";
+import PageHero from "@/components/ui/PageHero";
 import styles from "./careers.module.css";
+import content from "@/data/content.json";
 
 export default function CareersPage() {
   const [formData, setFormData] = useState({
@@ -17,30 +18,7 @@ export default function CareersPage() {
   const [status, setStatus] = useState({ type: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
 
-  const openPositions = [
-    {
-      title: "Robotics Instructor (Chennai & Puducherry)",
-      type: "Full-Time / Part-Time",
-      desc: "Educate and inspire students by delivering CBSE-aligned and advanced robotics curriculums.",
-      reqs: [
-        "Strong fundamentals in basic electronics, Arduino, and sensors",
-        "Excellent communication skills and passion for teaching children & young adults",
-        "Prior experience teaching STEM / Robotics is a plus",
-        "Willingness to travel to partner schools in Chennai/Puducherry",
-      ],
-    },
-    {
-      title: "Embedded Systems Developer",
-      type: "Full-Time",
-      desc: "Design and build our next-generation proprietary learning kits, microcontroller boards, and robotic controller systems.",
-      reqs: [
-        "Proficiency in C/C++ programming for ESP32, STM32, or Arduino architectures",
-        "Hands-on experience with hardware debugging, oscilloscope, and soldering",
-        "Understanding of I2C, SPI, UART communication protocols",
-        "Basic knowledge of PCB design tools (EasyEDA, KiCad, or Eagle) is preferred",
-      ],
-    },
-  ];
+  const openPositions = content.careers.openPositions;
 
   const handleChange = (e) => {
     setFormData({
@@ -101,8 +79,8 @@ export default function CareersPage() {
   return (
     <div>
       <PageHero
-        title="Careers"
-        subtitle="Shape the Future of Robotics & AI Education. Join the World Champion Team."
+        title={content.careers.hero.title}
+        subtitle={content.careers.hero.subtitle}
       />
 
       <section className="section">
@@ -110,9 +88,9 @@ export default function CareersPage() {
           <div className={styles.careersGrid}>
             {/* Left Column: Job Postings */}
             <div className={styles.opportunities}>
-              <h2 className={styles.sectionHeading}>Current Openings</h2>
+              <h2 className={styles.sectionHeading}>{content.careers.sectionHeading}</h2>
               <p className={styles.introText}>
-                We are looking for passionate individuals who love hardware, microcontrollers, and teaching. If you want to build India's next generation of engineers, we want to hear from you.
+                {content.careers.introText}
               </p>
 
               <div className={styles.positionsList}>
@@ -124,7 +102,7 @@ export default function CareersPage() {
                     <h3 className={styles.posTitle}>{pos.title}</h3>
                     <p className={styles.posDesc}>{pos.desc}</p>
                     <div className={styles.requirements}>
-                      <h4>What we look for:</h4>
+                      <h4>{content.careers.requirementsLabel}</h4>
                       <ul>
                         {pos.reqs.map((req, rIdx) => (
                           <li key={rIdx}>{req}</li>
@@ -139,8 +117,8 @@ export default function CareersPage() {
             {/* Right Column: Application Form */}
             <div className={`${styles.applicationContainer} reveal-item`} style={{ transitionDelay: "0.2s" }}>
               <div className={`glass-card ${styles.formCard}`}>
-                <h3 className={styles.formTitle}>Submit Application</h3>
-                <p className={styles.formSubtitle}>Apply directly using the form below.</p>
+                <h3 className={styles.formTitle}>{content.careers.formTitle}</h3>
+                <p className={styles.formSubtitle}>{content.careers.formSubtitle}</p>
 
                 {status.message && (
                   <div className={`${styles.statusBox} ${status.type === "success" ? styles.successBox : styles.errorBox}`}>
@@ -199,9 +177,9 @@ export default function CareersPage() {
                       required
                     >
                       <option value="">Select a position</option>
-                      <option value="Robotics Instructor">Robotics Instructor</option>
-                      <option value="Embedded Systems Developer">Embedded Systems Developer</option>
-                      <option value="General Application">General / Other</option>
+                      {content.careers.positionOptions.map((opt) => (
+                        <option key={opt.value} value={opt.value}>{opt.label}</option>
+                      ))}
                     </select>
                   </div>
 
