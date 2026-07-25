@@ -1,20 +1,20 @@
 .wrapper {
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .heroSection {
   position: relative;
   padding: 8rem 0 4rem;
-  background: linear-gradient(to bottom, rgba(6, 4, 15, 0.4) 0%, rgba(15, 10, 35, 0.95) 100%);
+  background: linear-gradient(to bottom, rgba(13, 27, 46, 0.8) 0%, rgba(3, 11, 26, 0.98) 100%);
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.07);
 }
 
 .heroGrid {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(124, 58, 237, 0.05) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(124, 58, 237, 0.05) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: center top;
   mask-image: radial-gradient(ellipse at center, black, transparent 80%);
@@ -40,7 +40,7 @@
 }
 
 .navBreadcrumb a:hover {
-  color: #fff;
+  color: var(--primary);
 }
 
 .heroContent {
@@ -137,6 +137,84 @@
   .contentGrid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 6rem 0 3rem;
+  }
+
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  .metaRow {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .ctaWrapper {
+    flex-direction: column;
+  }
+
+  .ctaWrapper a,
+  .ctaWrapper button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contentSection {
+    padding: 3rem 0 4rem;
+  }
+
+  .sectionHeader {
+    font-size: 1.3rem;
+  }
+
+  .longDesc {
+    font-size: 0.95rem;
+  }
+
+  .modulesCard,
+  .trustCard {
+    padding: 1.5rem !important;
+  }
+
+  .imageContainer {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 5rem 0 2.5rem;
+  }
+
+  .introText {
+    font-size: 1rem;
+  }
+
+  .metaRow {
+    gap: 0.5rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .modulesCard,
+  .trustCard {
+    padding: 1.25rem !important;
+  }
+
+  .imageContainer {
+    height: 170px;
   }
 }
 

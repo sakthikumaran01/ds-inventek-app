@@ -1,0 +1,40 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: 8rem 2rem 4rem;
+  margin-top: 60px;
+  background: linear-gradient(180deg, rgba(13, 27, 46, 0.4) 0%, transparent 100%);
+}
+
+.heroTitle {
+  font-family: var(--font-orbitron), system-ui, sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.heroSub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 5rem 1rem 2.5rem;
+  }
+
+  .heroSub {
+    font-size: 0.95rem;
+  }
+}

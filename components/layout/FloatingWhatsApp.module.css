@@ -1,0 +1,50 @@
+.floatingBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 56px;
+  background: #25d366;
+  border-radius: 100px;
+  padding: 0 1.25rem;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.22, 1);
+  overflow: hidden;
+  max-width: 56px;
+}
+
+.whatsappIcon {
+  flex-shrink: 0;
+}
+
+.label {
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateX(10px);
+}
+
+.floatingBtn:hover {
+  max-width: 200px;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+}
+
+.floatingBtn:hover .label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .floatingBtn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}

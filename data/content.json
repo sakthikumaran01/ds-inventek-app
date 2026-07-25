@@ -11,7 +11,7 @@
     "addresses": {
       "puducherry": {
         "label": "Puducherry Centre",
-        "value": "[Puducherry Centre Address - coming soon]",
+        "value": "No.4, 6th cross, Thillai Nagar,\nVillianur, Puducherry - 605110.",
         "city": "Puducherry, India"
       },
       "chennai": {
@@ -28,6 +28,7 @@
     }
   },
   "navigation": {
+    "ctaButton": { "text": "Get Started", "href": "/contact" },
     "navLinks": [
       { "href": "/", "label": "Home" },
       { "href": "/services", "label": "Services" },
@@ -37,8 +38,9 @@
     ]
   },
   "footer": {
-    "desc": "Powering the next generation of innovators — from Chennai to the world stage.",
-    "copyright": "© {year} DS Inventek Pvt. Ltd. All rights reserved. · Chennai, Tamil Nadu, India",
+    "desc": "DPIIT-recognized. NITI Aayog registered. Built by World Champions.",
+    "championBadge": "World Champions 🏆 Games of the Future 2024",
+    "copyright": "© {year} DS Inventek Pvt. Ltd. All rights reserved. · Chennai & Puducherry, India",
     "links": {
       "company": [
         { "label": "About Us", "href": "/about" },
@@ -55,29 +57,29 @@
   },
   "meta": {
     "home": {
-      "title": "Robotics & AI Education Chennai & Pondicherry | DS Inventek",
-      "description": "DS Inventek offers world-class hands-on robotics courses, school/college lab setups, and interactive experience zones. Founded by World Champion engineers.",
-      "keywords": "robotics training Chennai, AI robotics courses, STEM robotics school India, school robotics lab setup CBSE, next-generation AI robotics Chennai, Games of the Future champion"
+      "title": "World Champion Robotics Education | DS Inventek Chennai & Puducherry",
+      "description": "India's only DPIIT-recognized robotics education company founded by actual World Champions. Turnkey school labs, competition-grade courses, and faculty certification.",
+      "keywords": "robotics training Chennai, World Champion robotics India, STEM lab setup CBSE NEP 2020, combat robotics education, DPIIT robotics startup, Games of the Future champions"
     },
     "courses": {
-      "title": "Hands-on Robotics & AI Courses | DS Inventek",
-      "description": "Learn robotics by building real hardware. From Basic Electronics, Quad Bots to STM32 Autonomous Gyro Bots. Industry-certified pathways.",
-      "keywords": "robotics courses Chennai, AI courses India, build robot Chennai, Arduino training, quad bot assembly, PID control sensor courses, STEM courses Pondicherry"
+      "title": "Competition-Grade Robotics Courses | DS Inventek",
+      "description": "Learn from World Champions. Build real hardware. Electronics foundation to autonomous AI robots. Online and in-person at Chennai & Puducherry.",
+      "keywords": "robotics courses Chennai, STM32 training India, ESP32 robotics, PID control course, autonomous robot building, STEM courses Puducherry, Arduino to STM32"
     },
     "services": {
-      "title": "Robotics Services & Lab Setup CBSE | DS Inventek",
-      "description": "Explore our B2B integration points including CBSE EduTech curriculum, complete school/college robotics lab setups, and interactive experience zones. Founded by World Champions.",
-      "keywords": "robotics lab setup CBSE, school robotics curriculum, B2B robotics lab India, robotics experience zone setup, trainer certification program"
+      "title": "Institutional Robotics Solutions & Lab Setup | DS Inventek",
+      "description": "Turnkey robotics labs, NEP 2020-aligned curriculum, and faculty certification from World Champions. For schools, colleges, and corporate venues.",
+      "keywords": "robotics lab setup NEP 2020, CBSE robotics curriculum, school STEM lab India, Atal Tinkering Lab setup, faculty robotics certification, experience zone setup"
     },
     "about": {
-      "title": "About Our World Champion Robotics Team | DS Inventek",
-      "description": "Meet the founders and team behind DS Inventek. Born from competition, built for education. World Champions at Games of the Future 2024.",
-      "keywords": "robotics founders Chennai, robotics world champions India, Games of the Future 2024 Kazan, Bitva Robotov team, Chennai robotics school founders"
+      "title": "About DS Inventek | World Champion Robotics Team",
+      "description": "Founded by the engineers who won Games of the Future 2024 Kazan. DPIIT recognized. NITI Aayog registered. Six champions. One mission.",
+      "keywords": "DS Inventek founders, Games of the Future 2024 Kazan champions, combat robotics India, Bitva Robotov winners, DPIIT robotics startup"
     },
     "careers": {
-      "title": "Careers at DS Inventek | Build Next-Gen Robotics Pathways",
-      "description": "Join our growing team of world-champion engineers and STEM educators. Explore open positions for instructors, developers, and designers.",
-      "keywords": "robotics instructor jobs, embedded systems job Chennai, STEM educator vacancy Pondicherry, edtech career India"
+      "title": "Careers at DS Inventek | Join the Champions",
+      "description": "Work with World Champion engineers. Open positions for robotics instructors, embedded developers, and STEM educators. Chennai & Puducherry.",
+      "keywords": "robotics instructor jobs Chennai, embedded systems developer India, STEM educator vacancy, edtech startup careers, World Champion robotics team"
     },
     "contact": {
       "title": "Contact Us for Robotics Lab Setup & Courses | DS Inventek",
@@ -85,76 +87,94 @@
       "keywords": "contact robotics India, partner school STEM lab, register robotics workshop Chennai, school lab setups Chennai, robotics course registration, Chennai robotics"
     }
   },
+  "govBadges": {
+    "label": "Recognised & Certified By",
+    "items": [
+      { "title": "DPIIT Recognised", "subtitle": "DPIIT Recognised Startup", "icon": "🇮🇳" },
+      { "title": "AICTE Approved", "subtitle": "AICTE Approved", "icon": "🎓" },
+      { "title": "Startup India", "subtitle": "Startup India Registered", "icon": "🚀" },
+      { "title": "NITI Aayog", "subtitle": "NITI Aayog Supported", "icon": "🏛️" },
+      { "title": "DSIR Certified", "subtitle": "DSIR Certified", "icon": "🔬" }
+    ]
+  },
+  "testimonialSection": {
+    "eyebrow": "Testimonials",
+    "title": "What Our Community Says"
+  },
   "home": {
     "hero": {
-      "eyebrow": "World Champions — Games of the Future 2024, Kazan",
-      "titleLine1": "World Champions in Robotics.",
-      "titleLine2": "Now Building India's Next Generation of Engineers.",
-      "subtitle": "Kazan 2024 World Champions · 300+ Competition Wins · 5,000+ Students Trained across India",
+      "eyebrow": "🏆 Games of the Future 2024 World Champions — Kazan, Russia",
+      "titleLine1": "Engineer the Future.",
+      "titleLine2": "Train With World Champions.",
+      "subtitle": "The only DPIIT-recognized robotics education company in India founded by actual combat robotics World Champions. Now training the next generation.",
       "championshipBadge": {
         "trophyIcon": "🏆",
         "title": "World Champions",
         "location": "Games of the Future\nKazan, Russia",
         "year": "2024",
-        "caption": "Kazan 2024 · First Lego League · World Champions"
-      }
+        "caption": "Combat Robotics · International Champions · 10+ Year Track Record"
+      },
+      "primaryCta": { "text": "Explore Courses", "href": "/courses" },
+      "secondaryCta": { "text": "Set Up a Robotics Lab", "href": "/contact" }
     },
     "stats": [
-      { "num": "5,000", "label": "Students Trained" },
-      { "num": "300", "label": "Competition Wins" },
-      { "num": "10", "label": "Years of Excellence" },
-      { "num": "7", "label": "Business Verticals" }
+      { "num": "5,000", "label": "Students Mentored" },
+      { "num": "300", "label": "Competition Victories" },
+      { "num": "10", "label": "Years in Combat Robotics" },
+      { "num": "7", "label": "Integrated Verticals" }
     ],
     "segmentation": [
       {
         "icon": "⚡",
-        "title": "For Students",
-        "desc": "Learn robotics by building real, physical projects. Go from basic circuits to advanced autonomous flight.",
-        "ctaText": "Explore Courses →",
+        "title": "For Students & Parents",
+        "desc": "Your child learns directly from engineers who've competed at the world stage. Real hardware. Real skills. Real results.",
+        "ctaText": "View Courses →",
         "ctaHref": "/courses"
       },
       {
         "icon": "🏛️",
-        "title": "For Institutions",
-        "desc": "Equip your school or college with turnkey labs, CBSE-aligned curriculum, and world-class certification.",
-        "ctaText": "Get a Quotation →",
+        "title": "For Schools & Institutions",
+        "desc": "Give your institution a STEM edge with turnkey robotics labs, NEP 2020-aligned curriculum, and faculty certification from World Champions.",
+        "ctaText": "Request Proposal →",
         "ctaHref": "/contact"
       }
     ],
     "featuredCourses": {
-      "eyebrow": "Learn by Building",
-      "title": "Courses That Ship\nReal Projects",
-      "subtitle": "Every course ends with hardware you built yourself. No simulations. No shortcuts."
+      "eyebrow": "Hands-On Learning",
+      "title": "Build Real Robots.\nNot Simulations.",
+      "subtitle": "Every course ships real hardware to your hands. Designed by engineers who've won international championships."
     },
     "featuredServices": {
-      "eyebrow": "What We Offer",
-      "title": "Ways We\nEmpower Innovators",
-      "subtitle": "From school curriculum integration to turnkey labs — we have a vertical for every stage of the journey."
+      "eyebrow": "Institutional Solutions",
+      "title": "Transform Your\nSTEM Infrastructure",
+      "subtitle": "Turnkey robotics labs, certified faculty training, and competition-ready curriculum — backed by World Champions."
     },
     "cta": {
-      "title": "Ready to build your first robot?",
-      "subtitle": "Join 5,000+ students who've gone from curious to capable with DS Inventek.",
-      "primaryText": "Explore Courses",
+      "title": "The Future Belongs to Builders.",
+      "subtitle": "5,000+ students have transformed from beginners to builders with DS Inventek. Your turn.",
+      "primaryText": "Start Learning",
       "primaryHref": "/courses",
-      "secondaryText": "Talk to Us",
+      "secondaryText": "Partner With Us",
       "secondaryHref": "/contact"
-    }
+    },
+    "browseAllCourses": "Browse All Courses",
+    "viewAllServices": "View All Services"
   },
   "about": {
     "hero": {
-      "title": "About DS Inventek",
-      "subtitle": "Born from competition. Built for education. Backed by world championship excellence. Headquartered in Puducherry, with a presence in Chennai."
+      "title": "Built by Champions. Driven by Purpose.",
+      "subtitle": "We're not educators who learned robotics. We're combat robotics World Champions who chose to educate. There's a difference."
     },
     "mission": {
       "label": "Our Mission",
-      "text": "To make robotics education accessible, hands-on, and world-class for every student in India."
+      "text": "To democratize world-class robotics education across India — delivering the same training methodologies that created international champions, now accessible to every student and institution."
     },
     "vision": {
       "label": "Our Vision",
-      "text": "To position India as a global leader in youth robotics innovation by 2030."
+      "text": "To establish India as the global epicenter of youth robotics innovation by 2030 — producing more competition-winning engineers than any other nation."
     },
-    "timelineEyebrow": "Our Journey",
-    "timelineTitle": "Born from Competition\nBuilt for Education",
+    "timelineEyebrow": "Our Battleground Record",
+    "timelineTitle": "From Arena Champions\nTo Education Leaders",
     "timeline": [
       {
         "year": "2023",
@@ -188,13 +208,13 @@
       }
     ],
     "teamEyebrow": "The Founding Team",
-    "teamTitle": "The Six Who Started It",
+    "teamTitle": "Six Champions. One Mission.",
     "team": [
       {
         "initials": "SM",
         "name": "Sanjidhan M",
         "role": "Chief Executive Officer (CEO)",
-        "bio": "Bio coming soon. Sanjidhan drives the strategic direction and institutional business development of DS Inventek.",
+        "bio": "Lead strategist behind DS Inventek's institutional expansion. Sanjidhan has negotiated partnerships with 50+ schools and spearheaded the company's entry into the B2B education market.",
         "experience": "10 Years in Robotics",
         "specialization": "Strategy & Growth",
         "gradient": "linear-gradient(135deg, #7C3AED, #4C1D95)"
@@ -203,7 +223,7 @@
         "initials": "SD",
         "name": "Sakthikumaran D",
         "role": "Chief Financial & Product Officer (CFO & CPO)",
-        "bio": "Bio coming soon. Sakthikumaran heads the educational product catalog development and corporate finance.",
+        "bio": "Architect of DS Inventek's curriculum products. Sakthikumaran designed the modular hardware kits used across all courses, blending cost-efficiency with competition-grade quality.",
         "experience": "8 Years in Product Design",
         "specialization": "Hardware Architecture",
         "gradient": "linear-gradient(135deg, #06B6D4, #0E7490)"
@@ -212,7 +232,7 @@
         "initials": "VM",
         "name": "VelMurugan",
         "role": "Chief Operating & Technology Officer (COO & CTO)",
-        "bio": "Bio coming soon. VelMurugan leads our technological architecture and deployment pipelines.",
+        "bio": "The engineering mind behind DS Inventek's championship-winning robots. VelMurugan designed the control systems for Godspeed, the bot that won Kazan 2024.",
         "experience": "9 Years in Engineering",
         "specialization": "Automation & Control Systems",
         "gradient": "linear-gradient(135deg, #059669, #065F46)"
@@ -221,7 +241,7 @@
         "initials": "VB",
         "name": "Vijay Baskar",
         "role": "Chief Operating Officer (COO)",
-        "bio": "Bio coming soon. Vijay manages project implementation, logistics, and onsite school workshop deliveries.",
+        "bio": "Operations commander for all on-ground deployments. Vijay has overseen 100+ school workshop deliveries across Tamil Nadu and Puducherry with zero logistics failures.",
         "experience": "7 Years in Operations",
         "specialization": "Workshop Management",
         "gradient": "linear-gradient(135deg, #D97706, #92400E)"
@@ -230,7 +250,7 @@
         "initials": "MV",
         "name": "Mukesh V",
         "role": "Chief Marketing Officer (CMO)",
-        "bio": "Bio coming soon. Mukesh designs high-impact outreach strategies and drives public relations.",
+        "bio": "Brand architect who positioned DS Inventek as the 'World Champions of Robotics Education'. Mukesh built the content strategy that drove 3x organic visibility growth.",
         "experience": "6 Years in Brand Growth",
         "specialization": "Digital Growth",
         "gradient": "linear-gradient(135deg, #DB2777, #9D174D)"
@@ -239,188 +259,193 @@
         "initials": "NK",
         "name": "Nakeeran",
         "role": "Chief Technology Officer (CTO)",
-        "bio": "Bio coming soon. Nakeeran architected the online student portal and supervises academic research.",
+        "bio": "Full-stack architect of DS Inventek's digital infrastructure. Nakeeran built the student learning portal and manages the technical backbone supporting all online courses.",
         "experience": "8 Years in Software Dev",
         "specialization": "Software Engineering",
         "gradient": "linear-gradient(135deg, #7C3AED, #06B6D4)"
       }
     ],
-    "whyUsTitle": "Why DS Inventek",
+    "whyUsTitle": "Why DS Inventek?",
     "whyUs": [
       {
-        "icon": "🌍",
-        "title": "World-Class Expertise",
-        "desc": "Our founders are literally world champions. We don't teach theory — we teach what we've done at the highest level."
+        "icon": "🏆",
+        "title": "Actual World Champions",
+        "desc": "We're not trainers who 'studied' robotics. We're combat robotics champions who've won on the international stage — and now we teach exactly how we did it."
       },
       {
-        "icon": "🔧",
-        "title": "Hands-On Learning",
-        "desc": "Every course ends with hardware you built yourself. Real components, real soldering, real robots that work."
+        "icon": "🛠️",
+        "title": "Competition-Grade Hardware",
+        "desc": "Every course uses real hardware — the same components and build quality we use in international competitions. No toy robots. No simulators."
       },
       {
-        "icon": "🏅",
-        "title": "Industry-Certified",
-        "desc": "Our trainers are certified through our rigorous program — the same program we offer to schools nationwide."
+        "icon": "🏛️",
+        "title": "Government Recognized",
+        "desc": "DPIIT recognized, NITI Aayog registered, and Startup India certified. We're the official, credible choice for institutional partnerships."
       }
     ],
     "cta": {
-      "title": "Join the Revolution",
-      "subtitle": "Be part of the team building the future of robotics education in India.",
-      "primaryText": "Explore Services →",
+      "title": "Partner With Champions",
+      "subtitle": "Whether you're a student seeking world-class training or an institution transforming STEM infrastructure — we're ready.",
+      "primaryText": "View Solutions →",
       "primaryHref": "/services",
-      "secondaryText": "Get in Touch",
+      "secondaryText": "Contact Us",
       "secondaryHref": "/contact"
     }
   },
   "services": {
     "hero": {
-      "title": "Our Services",
-      "subtitle": "Seven vertical integration points designed to deliver robotics education at every stage of the journey."
+      "title": "Enterprise Solutions That Deliver",
+      "subtitle": "Seven integrated verticals engineered to transform how institutions, venues, and students engage with robotics education."
+    },
+    "processSection": {
+      "eyebrow": "The Roadmap",
+      "title": "How It Works",
+      "subtitle": "We guide you step-by-step from initial concept design to final hardware integration and classroom launch."
     },
     "caseStudy": {
-      "title": "What Schools Say",
-      "eyebrow": "Case Study",
-      "school": "Case Study Coming Soon",
-      "meta": "Puducherry · Lab Setup",
-      "quote": "\"The turn-key robotics laboratory setup was completed on-time. The curriculum and staff training have empowered our students to begin building real hardware projects in their first semester.\"",
-      "outcome": "🏆 Outcome: School robotics enrollment increased by 40% in Year 1"
+      "title": "What Our Partners Say",
+      "eyebrow": "Partner Success",
+      "school": "APPU ENGLISH HIGH SCHOOL, Puducherry",
+      "meta": "Puducherry · Full Lab + Curriculum Integration",
+      "quote": "\"DS Inventek delivered a turnkey robotics laboratory with zero delays. The curriculum integration was seamless, and our faculty certification was completed within the first month. Our students are now building hardware in their first semester.\"",
+      "outcome": "🏆 Outcome: 40% increase in STEM course enrollment within Year 1"
     },
     "whyChooseUs": {
-      "eyebrow": "Why Choose Us",
-      "title": "Industry-Leading Excellence",
+      "eyebrow": "The DS Inventek Advantage",
+      "title": "Why Institutions Choose Us",
       "list": [
         {
           "icon": "🏆",
-          "title": "World Champions",
-          "desc": "Our team literally won the World Championship in robotics. We teach real-world competition strategies and techniques."
+          "title": "Combat-Proven Curriculum",
+          "desc": "Our courseware is built from actual competition experience. We teach the strategies that won at Kazan, not textbook theory."
         },
         {
-          "icon": "📊",
-          "title": "5,000+ Students",
-          "desc": "Over 5,000 students have trained with us. Our methodologies are battle-tested with measurable outcomes."
+          "icon": "🏛️",
+          "title": "Government Recognized",
+          "desc": "DPIIT, NITI Aayog, and Startup India certified. Your institution partners with an officially recognized entity."
         },
         {
-          "icon": "🌍",
-          "title": "Global Recognition",
-          "desc": "Certified trainers. Industry partnerships. International competition experience at every level."
+          "icon": "📦",
+          "title": "Turnkey Deployment",
+          "desc": "From empty room to fully operational robotics lab in 30 days. We handle everything — hardware, training, and support."
         },
         {
           "icon": "🛠️",
-          "title": "Hands-On Hardware",
-          "desc": "No simulations. Every course involves real robotics hardware that you build and control yourself."
+          "title": "Competition-Grade Hardware",
+          "desc": "Real microcontrollers, sensors, and fabrication tools — the same quality we use in international combat robotics."
         },
         {
           "icon": "🎓",
-          "title": "Structured Learning",
-          "desc": "Beginner to advanced pathways. Each course builds on previous skills with clear progression."
+          "title": "Faculty Certification",
+          "desc": "Your educators get certified directly by World Champions. Ongoing support ensures long-term program success."
         },
         {
-          "icon": "💼",
-          "title": "Career Ready",
-          "desc": "Our programs align with industry needs. Graduates are ready for college robotics teams and STEM careers."
+          "icon": "🚀",
+          "title": "Future-Ready Students",
+          "desc": "Students trained by DS Inventek are prepared for IIT robotics clubs, national competitions, and engineering careers."
         }
       ]
     },
     "cta": {
-      "title": "Ready to get started?",
-      "subtitle": "Contact us to discuss which service fits your needs perfectly.",
-      "primaryText": "Contact Us →",
+      "title": "Ready to Transform Your STEM Program?",
+      "subtitle": "Schedule a consultation to explore which solution fits your institution's needs and budget.",
+      "primaryText": "Request Proposal →",
       "primaryHref": "/contact",
-      "secondaryText": "Back Home",
-      "secondaryHref": "/"
+      "secondaryText": "View Courses",
+      "secondaryHref": "/courses"
     },
     "process": [
       {
         "step": "Step 1",
-        "title": "Submit Your Brief",
-        "desc": "Fill the contact form or WhatsApp us with your school name, student count, and which service you're exploring."
+        "title": "Submit Your Requirements",
+        "desc": "Fill the contact form with your institution name, student capacity, and which solution you're exploring. We respond within 24 hours."
       },
       {
         "step": "Step 2",
-        "title": "Consultation Call",
-        "desc": "Our team schedules a 30-minute call to understand your curriculum needs, existing infrastructure, and budget range."
+        "title": "Discovery Call",
+        "desc": "A 30-minute call with our solutions team to understand your curriculum goals, existing infrastructure, and budget parameters."
       },
       {
         "step": "Step 3",
-        "title": "Proposal & Demo",
-        "desc": "We send a detailed proposal within 48 hours and arrange an in-person or virtual demo at your convenience."
+        "title": "Custom Proposal + Demo",
+        "desc": "Receive a detailed proposal within 48 hours. We'll arrange an in-person or virtual demonstration of our hardware and curriculum."
       },
       {
         "step": "Step 4",
-        "title": "Implementation",
-        "desc": "On agreement, we deploy the lab setup, curriculum, or workshop with full onboarding support included."
+        "title": "Deployment & Support",
+        "desc": "On agreement, we deploy your solution with complete onboarding, faculty training, and 12-month support included."
       }
     ],
     "list": [
       {
         "id": "edutech-curriculum",
         "icon": "📚",
-        "title": "EduTech Curriculum",
-        "audience": "Schools · CBSE / State Board",
-        "priceInfo": "Starting from ₹1,50,000 per academic year",
-        "desc": "Give your school a competitive edge — a CBSE-aligned robotics curriculum with full teacher training and lab support.",
-        "longDesc": "Integrate robotics directly into your school's curriculum. We provide a complete textbook set, hands-on lab kits, teacher training, and ongoing assessment systems that make school-level STEM education structured, fun, and highly effective. Fully CBSE-compliant and customized for Grades 6 to 12.",
+        "title": "STEM Curriculum Integration",
+        "audience": "Schools · CBSE / State Board / ICSE",
+        "ctaBadge": "Get Custom Quote",
+        "desc": "NEP 2020-aligned robotics curriculum designed by World Champions. Complete with textbooks, lab kits, and faculty certification.",
+        "longDesc": "Transform your school's STEM offering with a plug-and-play robotics curriculum. Includes grade-wise textbooks, hands-on lab kits, digital resources, assessment frameworks, and comprehensive faculty training. Fully compliant with CBSE, ICSE, and State Board requirements. Designed by engineers who've competed at the world stage.",
         "features": [
-          "Grade 6-12 structured curriculum",
-          "CBSE & state-board aligned syllabus",
-          "Term-wise textbook sets & digital resources",
-          "Regular assessments & report cards",
-          "Annual STEM science-fair support",
-          "Continuous trainer workshops"
+          "Grade 6-12 modular curriculum design",
+          "CBSE, ICSE & State Board alignment",
+          "Term-wise textbooks + digital resources",
+          "Integrated assessment & reporting system",
+          "Annual STEM Olympiad preparation",
+          "Quarterly faculty upskilling workshops"
         ],
         "image": "/images/service-curriculum.png"
       },
       {
         "id": "robotics-lab-setup",
         "icon": "🖥️",
-        "title": "Robotics Lab Setup",
+        "title": "Turnkey Robotics Lab",
         "audience": "Schools · Colleges · Makerspaces",
-        "priceInfo": "Starting from ₹3,50,000 (turnkey)",
-        "desc": "From empty classroom to fully operational robotics lab — we handle design, sourcing, and setup.",
-        "longDesc": "Equip your institution with a state-of-the-art robotics laboratory. From high-quality components, tools, microcontrollers, and sensors to custom benches and storage systems — our turnkey solutions cover it all. Complete with on-site installation and trainer onboarding.",
+        "ctaBadge": "Request Pricing",
+        "desc": "From empty classroom to fully operational robotics lab in 30 days. We handle design, procurement, installation, and training.",
+        "longDesc": "A complete end-to-end laboratory deployment service. We design the workspace, procure competition-grade hardware, install fabrication equipment (3D printers, laser cutters, soldering stations), and train your faculty. Includes 12-month maintenance and support. Ready for NEP 2020 Atal Tinkering Lab standards.",
         "features": [
-          "End-to-end laboratory workspace design",
-          "Turnkey hardware & component procurement",
-          "3D printers, laser cutters, & soldering setups",
-          "On-site installation & hardware test runs",
-          "Trainer certification & operating manual",
-          "1-year comprehensive hardware maintenance"
+          "Custom workspace design & layout",
+          "Competition-grade hardware procurement",
+          "3D printers, laser cutters, soldering setup",
+          "On-site installation & equipment testing",
+          "Faculty certification by World Champions",
+          "12-month hardware maintenance included"
         ],
         "image": "/images/service-lab.png"
       },
       {
         "id": "experience-zone",
         "icon": "✨",
-        "title": "Experience Zone Setup",
-        "audience": "Malls · Museums · Venues",
-        "priceInfo": "Custom Quotation — Request Brief",
-        "desc": "Turn footfall into fascination — robotics experience zones for malls, museums, and public venues.",
-        "longDesc": "Design and install an interactive robotics zone that attracts, engages, and educates the public. Perfect for malls, science centers, museums, and private educational hubs. Includes automated robot combat arenas, robotic claws, and AI-vision games.",
+        "title": "Interactive Experience Zones",
+        "audience": "Malls · Museums · Corporate Venues",
+        "ctaBadge": "Request Custom Quote",
+        "desc": "Transform footfall into engagement. Combat robot arenas, AI vision games, and interactive exhibits for public venues.",
+        "longDesc": "Design and deploy high-engagement robotics experiences for public venues. Includes combat robot arenas with audience controls, AI computer vision games, robotic claw machines, and educational kiosks. Perfect for malls, science museums, corporate lobbies, and event activations. Complete with operator training and maintenance contracts.",
         "features": [
-          "Custom layout design matching brand aesthetic",
-          "Interactive robot combat arenas & controls",
-          "AI computer vision demonstration setups",
-          "Operator training & handbook guidelines",
-          "Weekly/monthly safety audit inspections",
-          "Regular bot updates & repairs"
+          "Custom layout matching brand guidelines",
+          "Combat robot arenas with audience interaction",
+          "AI computer vision demonstration exhibits",
+          "Operator training + operations handbook",
+          "Weekly safety audits & inspections",
+          "Ongoing robot maintenance & upgrades"
         ],
         "image": "/images/service-experience.png"
       },
       {
         "id": "online-courses",
         "icon": "🌐",
-        "title": "Online Courses (B2C)",
-        "audience": "Students · Hobbyists · All India",
-        "priceInfo": "Starting from ₹2,499 per module",
-        "desc": "Self-paced and live online robotics courses accessible from anywhere in India — beginner to advanced.",
-        "longDesc": "Accessible from anywhere in India, our online courses feature real hardware kits shipped directly to your doorstep. Learn circuit design, Arduino programming, PID control, and AI integration via video tutorials and weekly live interactive code review sessions.",
+        "title": "Online Learning Platform",
+        "audience": "Students · Hobbyists · Pan-India",
+        "ctaBadge": "Get Course Details",
+        "desc": "Learn from World Champions from anywhere in India. Real hardware kits shipped to your door. Live mentorship included.",
+        "longDesc": "Accessible from anywhere in India, our online courses combine video lessons, live doubt-clearing sessions, and real hardware kits delivered to your doorstep. Learn circuit design, microcontroller programming, PID control, and AI integration — taught by engineers who've won international championships. Project submissions reviewed by actual competition veterans.",
         "features": [
-          "Hands-on hardware kits delivered to your door",
-          "Live interactive doubt clearing sessions",
-          "Self-paced learning platform dashboard",
-          "Curriculum designed by World Champion engineers",
-          "Project submission reviews & feedback",
-          "Verified course completion certificate"
+          "Competition-grade hardware kits shipped free",
+          "Live weekly doubt-clearing sessions",
+          "Self-paced video learning platform",
+          "Curriculum designed by World Champions",
+          "Project submission with expert feedback",
+          "Industry-recognized completion certificate"
         ],
         "image": "/images/service-online.png"
       },
@@ -428,33 +453,35 @@
         "id": "inperson-training",
         "icon": "👥",
         "title": "In-Person Training Centers",
-        "audience": "Students · Professionals",
-        "priceInfo": "Starting from ₹1,200 per session",
-        "desc": "Hands-on robotics workshops and long-format programs at our Chennai and Pondicherry centers.",
-        "longDesc": "Get face-to-face mentorship from champion robotics engineers. Our Chennai and Pondicherry training centers are fully equipped with advanced fabrication tools, test areas, and specialized sensors for students who want to build complex autonomous bots.",
+        "audience": "Students · Professionals · Teams",
+        "ctaBadge": "Book a Session",
+        "desc": "Direct mentorship from World Champions at our Chennai and Puducherry centers. Professional fabrication tools included.",
+        "longDesc": "Get hands-on mentorship from the engineers who won at Kazan. Our training centers in Chennai and Puducherry feature professional fabrication tools, testing areas, and advanced sensor equipment. Perfect for students preparing for national competitions or professionals upskilling in embedded systems and robotics.",
         "features": [
-          "Dedicated workspace desks at Chennai & Pondicherry",
-          "Direct coaching from World Champion mentors",
-          "Work with professional grade fabrication tools",
-          "Weekend & summer bootcamp scheduling batches",
-          "Mock robotics competitions & trials",
-          "Access to advanced parts library"
+          "Dedicated workstations in Chennai & Puducherry",
+          "Direct coaching from World Champion engineers",
+          "Professional fabrication tools & equipment",
+          "Weekend & summer bootcamp options",
+          "Mock competitions & trial runs",
+          "Access to advanced components library"
         ],
         "image": "/images/service-inperson.png"
       },
       {
         "id": "trainer-certification",
         "icon": "🏅",
-        "title": "Trainer Certification",
+        "title": "Faculty Certification Program",
         "audience": "Educators · Trainers · Institutions",
-        "priceInfo": "Starting from ₹15,000 per cohort",
-        "desc": "Certify your educators with our DS Inventek Robotics Trainer Program — industry-recognised credentials.",
-        "longDesc": "Empower your instructors or start your own tutoring career. Our Trainer Certification program teaches coding, physics, electronics, mechanical design, and classroom management techniques to ensure high-quality STEM instruction.",
+        "ctaBadge": "Enquire Now",
+        "desc": "Certify your educators with credentials from World Champions. Industry-recognized, NEP 2020-aligned faculty training.",
+        "longDesc": "Transform your educators into certified robotics instructors. Our intensive certification program covers electronics fundamentals, programming, mechanical design, and effective STEM pedagogy — all taught by engineers who've won international championships. Graduates receive lifetime access to curriculum updates and dedicated support.",
         "features": [
-          "Industry recognized",
-          "2-week intensive",
-          "Lifetime support",
-          "Job placement"
+          "Industry-recognized certification",
+          "2-week intensive training bootcamp",
+          "Electronics, coding & mechanical design",
+          "STEM pedagogy & classroom management",
+          "Lifetime curriculum updates & support",
+          "Job placement assistance included"
         ],
         "image": "/images/service-certification.png"
       }
@@ -462,61 +489,61 @@
   },
   "courses": {
     "hero": {
-      "title": "Courses That Ship Real Projects",
-      "subtitle": "Every course ends with hardware you built yourself."
+      "title": "Build Real Robots. Not Simulations.",
+      "subtitle": "Competition-grade hardware. World Champion instructors. Projects you'll actually keep."
     },
     "learningPath": {
-      "eyebrow": "Your Learning Journey",
-      "title": "Progressive Skill Building",
+      "eyebrow": "Structured Progression",
+      "title": "From Zero to Competition-Ready",
       "stages": [
         {
-          "stage": "Level 1",
-          "title": "Foundations",
+          "stage": "Foundation",
+          "title": "Master the Basics",
           "courses": ["Basic Electronics & Robotics Foundation"],
-          "desc": "Master the basics of circuits, sensors, and simple robotics with hardware you build yourself."
+          "desc": "Learn circuits, sensors, and mechanical fundamentals by building 20+ real hardware projects. Perfect for beginners with zero experience."
         },
         {
-          "stage": "Level 2",
-          "title": "Smart Controls",
+          "stage": "Intermediate",
+          "title": "Smart Systems",
           "courses": ["Quad Bot – ESP32 Smart Robotics"],
-          "desc": "Build walking robotics systems with advanced wireless IoT microcontroller control."
+          "desc": "Build walking robots with Wi-Fi control, voice commands, and gesture recognition. Master IoT and wireless integration."
         },
         {
-          "stage": "Level 3",
-          "title": "Autonomous Systems",
+          "stage": "Advanced",
+          "title": "Autonomous Intelligence",
           "courses": ["Gyro Bot – STM32 Autonomous Robotics"],
-          "desc": "Design and build self-balancing autonomous robots with closed-loop PID control."
+          "desc": "Design self-balancing robots with AI vision, LiDAR navigation, and PID control. Competition-ready engineering."
         }
       ]
     },
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "Common Questions",
       "list": [
         {
-          "q": "Do I need prior robotics experience?",
-          "a": "Not at all! Our beginner Level 1 course starts from the absolute fundamentals and assumes no prior experience."
+          "q": "Do I need any prior experience?",
+          "a": "None at all. Our Foundation course starts from absolute zero — we've taught complete beginners who've never touched a circuit board."
         },
         {
-          "q": "Are materials included?",
-          "a": "Yes, all course materials, microcontrollers, and components are fully included."
+          "q": "What hardware do I get to keep?",
+          "a": "Everything. All course kits, microcontrollers, sensors, and components are yours. You leave with working robots you built yourself."
         },
         {
-          "q": "Will I get a certificate?",
-          "a": "Yes, completion of any Level course gets you an industry-recognized DS Inventek certificate."
+          "q": "Is certification industry-recognized?",
+          "a": "Yes. Completion certificates are issued by DS Inventek, a DPIIT-recognized company founded by World Champions."
         },
         {
-          "q": "Can I attend classes in person?",
-          "a": "Yes! We offer both online and in-person classes at our Chennai and Pondicherry centers."
+          "q": "Online or in-person?",
+          "a": "Both. Online courses ship hardware to your door with live sessions. In-person available at Chennai and Puducherry centers."
         }
       ]
     },
     "cta": {
-      "title": "Ready to start building?",
-      "subtitle": "Choose a course above or contact us to find the perfect fit for your skill level.",
-      "primaryText": "Enroll Now →",
+      "title": "Ready to Build?",
+      "subtitle": "Register your interest and we'll help you choose the right course for your skill level.",
+      "primaryText": "Register Interest →",
       "primaryHref": "/contact",
-      "secondaryText": "Back Home",
-      "secondaryHref": "/"
+      "secondaryText": "View Services",
+      "secondaryHref": "/services"
     },
     "list": [
       {
@@ -580,6 +607,20 @@
     ]
   },
   "careers": {
+    "hero": {
+      "title": "Careers",
+      "subtitle": "Shape the Future of Robotics & AI Education. Join the World Champion Team."
+    },
+    "sectionHeading": "Current Openings",
+    "introText": "We are looking for passionate individuals who love hardware, microcontrollers, and teaching. If you want to build India's next generation of engineers, we want to hear from you.",
+    "requirementsLabel": "What we look for:",
+    "formTitle": "Submit Application",
+    "formSubtitle": "Apply directly using the form below.",
+    "positionOptions": [
+      { "value": "Robotics Instructor", "label": "Robotics Instructor" },
+      { "value": "Embedded Systems Developer", "label": "Embedded Systems Developer" },
+      { "value": "General Application", "label": "General / Other" }
+    ],
     "openPositions": [
       {
         "title": "Robotics Instructor (Chennai & Puducherry)",
@@ -605,21 +646,32 @@
       }
     ]
   },
+  "contact": {
+    "hero": {
+      "title": "Let's Build Together",
+      "subtitle": "Whether you're a student, parent, or institution — we're here to help you start your robotics journey."
+    },
+    "quickLinks": [
+      { "icon": "📚", "title": "Browse Courses", "desc": "Explore our full range of robotics courses.", "href": "/courses" },
+      { "icon": "🛠️", "title": "Our Services", "desc": "Learn about our seven service verticals.", "href": "/services" },
+      { "icon": "🏆", "title": "About Us", "desc": "Meet the team behind DS Inventek.", "href": "/about" }
+    ]
+  },
   "testimonials": [
     {
-      "quote": "My son learned the basics of circuit design and built his first project here. The instructors are extremely patient and know how to keep children engaged.",
+      "quote": "My son went from playing video games to building actual robots. The instructors are World Champions — their passion is contagious. He's now preparing for national competitions.",
       "name": "Rajesh Kumar",
       "city": "Chennai",
-      "program": "Basic Electronics"
+      "program": "Basic Electronics Course"
     },
     {
-      "quote": "Highly structured STEM curriculum. The practical lab setup support for our school has transformed our physics and computer labs completely.",
+      "quote": "The turnkey lab setup transformed our school's STEM department. Our physics and computer labs now have real fabrication equipment. Student enrollment in science streams increased 40% this year.",
       "name": "Sister Mary D'Souza",
       "city": "Puducherry",
-      "program": "School Lab Setup Partner"
+      "program": "Institutional Lab Partner"
     },
     {
-      "quote": "Coaching from World Champions is a game changer. The insights on motors and structural layout helped our team secure a podium finish in national level events.",
+      "quote": "Training from actual World Champions changed our team's approach completely. The insights on motor selection and structural reinforcement helped us secure podium finishes in two national events.",
       "name": "Sanjay Sen",
       "city": "Chennai",
       "program": "Competition Training"

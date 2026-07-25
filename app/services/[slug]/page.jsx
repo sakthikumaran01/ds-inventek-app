@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import ServiceDetailClient from "@/components/ServiceDetailClient";
+import ServiceDetailClient from "@/components/clients/ServiceDetailClient";
 import styles from "./detail.module.css";
 import content from "@/data/content.json";
 

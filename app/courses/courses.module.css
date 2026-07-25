@@ -3,14 +3,14 @@
   z-index: 1;
   padding: 8rem 2rem 4rem;
   margin-top: 60px;
-  background: linear-gradient(180deg, rgba(124, 58, 237, 0.05) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(14, 165, 233, 0.04) 0%, transparent 100%);
 }
 
 .heroTitle {
   font-family: var(--font-orbitron), sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 900;
-  line-height: 1.1;
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
@@ -185,6 +185,11 @@
 
   .pathContainer {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .pathCard {
+    padding: 1.75rem !important;
   }
 
   .faqGrid {
@@ -197,6 +202,28 @@
 
   .ctaBtns a {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 5rem 1rem 2.5rem;
+  }
+
+  .coursesGrid {
+    gap: 1rem;
+  }
+
+  .pathCard {
+    padding: 1.5rem !important;
+  }
+
+  .faqCard {
+    padding: 1.25rem !important;
+  }
+
+  .ctaInner {
+    padding: 3rem 1.5rem;
   }
 }
 

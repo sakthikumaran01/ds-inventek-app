@@ -1,12 +1,11 @@
 import "./globals.css";
 import { Inter, Orbitron, JetBrains_Mono } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import BackgroundOrbs from "@/components/BackgroundOrbs";
-import ScrollReveal from "@/components/ScrollReveal";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import BackToTop from "@/components/BackToTop";
-import CustomCursor from "@/components/CustomCursor";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import BackgroundOrbs from "@/components/layout/BackgroundOrbs";
+import ScrollReveal from "@/components/layout/ScrollReveal";
+import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
+import BackToTop from "@/components/layout/BackToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -77,7 +76,6 @@ export default function RootLayout({ children }) {
         <Footer />
         <FloatingWhatsApp />
         <BackToTop />
-        <CustomCursor />
       </body >
     </html >
   );

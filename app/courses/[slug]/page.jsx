@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import CourseDetailClient from "@/components/CourseDetailClient";
+import CourseDetailClient from "@/components/clients/CourseDetailClient";
 import styles from "./detail.module.css";
 import content from "@/data/content.json";
 

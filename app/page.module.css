@@ -7,26 +7,34 @@
   overflow: hidden;
   z-index: 1;
   margin-top: 60px;
-  background-image: linear-gradient(to right, rgba(6, 4, 15, 0.92) 35%, rgba(6, 4, 15, 0.5) 75%, rgba(6, 4, 15, 0.85) 100%), 
-                    url('/images/homescreen.jpeg');
+  background-image:
+    linear-gradient(to right,
+      rgba(3, 11, 26, 0.98) 0%,
+      rgba(3, 11, 26, 0.95) 30%,
+      rgba(3, 11, 26, 0.55) 52%,
+      rgba(3, 11, 26, 0.05) 75%,
+      transparent 100%),
+    url('/images/homescreen.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: center right;
 }
 
 .heroGrid {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(124, 58, 237, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124, 58, 237, 0.06) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 80%);
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 60% 80% at 20% 50%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 80% at 20% 50%, black 30%, transparent 80%);
   pointer-events: none;
 }
 
 .heroContent {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 6rem 2rem 4rem;
+  max-width: 600px;
+  margin: 0;
+  padding: 3.5rem 2rem 4rem clamp(2rem, 8vw, 7rem);
   position: relative;
   z-index: 2;
   width: 100%;
@@ -35,67 +43,75 @@
 .heroEyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(6, 182, 212, 0.1);
-  border: 1px solid rgba(6, 182, 212, 0.25);
+  gap: 0.6rem;
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 100px;
-  padding: 0.5rem 1.2rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem;
   font-family: var(--font-mono), monospace;
   font-weight: 600;
-  color: var(--secondary);
-  letter-spacing: 0.08em;
+  color: var(--primary-light);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 2rem;
-  animation: fadeUp 0.8s ease both;
+  margin-bottom: 1.75rem;
+}
+
+.globeIcon {
+  font-size: 1rem;
 }
 
 .heroEyebrow::before {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: var(--secondary);
-  box-shadow: 0 0 12px var(--secondary);
+  background: var(--primary-light);
+  box-shadow: 0 0 10px var(--primary);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
 }
 
 .heroTitle {
-  font-family: var(--font-orbitron), sans-serif;
-  font-size: clamp(2.5rem, 8vw, 5.5rem);
-  font-weight: 900;
-  line-height: 1.05;
+  font-family: var(--font-orbitron), system-ui, sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.2;
   letter-spacing: -0.02em;
-  margin-bottom: 2rem;
-  animation: fadeUp 0.8s 0.1s ease both;
+  margin-bottom: 1.5rem;
 }
 
 .line1 {
   display: block;
-  color: var(--text-primary);
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .line2 {
   display: block;
-  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  background: linear-gradient(90deg, var(--primary-light) 0%, var(--secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .heroSub {
-  font-size: 1.15rem;
-  color: var(--text-muted);
-  max-width: 580px;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #94a3b8;
+  max-width: 520px;
+  line-height: 1.75;
   margin-bottom: 2.5rem;
-  animation: fadeUp 0.8s 0.2s ease both;
+  font-weight: 400;
 }
 
 .heroCtas {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  animation: fadeUp 0.8s 0.3s ease both;
 }
 
 .heroCtas a {
@@ -206,8 +222,10 @@
 .stats {
   position: relative;
   z-index: 1;
-  background: linear-gradient(180deg, transparent, rgba(124, 58, 237, 0.06) 50%, transparent);
+  background: linear-gradient(180deg, rgba(3, 11, 26, 0) 0%, rgba(13, 27, 46, 0.5) 50%, rgba(3, 11, 26, 0) 100%);
   padding: 4rem 2rem;
+  border-top: 1px solid rgba(56, 189, 248, 0.07);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.07);
 }
 
 .statsInner {
@@ -302,6 +320,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 2rem;
+  flex-grow: 1;
 }
 
 @media (max-width: 768px) {
@@ -421,16 +440,29 @@
 @media (max-width: 768px) {
   .hero {
     margin-top: 40px;
-    min-height: auto;
+    min-height: 100svh;
     padding-top: 3rem;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(3, 11, 26, 0.92) 0%,
+        rgba(3, 11, 26, 0.88) 60%,
+        rgba(3, 11, 26, 0.95) 100%),
+      url('/images/homescreen.jpeg');
+    background-position: center center;
+    background-size: cover;
   }
 
   .heroContent {
-    padding: 3rem 1.5rem;
+    max-width: 100%;
+    padding: 3rem 1.5rem 4rem;
   }
 
   .heroTitle {
     margin-bottom: 1.5rem;
+  }
+
+  .heroSub {
+    max-width: 100%;
   }
 
   .scrollIndicator {
@@ -438,8 +470,21 @@
   }
 
   .statsInner {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.875rem;
+  }
+
+  .statCard {
+    padding: 1.5rem 0.5rem;
+    min-width: 0;
+  }
+
+  .statNum {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .statLabel {
+    font-size: clamp(0.62rem, 2.2vw, 0.85rem);
   }
 
   .servicesGrid {
@@ -452,13 +497,38 @@
 }
 
 @media (max-width: 480px) {
+  .hero {
+    background-position: center top;
+  }
+
+  .heroContent {
+    padding: 2.5rem 1rem 3.5rem;
+  }
+
+  .heroEyebrow {
+    font-size: 0.65rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .heroSub {
+    font-size: 1rem;
+  }
+
+  /* Keep 2×2 grid — intentionally no statsInner override here */
+
   .heroCtas {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
   }
 
   .heroCtas a {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     justify-content: center;
+    font-size: 0.78rem;
+    padding: 0.65rem 0.875rem;
+    white-space: nowrap;
   }
 
   .ctaBtns {
