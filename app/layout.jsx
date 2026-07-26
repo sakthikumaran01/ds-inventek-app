@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter, Orbitron, JetBrains_Mono } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackgroundOrbs from "@/components/layout/BackgroundOrbs";
@@ -76,6 +77,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <FloatingWhatsApp />
         <BackToTop />
+        <SpeedInsights />
       </body >
     </html >
   );
