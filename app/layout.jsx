@@ -1,12 +1,13 @@
 import "./globals.css";
-import { Inter, Orbitron, JetBrains_Mono } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Inter, Fraunces } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import BackgroundOrbs from "@/components/layout/BackgroundOrbs";
 import ScrollReveal from "@/components/layout/ScrollReveal";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 import BackToTop from "@/components/layout/BackToTop";
+import { SITE_URL } from "@/lib/utils";
+import { getOrganizationJsonLd } from "@/lib/structuredData";
+import content from "@/data/content.json";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,19 +15,20 @@ const inter = Inter({
   display: "swap",
 });
 
-const orbitron = Orbitron({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-orbitron",
+  weight: ["400", "500"],
+  variable: "--font-serif",
   display: "swap",
 });
 
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
+const siteUrl = SITE_URL;
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ds-inventek-i5u5etfv0-sakthisk.vercel.app';
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -67,17 +69,21 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const organizationJsonLd = getOrganizationJsonLd(content.company);
+
   return (
-    <html lang="en" className={`${inter.variable} ${orbitron.variable} ${mono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body>
-        <BackgroundOrbs />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <ScrollReveal />
         <Navbar />
         <main>{children}</main>
         <Footer />
         <FloatingWhatsApp />
         <BackToTop />
-        <SpeedInsights />
       </body >
     </html >
   );

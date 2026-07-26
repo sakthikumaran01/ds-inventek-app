@@ -2,15 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import styles from "./AnimatedCounter.module.css";
 
 /**
  * Animated counter component that counts up when in view
  * Great for stats sections
  */
-export default function AnimatedCounter({ 
-  end, 
-  duration = 2, 
-  prefix = "", 
+export default function AnimatedCounter({
+  end,
+  duration = 2,
+  prefix = "",
   suffix = "",
   decimals = 0,
   className = ""
@@ -55,7 +56,7 @@ export default function AnimatedCounter({
   return (
     <motion.span
       ref={ref}
-      className={className}
+      className={`${styles.counter} ${className}`}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
       transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}

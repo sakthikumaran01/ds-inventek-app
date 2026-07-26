@@ -3,22 +3,22 @@
   z-index: 1;
   padding: 8rem 2rem 4rem;
   margin-top: 60px;
-  background: linear-gradient(180deg, rgba(13, 27, 46, 0.4) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border-hairline);
 }
 
 .heroTitle {
-  font-family: var(--font-orbitron), system-ui, sans-serif;
+  font-family: var(--font-serif), serif;
   font-size: clamp(1.8rem, 4vw, 2.75rem);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
-  color: #ffffff;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
 .heroSub {
   font-size: 1.05rem;
-  color: var(--text-muted);
+  color: var(--ink-muted);
   max-width: 600px;
   line-height: 1.75;
 }

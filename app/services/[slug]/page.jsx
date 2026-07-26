@@ -4,6 +4,8 @@ import Link from "next/link";
 import ServiceDetailClient from "@/components/clients/ServiceDetailClient";
 import styles from "./detail.module.css";
 import content from "@/data/content.json";
+import { SITE_URL } from "@/lib/utils";
+import { getServiceJsonLd, getBreadcrumbJsonLd } from "@/lib/structuredData";
 
 export async function generateStaticParams() {
   return content.services.list.map((service) => ({
@@ -19,6 +21,9 @@ export async function generateMetadata({ params }) {
     title: `${service.title} | DS Inventek`,
     description: service.desc,
     keywords: `robotics, ${service.title}, school robotics, lab setup, STEM Chennai, Pondicherry`,
+    alternates: {
+      canonical: `/services/${service.id}`,
+    },
   };
 }
 
@@ -29,10 +34,24 @@ export default function ServiceDetailPage({ params }) {
     notFound();
   }
 
+  const serviceJsonLd = getServiceJsonLd(service);
+  const breadcrumbJsonLd = getBreadcrumbJsonLd([
+    { name: "Home", url: SITE_URL },
+    { name: "Services", url: `${SITE_URL}/services` },
+    { name: service.title, url: `${SITE_URL}/services/${service.id}` },
+  ]);
+
   return (
     <div className={styles.wrapper}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className={styles.heroSection}>
-        <div className={styles.heroGrid}></div>
         <div className="container">
           <div className={styles.navBreadcrumb}>
             <Link href="/services">Services</Link>
@@ -70,7 +89,7 @@ export default function ServiceDetailPage({ params }) {
                 <ul>
                   <li>✓ Work directly with World Champions (Kazan 2024 FLL title holders)</li>
                   <li>✓ Turnkey execution with zero reliance on secondary suppliers</li>
-                  <li>✓ Recognised by NITI Aayog, DPIIT, and Startup India</li>
+                  <li>✓ Recognised by DPIIT and Startup India</li>
                 </ul>
               </div>
             </div>
@@ -79,7 +98,7 @@ export default function ServiceDetailPage({ params }) {
               <div className={`glass-card ${styles.imageContainer}`}>
                 <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={service.imageAlt || service.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"
                   className={styles.image}

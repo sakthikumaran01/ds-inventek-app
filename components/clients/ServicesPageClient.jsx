@@ -35,6 +35,7 @@ export default function ServicesPageClient({ content }) {
                 desc={service.desc}
                 features={service.features}
                 image={service.image}
+                imageAlt={service.imageAlt}
                 delay={`${(idx % 3) * 0.1}`}
               />
             ))}
@@ -87,7 +88,7 @@ export default function ServicesPageClient({ content }) {
                 key={idx}
                 className={`glass-card ${styles.processCard}`}
                 variants={fadeUp}
-                whileHover={{ y: -8, scale: 1.02 }}
+                whileHover={{ y: -4 }}
               >
                 <div className={styles.processStep}>{step.step}</div>
                 <h3 className={styles.processTitle}>{step.title}</h3>
@@ -172,7 +173,7 @@ export default function ServicesPageClient({ content }) {
                 key={idx}
                 className={`glass-card ${styles.whyCard}`}
                 variants={fadeUp}
-                whileHover={{ y: -8, scale: 1.02 }}
+                whileHover={{ y: -4 }}
               >
                 <div className={styles.whyIcon} aria-hidden="true">{item.icon}</div>
                 <h3 className={styles.whyTitle}>{item.title}</h3>

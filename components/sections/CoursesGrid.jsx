@@ -46,6 +46,7 @@ export default function CoursesGrid({ courses, showFilter = false }) {
             duration={course.duration}
             price={course.price}
             image={course.image}
+            imageAlt={course.imageAlt}
             delay={`${(idx % 3) * 0.1}s`}
           />
         ))}

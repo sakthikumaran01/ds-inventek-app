@@ -1,7 +1,9 @@
 .floatingBtn {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  /* height is a fixed 56px icon-button diameter, not a layout width — it
+     never needs to shrink for smaller viewports. */
+  bottom: calc(2rem + env(safe-area-inset-bottom));
+  right: calc(2rem + env(safe-area-inset-right));
   z-index: 999;
   display: flex;
   align-items: center;
@@ -10,7 +12,7 @@
   background: #25d366;
   border-radius: 100px;
   padding: 0 1.25rem;
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 14px rgba(28, 27, 24, 0.18);
   color: #ffffff;
   text-decoration: none;
   font-family: var(--font-inter), sans-serif;
@@ -34,7 +36,7 @@
 
 .floatingBtn:hover {
   max-width: 200px;
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+  box-shadow: 0 6px 18px rgba(28, 27, 24, 0.24);
 }
 
 .floatingBtn:hover .label {
@@ -44,7 +46,7 @@
 
 @media (max-width: 768px) {
   .floatingBtn {
-    bottom: 1.5rem;
-    right: 1.5rem;
+    bottom: calc(1.5rem + env(safe-area-inset-bottom));
+    right: calc(1.5rem + env(safe-area-inset-right));
   }
 }

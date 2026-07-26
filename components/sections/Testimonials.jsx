@@ -31,7 +31,7 @@ function TestimonialCardContent({ t }) {
         <div className={styles.avatar}>{t.name[0]}</div>
         <div>
           <h4 className={styles.name}>{t.name}</h4>
-          <span className={styles.meta}>{t.city} Â· {t.program}</span>
+          <span className={styles.meta}>{t.city} {'·'} {t.program}</span>
         </div>
       </div>
     </>
@@ -78,7 +78,7 @@ export default function Testimonials() {
               key={idx}
               className={`glass-card ${styles.testimonialCard}`}
               variants={cardVariant}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -4 }}
             >
               <TestimonialCardContent t={t} />
             </motion.div>

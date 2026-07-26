@@ -5,19 +5,19 @@ export default function Loading() {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      background: "var(--bg-dark)",
+      background: "var(--bg-page)",
     }}>
       <div style={{ textAlign: "center" }}>
         <div style={{
           width: "48px",
           height: "48px",
-          border: "3px solid rgba(56, 189, 248, 0.15)",
-          borderTopColor: "var(--primary)",
+          border: "3px solid var(--border-hairline)",
+          borderTopColor: "var(--accent)",
           borderRadius: "50%",
           animation: "spin 0.8s linear infinite",
           margin: "0 auto 1rem",
         }} />
-        <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", letterSpacing: "0.08em" }}>
+        <p style={{ color: "var(--ink-muted)", fontSize: "0.85rem", letterSpacing: "0.08em" }}>
           Loading…
         </p>
         <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>

@@ -5,6 +5,9 @@ export const metadata = {
   title: content.meta.contact.title,
   description: content.meta.contact.description,
   keywords: content.meta.contact.keywords,
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

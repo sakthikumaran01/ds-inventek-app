@@ -97,7 +97,7 @@ export default function ContactPageClient({ content }) {
                     style={{
                       fontSize: "0.85rem",
                       fontWeight: "normal",
-                      color: "var(--text-muted)",
+                      color: "var(--ink-muted)",
                       marginTop: "0.25rem",
                     }}
                   >
@@ -119,7 +119,7 @@ export default function ContactPageClient({ content }) {
                     style={{
                       fontSize: "0.85rem",
                       fontWeight: "normal",
-                      color: "var(--text-muted)",
+                      color: "var(--ink-muted)",
                       marginTop: "0.25rem",
                     }}
                   >
@@ -137,7 +137,7 @@ export default function ContactPageClient({ content }) {
                 className="glass-card"
                 style={{ marginTop: "1.5rem", padding: "1.5rem" }}
                 variants={fadeRight}
-                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
               >
                 <div className={styles.responseTimeLabel}>
                   {content.company.responseTimeLabel}
@@ -158,8 +158,7 @@ export default function ContactPageClient({ content }) {
                   rel="noopener noreferrer"
                   className={styles.socialLink}
                   title="LinkedIn"
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ y: -3 }}
                 >
                   in
                 </motion.a>
@@ -170,8 +169,7 @@ export default function ContactPageClient({ content }) {
                   className={styles.socialLink}
                   title="Instagram"
                   aria-label="Instagram"
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ y: -3 }}
                 >
                   <span aria-hidden="true">📷</span>
                 </motion.a>
@@ -182,8 +180,7 @@ export default function ContactPageClient({ content }) {
                   className={styles.socialLink}
                   title="YouTube"
                   aria-label="YouTube"
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ y: -3 }}
                 >
                   <span aria-hidden="true">▶</span>
                 </motion.a>
@@ -194,8 +191,7 @@ export default function ContactPageClient({ content }) {
                   className={styles.socialLink}
                   title="WhatsApp"
                   aria-label="WhatsApp"
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ y: -3 }}
                 >
                   <span aria-hidden="true">💬</span>
                 </motion.a>
@@ -207,7 +203,7 @@ export default function ContactPageClient({ content }) {
                   marginTop: "2rem",
                   overflow: "hidden",
                   borderRadius: "12px",
-                  border: "1px solid var(--glass-border)",
+                  border: "1px solid var(--border-hairline)",
                 }}
                 variants={fadeRight}
               >
