@@ -5,6 +5,9 @@ export const metadata = {
   title: content.meta.courses.title,
   description: content.meta.courses.description,
   keywords: content.meta.courses.keywords,
+  alternates: {
+    canonical: "/courses",
+  },
 };
 
 export default function CoursesPage() {

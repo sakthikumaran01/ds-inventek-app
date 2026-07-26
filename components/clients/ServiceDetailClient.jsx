@@ -1,7 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import QuotationModal from "@/components/modals/QuotationModal";
+import dynamic from "next/dynamic";
+
+const QuotationModal = dynamic(() => import("@/components/modals/QuotationModal"), {
+  ssr: false,
+});
 
 export default function ServiceDetailClient({ serviceName }) {
   const [modalOpen, setModalOpen] = useState(false);

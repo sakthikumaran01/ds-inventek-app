@@ -1,7 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import EnrollmentModal from "@/components/modals/EnrollmentModal";
+import dynamic from "next/dynamic";
+
+const EnrollmentModal = dynamic(() => import("@/components/modals/EnrollmentModal"), {
+  ssr: false,
+});
 
 export default function CourseDetailClient({ courseName }) {
   const [modalOpen, setModalOpen] = useState(false);

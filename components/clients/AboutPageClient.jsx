@@ -58,20 +58,20 @@ export default function AboutPageClient({ content }) {
           >
             <motion.div
               className={`glass-card ${styles.missionCard}`}
-              style={{ borderLeft: "3px solid var(--primary-light)" }}
+              style={{ borderLeft: "3px solid var(--accent)" }}
               variants={fadeUp}
-              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
             >
               <div className={styles.cardLabel}>{content.about.mission.label}</div>
               <p className={styles.cardText}>{content.about.mission.text}</p>
             </motion.div>
             <motion.div
               className={`glass-card ${styles.missionCard}`}
-              style={{ borderLeft: "3px solid var(--secondary)" }}
+              style={{ borderLeft: "3px solid var(--accent)" }}
               variants={fadeUp}
-              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
             >
-              <div className={styles.cardLabel} style={{ color: "var(--secondary)" }}>
+              <div className={styles.cardLabel} style={{ color: "var(--accent)" }}>
                 {content.about.vision.label}
               </div>
               <p className={styles.cardText}>{content.about.vision.text}</p>
@@ -188,7 +188,7 @@ export default function AboutPageClient({ content }) {
       <div className="divider"></div>
 
       {/* Team */}
-      <section className="section">
+      <section className="section cv-auto">
         <div className="container">
           <motion.p
             className="section-eyebrow"
@@ -254,7 +254,7 @@ export default function AboutPageClient({ content }) {
       <div className="divider"></div>
 
       {/* Why Us */}
-      <section className="section">
+      <section className="section cv-auto">
         <div className="container">
           <motion.h2
             className="section-title"

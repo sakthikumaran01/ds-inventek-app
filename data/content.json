@@ -38,7 +38,7 @@
     ]
   },
   "footer": {
-    "desc": "DPIIT-recognized. NITI Aayog registered. Built by World Champions.",
+    "desc": "DPIIT-recognized. Built by World Champions.",
     "championBadge": "World Champions 🏆 Games of the Future 2024",
     "copyright": "© {year} DS Inventek Pvt. Ltd. All rights reserved. · Chennai & Puducherry, India",
     "links": {
@@ -73,7 +73,7 @@
     },
     "about": {
       "title": "About DS Inventek | World Champion Robotics Team",
-      "description": "Founded by the engineers who won Games of the Future 2024 Kazan. DPIIT recognized. NITI Aayog registered. Six champions. One mission.",
+      "description": "Founded by the engineers who won Games of the Future 2024 Kazan. DPIIT recognized. Six champions. One mission.",
       "keywords": "DS Inventek founders, Games of the Future 2024 Kazan champions, combat robotics India, Bitva Robotov winners, DPIIT robotics startup"
     },
     "careers": {
@@ -92,9 +92,7 @@
     "items": [
       { "title": "DPIIT Recognised", "subtitle": "DPIIT Recognised Startup", "icon": "🇮🇳" },
       { "title": "AICTE Approved", "subtitle": "AICTE Approved", "icon": "🎓" },
-      { "title": "Startup India", "subtitle": "Startup India Registered", "icon": "🚀" },
-      { "title": "NITI Aayog", "subtitle": "NITI Aayog Supported", "icon": "🏛️" },
-      { "title": "DSIR Certified", "subtitle": "DSIR Certified", "icon": "🔬" }
+      { "title": "Startup India", "subtitle": "Startup India Registered", "icon": "🚀" }
     ]
   },
   "testimonialSection": {
@@ -114,8 +112,8 @@
         "year": "2024",
         "caption": "Combat Robotics · International Champions · 10+ Year Track Record"
       },
-      "primaryCta": { "text": "Explore Courses", "href": "/courses" },
-      "secondaryCta": { "text": "Set Up a Robotics Lab", "href": "/contact" }
+      "primaryCta": { "text": "View Programs", "href": "/courses" },
+      "secondaryCta": { "text": "Request a Consultation", "href": "/contact" }
     },
     "stats": [
       { "num": "5,000", "label": "Students Mentored" },
@@ -128,14 +126,14 @@
         "icon": "⚡",
         "title": "For Students & Parents",
         "desc": "Your child learns directly from engineers who've competed at the world stage. Real hardware. Real skills. Real results.",
-        "ctaText": "View Courses →",
+        "ctaText": "View Programs →",
         "ctaHref": "/courses"
       },
       {
         "icon": "🏛️",
         "title": "For Schools & Institutions",
         "desc": "Give your institution a STEM edge with turnkey robotics labs, NEP 2020-aligned curriculum, and faculty certification from World Champions.",
-        "ctaText": "Request Proposal →",
+        "ctaText": "Request a Consultation →",
         "ctaHref": "/contact"
       }
     ],
@@ -152,9 +150,9 @@
     "cta": {
       "title": "The Future Belongs to Builders.",
       "subtitle": "5,000+ students have transformed from beginners to builders with DS Inventek. Your turn.",
-      "primaryText": "Start Learning",
+      "primaryText": "View Programs",
       "primaryHref": "/courses",
-      "secondaryText": "Partner With Us",
+      "secondaryText": "Request a Consultation",
       "secondaryHref": "/contact"
     },
     "browseAllCourses": "Browse All Courses",
@@ -280,7 +278,7 @@
       {
         "icon": "🏛️",
         "title": "Government Recognized",
-        "desc": "DPIIT recognized, NITI Aayog registered, and Startup India certified. We're the official, credible choice for institutional partnerships."
+        "desc": "DPIIT recognized and Startup India certified. We're the official, credible choice for institutional partnerships."
       }
     ],
     "cta": {
@@ -288,7 +286,7 @@
       "subtitle": "Whether you're a student seeking world-class training or an institution transforming STEM infrastructure — we're ready.",
       "primaryText": "View Solutions →",
       "primaryHref": "/services",
-      "secondaryText": "Contact Us",
+      "secondaryText": "Request a Consultation",
       "secondaryHref": "/contact"
     }
   },
@@ -322,7 +320,7 @@
         {
           "icon": "🏛️",
           "title": "Government Recognized",
-          "desc": "DPIIT, NITI Aayog, and Startup India certified. Your institution partners with an officially recognized entity."
+          "desc": "DPIIT and Startup India certified. Your institution partners with an officially recognized entity."
         },
         {
           "icon": "📦",
@@ -349,9 +347,9 @@
     "cta": {
       "title": "Ready to Transform Your STEM Program?",
       "subtitle": "Schedule a consultation to explore which solution fits your institution's needs and budget.",
-      "primaryText": "Request Proposal →",
+      "primaryText": "Request a Consultation →",
       "primaryHref": "/contact",
-      "secondaryText": "View Courses",
+      "secondaryText": "View Programs",
       "secondaryHref": "/courses"
     },
     "process": [
@@ -393,7 +391,8 @@
           "Annual STEM Olympiad preparation",
           "Quarterly faculty upskilling workshops"
         ],
-        "image": "/images/service-curriculum.png"
+        "image": "/images/service-curriculum.png",
+        "imageAlt": "Students seated at classroom desks listening to a teacher presenting at a whiteboard"
       },
       {
         "id": "robotics-lab-setup",
@@ -411,7 +410,8 @@
           "Faculty certification by World Champions",
           "12-month hardware maintenance included"
         ],
-        "image": "/images/service-lab.png"
+        "image": "/images/service-lab.png",
+        "imageAlt": "Students wearing safety glasses examining equipment together in an engineering lab"
       },
       {
         "id": "experience-zone",
@@ -429,7 +429,8 @@
           "Weekly safety audits & inspections",
           "Ongoing robot maintenance & upgrades"
         ],
-        "image": "/images/service-experience.png"
+        "image": "/images/service-experience.png",
+        "imageAlt": "A hand pinning a printed app mockup to a project-planning wall"
       },
       {
         "id": "online-courses",
@@ -447,7 +448,8 @@
           "Project submission with expert feedback",
           "Industry-recognized completion certificate"
         ],
-        "image": "/images/service-online.png"
+        "image": "/images/service-online.png",
+        "imageAlt": "Three people laughing together at a café table, two with laptops open"
       },
       {
         "id": "inperson-training",
@@ -465,7 +467,8 @@
           "Mock competitions & trial runs",
           "Access to advanced components library"
         ],
-        "image": "/images/service-inperson.png"
+        "image": "/images/service-inperson.png",
+        "imageAlt": "Two people in conversation at a table with an open laptop showing a dashboard"
       },
       {
         "id": "trainer-certification",
@@ -483,7 +486,8 @@
           "Lifetime curriculum updates & support",
           "Job placement assistance included"
         ],
-        "image": "/images/service-certification.png"
+        "image": "/images/service-certification.png",
+        "imageAlt": "A hand writing notes on paper beside a cup of coffee and a notebook"
       }
     ]
   },
@@ -540,9 +544,9 @@
     "cta": {
       "title": "Ready to Build?",
       "subtitle": "Register your interest and we'll help you choose the right course for your skill level.",
-      "primaryText": "Register Interest →",
+      "primaryText": "Request a Consultation →",
       "primaryHref": "/contact",
-      "secondaryText": "View Services",
+      "secondaryText": "View Solutions",
       "secondaryHref": "/services"
     },
     "list": [
@@ -564,7 +568,8 @@
           "Module 8: Timing & Control Systems (Integrated Circuits, 555 Timer, Traffic lights)",
           "Module 9: Renewable Energy & Capstone Projects (Solar panels, Solar cars)"
         ],
-        "image": "/images/course-electronics.png"
+        "image": "/images/course-electronics.png",
+        "imageAlt": "Hands using tweezers and a screwdriver to solder components onto a circuit board with a heat sink"
       },
       {
         "id": "quad-bot",
@@ -581,7 +586,8 @@
           "Module 5: Voice & Speech Controlled Smart Robot (Speech command algorithms)",
           "Module 6: Gesture & Motion Controlled Smart Robot (MPU6050 wireless glove control)"
         ],
-        "image": "/images/course-quadbot.png"
+        "image": "/images/course-quadbot.png",
+        "imageAlt": "A student working on a laptop connected to an electronics testing rig with wiring harnesses in a lab"
       },
       {
         "id": "gyro-bot",
@@ -602,7 +608,8 @@
           "Module 9: LQR Optimal Control Theory, Balance Mathematics & Hardware Circuit Analysis",
           "Module 10: Capstone Project: Autonomous Driving Self-Balancing Smart Car"
         ],
-        "image": "/images/course-balancing.png"
+        "image": "/images/course-balancing.png",
+        "imageAlt": "Close-up of a green microcontroller board with colorful jumper wires on a workbench"
       }
     ]
   },

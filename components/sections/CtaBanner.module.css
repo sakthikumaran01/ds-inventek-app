@@ -2,23 +2,9 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: linear-gradient(135deg, #0d1b2e 0%, #091524 100%);
-  border-top: 1px solid rgba(56, 189, 248, 0.08);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.08);
-}
-
-.ctaBanner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: 
-    radial-gradient(ellipse 80% 60% at 20% 50%, rgba(14, 165, 233, 0.06) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 60% at 80% 50%, rgba(129, 140, 248, 0.06) 0%, transparent 70%);
-  z-index: 0;
-}
-
-.ctaBanner::after {
-  content: none;
+  background: var(--accent);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
 }
 
 .ctaInner {
@@ -31,16 +17,16 @@
 }
 
 .ctaTitle {
-  font-family: var(--font-orbitron), sans-serif;
+  font-family: var(--font-serif), serif;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: var(--on-accent);
 }
 
 .ctaSub {
   font-size: 1rem;
-  color: var(--text-muted);
+  color: rgba(250, 248, 243, 0.75);
   margin-bottom: 2.5rem;
   max-width: 480px;
   margin-left: auto;
@@ -53,6 +39,17 @@
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* This banner sits on the --accent (navy) fill — override the
+   site-wide (light-background) btn-ghost treatment for contrast here. */
+.ctaBtns :global(.btn-ghost) {
+  color: var(--on-accent);
+  border-color: rgba(250, 248, 243, 0.35);
+}
+
+.ctaBtns :global(.btn-ghost):hover {
+  border-color: var(--on-accent);
 }
 
 @media (max-width: 480px) {

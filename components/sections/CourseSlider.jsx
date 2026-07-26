@@ -48,6 +48,7 @@ export default function CourseSlider({ courses }) {
               duration={course.duration}
               price={course.price}
               image={course.image}
+              imageAlt={course.imageAlt}
               delay={`${idx * 0.05}s`}
             />
           </div>

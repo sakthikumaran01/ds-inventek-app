@@ -1,0 +1,26 @@
+# DS Inventek
+
+> India's only DPIIT-recognized robotics education company founded by actual World Champions. Turnkey school labs, competition-grade courses, and faculty certification.
+
+DS Inventek is a DPIIT-recognized robotics and AI education company based in Chennai and Puducherry, India, founded by combat-robotics World Champions (Games of the Future 2024, Kazan). It offers hands-on robotics courses for students, and turnkey robotics lab setup, curriculum, and faculty certification services for schools and colleges.
+
+## Courses
+
+- [Basic Electronics & Robotics Foundation](https://dsinventek.com/courses/basic-electronics): Learn electronics and robotics fundamentals with hands-on circuit building.
+- [Quad Bot – ESP32 Smart Robotics](https://dsinventek.com/courses/quad-bot): Build and program a four-legged walking robot using ESP32 with wireless control.
+- [Gyro Bot – STM32 Autonomous Robotics](https://dsinventek.com/courses/gyro-bot): Master autonomous self-balancing and navigation using STM32 microcontrollers and gyroscopic sensors.
+
+## Services
+
+- [STEM Curriculum Integration](https://dsinventek.com/services/edutech-curriculum): NEP 2020-aligned robotics curriculum designed by World Champions. Complete with textbooks, lab kits, and faculty certification.
+- [Turnkey Robotics Lab](https://dsinventek.com/services/robotics-lab-setup): From empty classroom to fully operational robotics lab in 30 days. We handle design, procurement, installation, and training.
+- [Interactive Experience Zones](https://dsinventek.com/services/experience-zone): Transform footfall into engagement. Combat robot arenas, AI vision games, and interactive exhibits for public venues.
+- [Online Learning Platform](https://dsinventek.com/services/online-courses): Learn from World Champions from anywhere in India. Real hardware kits shipped to your door. Live mentorship included.
+- [In-Person Training Centers](https://dsinventek.com/services/inperson-training): Direct mentorship from World Champions at our Chennai and Puducherry centers. Professional fabrication tools included.
+- [Faculty Certification Program](https://dsinventek.com/services/trainer-certification): Certify your educators with credentials from World Champions. Industry-recognized, NEP 2020-aligned faculty training.
+
+## Company
+
+- [About](https://dsinventek.com/about): Founders, mission, and track record.
+- [Contact](https://dsinventek.com/contact): info@dsinventek.com · +91 98946 64933
+- [Careers](https://dsinventek.com/careers): Open positions.

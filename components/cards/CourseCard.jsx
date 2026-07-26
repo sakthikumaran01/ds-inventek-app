@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "./CourseCard.module.css";
+import { usePointerFine } from "@/hooks/usePointerFine";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
@@ -23,11 +24,13 @@ export default function CourseCard({
   level,
   duration,
   image,
+  imageAlt,
   delay = 0,
   id,
   slug,
 }) {
   const targetSlug = slug || id;
+  const isPointerFine = usePointerFine();
 
   // Determine level styling
   const getLevelClass = () => {
@@ -53,16 +56,16 @@ export default function CourseCard({
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay: parseFloat(delay) || 0 }}
-      whileHover={{ 
-        y: -10, 
-        scale: 1.02,
-        transition: { duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }
-      }}
+      whileHover={
+        isPointerFine
+          ? { y: -4, transition: { duration: 0.25, ease: "easeOut" } }
+          : undefined
+      }
     >
       <Link href={`/courses/${targetSlug}`} className={styles.courseCardBg}>
         <Image
           src={image}
-          alt={name}
+          alt={imageAlt || name}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className={styles.courseCardImage}

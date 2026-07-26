@@ -6,29 +6,22 @@
   align-items: center;
   overflow: hidden;
   z-index: 1;
-  margin-top: 60px;
+  /* No margin-top: the navbar overlays this hero (transparent until
+     scrolled — see Navbar.jsx isTransparent) so the photo runs full-height
+     behind it instead of sitting below a solid nav bar. */
   background-image:
+    linear-gradient(to bottom,
+      rgba(28, 27, 24, 0.45) 0,
+      rgba(28, 27, 24, 0) 150px),
     linear-gradient(to right,
-      rgba(3, 11, 26, 0.98) 0%,
-      rgba(3, 11, 26, 0.95) 30%,
-      rgba(3, 11, 26, 0.55) 52%,
-      rgba(3, 11, 26, 0.05) 75%,
+      rgba(28, 27, 24, 0.94) 0%,
+      rgba(28, 27, 24, 0.88) 30%,
+      rgba(28, 27, 24, 0.5) 52%,
+      rgba(28, 27, 24, 0.05) 75%,
       transparent 100%),
     url('/images/homescreen.jpeg');
   background-size: cover;
   background-position: center right;
-}
-
-.heroGrid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 60% 80% at 20% 50%, black 30%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse 60% 80% at 20% 50%, black 30%, transparent 80%);
-  pointer-events: none;
 }
 
 .heroContent {
@@ -44,14 +37,14 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: rgba(14, 165, 233, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(250, 248, 243, 0.08);
+  border: 1px solid rgba(250, 248, 243, 0.25);
   border-radius: 100px;
   padding: 0.5rem 1.25rem;
-  font-size: 0.75rem;
-  font-family: var(--font-mono), monospace;
+  font-size: 0.6875rem;
+  font-family: var(--font-inter), sans-serif;
   font-weight: 600;
-  color: var(--primary-light);
+  color: var(--bg-page);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 1.75rem;
@@ -63,45 +56,30 @@
 
 .heroEyebrow::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background: var(--primary-light);
-  box-shadow: 0 0 10px var(--primary);
-  animation: pulse 2s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.2); }
+  background: var(--bg-page);
 }
 
 .heroTitle {
-  font-family: var(--font-orbitron), system-ui, sans-serif;
+  font-family: var(--font-serif), serif;
   font-size: clamp(2rem, 4.5vw, 3.25rem);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
 }
 
-.line1 {
-  display: block;
-  color: #ffffff;
-  font-weight: 700;
-}
-
+.line1,
 .line2 {
   display: block;
-  background: linear-gradient(90deg, var(--primary-light) 0%, var(--secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--bg-page);
 }
 
 .heroSub {
   font-size: 1.1rem;
-  color: #94a3b8;
+  color: rgba(250, 248, 243, 0.78);
   max-width: 520px;
   line-height: 1.75;
   margin-bottom: 2.5rem;
@@ -122,51 +100,35 @@
   animation: slideInRight 0.8s ease both;
 }
 
-.heroBadge {
-  position: absolute;
-  right: 8%;
-  top: 50%;
-  transform: translateY(-50%);
-  animation: fadeUp 0.8s 0.5s ease both, floatBadge 6s ease-in-out 1s infinite;
-}
-
-@keyframes floatBadge {
-  0%,
-  100% {
-    transform: translateY(-50%) translateY(0);
-  }
-  50% {
-    transform: translateY(-50%) translateY(-20px);
-  }
-}
-
-.trophyIcon {
-  font-size: 3.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.trophyTitle {
-  font-family: var(--font-orbitron), sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
+/* Both CTAs sit on the dark photographic hero — the site-wide navy
+   btn-primary fill blends into the dark backdrop, so invert it to a
+   light ivory fill here instead. The secondary btn-ghost keeps its
+   outline style but gets ivory text/border for contrast. */
+.heroCtas :global(.btn-primary) {
+  background: var(--bg-page);
   color: var(--accent);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
 }
 
-.trophySub {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  line-height: 1.6;
+.heroCtas :global(.btn-primary):hover {
+  background: var(--border-strong);
 }
 
-.trophyYear {
-  font-family: var(--font-mono), monospace;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-top: 0.75rem;
+.heroCtas :global(.btn-primary):active {
+  background: var(--ink-faint);
+}
+
+.heroCtas :global(.btn-ghost) {
+  color: var(--bg-page);
+  border-color: rgba(250, 248, 243, 0.35);
+}
+
+.heroCtas :global(.btn-ghost):hover {
+  border-color: var(--bg-page);
+}
+
+.heroCtas :global(.btn-ghost):active {
+  background: rgba(250, 248, 243, 0.12);
+  border-color: var(--bg-page);
 }
 
 .scrollIndicator {
@@ -183,7 +145,7 @@
 
 .scrollIndicator span {
   font-size: 0.7rem;
-  color: var(--text-muted);
+  color: rgba(250, 248, 243, 0.7);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -191,7 +153,7 @@
 .scrollMouse {
   width: 24px;
   height: 40px;
-  border: 2px solid var(--glass-border);
+  border: 2px solid rgba(250, 248, 243, 0.35);
   border-radius: 12px;
   display: flex;
   justify-content: center;
@@ -201,7 +163,7 @@
 .scrollWheel {
   width: 4px;
   height: 8px;
-  background: var(--primary-light);
+  background: var(--bg-page);
   border-radius: 2px;
   animation: scrollWheel 2s ease-in-out infinite;
 }
@@ -222,10 +184,10 @@
 .stats {
   position: relative;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(3, 11, 26, 0) 0%, rgba(13, 27, 46, 0.5) 50%, rgba(3, 11, 26, 0) 100%);
+  background: var(--bg-elevated);
   padding: 4rem 2rem;
-  border-top: 1px solid rgba(56, 189, 248, 0.07);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.07);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
 }
 
 .statsInner {
@@ -242,19 +204,17 @@
 }
 
 .statNum {
-  font-family: var(--font-mono), monospace;
-  font-size: 3rem;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 2.5rem;
   font-weight: 600;
-  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  letter-spacing: -0.01em;
+  color: var(--accent);
   display: block;
 }
 
 .statLabel {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--ink-muted);
   margin-top: 0.5rem;
   line-height: 1.5;
   display: block;
@@ -277,29 +237,21 @@
 
 .segmentCard {
   padding: 3rem !important;
-  border-radius: 20px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.22, 1);
+  transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
-.studentCard {
-  border-color: rgba(167, 139, 250, 0.2) !important;
-}
-
-.studentCard:hover {
-  border-color: rgba(167, 139, 250, 0.5) !important;
-  box-shadow: 0 0 30px rgba(124, 58, 237, 0.15);
-}
-
+.studentCard,
 .institutionCard {
-  border-color: rgba(6, 182, 212, 0.2) !important;
+  border-color: var(--border-hairline) !important;
 }
 
+.studentCard:hover,
 .institutionCard:hover {
-  border-color: rgba(6, 182, 212, 0.5) !important;
-  box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+  border-color: var(--border-strong) !important;
 }
 
 .segmentIcon {
@@ -308,15 +260,15 @@
 }
 
 .segmentTitle {
-  font-family: var(--font-orbitron), sans-serif;
+  font-family: var(--font-serif), serif;
   font-size: 1.4rem;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 500;
+  color: var(--ink);
   margin-bottom: 1rem;
 }
 
 .segmentDesc {
-  color: var(--text-muted);
+  color: var(--ink-muted);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -361,69 +313,8 @@
   margin-bottom: 2rem;
 }
 
-/* ── CTA BANNER ── */
-.ctaBanner {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.ctaBanner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(76, 29, 149, 0.6) 0%, rgba(124, 58, 237, 0.4) 50%, rgba(6, 182, 212, 0.2) 100%);
-  z-index: 0;
-}
-
-.ctaBanner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-top: 1px solid var(--glass-border);
-  border-bottom: 1px solid var(--glass-border);
-  z-index: 0;
-}
-
-.ctaInner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 5rem 2rem;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.ctaTitle {
-  font-family: var(--font-orbitron), sans-serif;
-  font-size: clamp(1.8rem, 5vw, 3rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.ctaSub {
-  font-size: 1rem;
-  color: var(--text-muted);
-  margin-bottom: 2.5rem;
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-.ctaBtns {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .heroBadge {
-    display: none;
-  }
-
   .statsInner {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -439,14 +330,13 @@
 
 @media (max-width: 768px) {
   .hero {
-    margin-top: 40px;
     min-height: 100svh;
     padding-top: 3rem;
     background-image:
       linear-gradient(to bottom,
-        rgba(3, 11, 26, 0.92) 0%,
-        rgba(3, 11, 26, 0.88) 60%,
-        rgba(3, 11, 26, 0.95) 100%),
+        rgba(28, 27, 24, 0.88) 0%,
+        rgba(28, 27, 24, 0.84) 60%,
+        rgba(28, 27, 24, 0.92) 100%),
       url('/images/homescreen.jpeg');
     background-position: center center;
     background-size: cover;
@@ -531,34 +421,5 @@
     white-space: nowrap;
   }
 
-  .ctaBtns {
-    flex-direction: column;
-  }
-
-  .ctaBtns a {
-    width: 100%;
-  }
-}
-
-.championshipBadge {
-  border: 2px solid #f59e0b !important;
-  box-shadow: 0 0 30px rgba(245, 158, 11, 0.35) !important;
-  background: rgba(245, 158, 11, 0.05) !important;
-  transition: all 0.3s ease;
-}
-
-.championshipBadge:hover {
-  transform: translateY(-50%) scale(1.05) !important;
-  box-shadow: 0 0 40px rgba(245, 158, 11, 0.5) !important;
-}
-
-.trophyCaption {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 0.75rem;
 }
 

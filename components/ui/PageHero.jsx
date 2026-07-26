@@ -2,12 +2,10 @@
 
 import { motion } from "framer-motion";
 import styles from "./PageHero.module.css";
-import CircuitPattern from "./CircuitPattern";
 
 export default function PageHero({ title, subtitle }) {
   return (
     <section className={styles.hero}>
-      <CircuitPattern opacity={0.06} />
       <div className="container">
         <motion.h1 
           id="hero-title" 

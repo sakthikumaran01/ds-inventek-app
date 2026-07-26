@@ -30,11 +30,11 @@ export default function Footer() {
               DS <span>INVENTEK</span>
             </Link>
             <p>{content.footer.desc}</p>
-            <p style={{ fontSize: "0.8rem", marginTop: "0.5rem", color: "var(--text-muted)" }}>
-              <span aria-hidden="true">📧</span> <a href={`mailto:${content.company.email}`} style={{ color: "var(--primary-light)", textDecoration: "none" }}>{content.company.email}</a>
+            <p style={{ fontSize: "0.8rem", marginTop: "0.5rem", color: "rgba(250, 248, 243, 0.6)" }}>
+              <span aria-hidden="true">📧</span> <a href={`mailto:${content.company.email}`} style={{ color: "var(--bg-page)", textDecoration: "none" }}>{content.company.email}</a>
             </p>
-            <p style={{ fontSize: "0.8rem", marginTop: "0.4rem", color: "var(--text-muted)" }}>
-              <span aria-hidden="true">📞</span> <a href={`tel:${content.company.phoneRaw}`} style={{ color: "var(--primary-light)", textDecoration: "none" }}>{content.company.phone}</a>
+            <p style={{ fontSize: "0.8rem", marginTop: "0.4rem", color: "rgba(250, 248, 243, 0.6)" }}>
+              <span aria-hidden="true">📞</span> <a href={`tel:${content.company.phoneRaw}`} style={{ color: "var(--bg-page)", textDecoration: "none" }}>{content.company.phone}</a>
             </p>
           </div>
 

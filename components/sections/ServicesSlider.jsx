@@ -51,6 +51,7 @@ export default function ServicesSlider({ services }) {
               desc={service.desc}
               badge={service.badge}
               image={service.image}
+              imageAlt={service.imageAlt}
               delay={`${idx * 0.1}`}
               slug={service.slug}
               ctaBadge={service.ctaBadge}

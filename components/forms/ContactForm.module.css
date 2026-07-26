@@ -5,9 +5,9 @@
 .successMessage {
   text-align: center;
   padding: 2rem;
-  background: rgba(52, 211, 153, 0.1);
-  border: 1px solid rgba(52, 211, 153, 0.3);
-  border-radius: 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  border-radius: 10px;
   margin-bottom: 2rem;
   animation: slideDown 0.4s ease;
 }
@@ -25,13 +25,13 @@
 
 .successIcon {
   font-size: 2rem;
-  color: #34d399;
+  color: var(--accent);
   margin-bottom: 0.5rem;
   display: block;
 }
 
 .successMessage p {
-  color: #34d399;
+  color: var(--ink);
   font-weight: 600;
 }
 
@@ -50,7 +50,7 @@
   display: block;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--ink-muted);
   margin-bottom: 0.5rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -60,33 +60,31 @@
 .formGroup select,
 .formGroup textarea {
   width: 100%;
-  background: rgba(13, 27, 46, 0.6);
-  border: 1px solid rgba(56, 189, 248, 0.1);
+  background: var(--bg-page);
+  border: 1px solid var(--border-hairline);
   border-radius: 8px;
   padding: 0.8rem 1rem;
-  color: var(--text-primary);
+  color: var(--ink);
   font-family: var(--font-inter), sans-serif;
   font-size: 0.9rem;
-  transition: all 0.25s ease;
+  transition: border-color 0.25s ease;
   outline: none;
 }
 
 .formGroup input::placeholder,
 .formGroup textarea::placeholder {
-  color: #4a5568;
+  color: var(--ink-faint);
 }
 
 .formGroup input:focus,
 .formGroup select:focus,
 .formGroup textarea:focus {
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.08);
-  background: rgba(13, 27, 46, 0.8);
+  border-color: var(--accent);
 }
 
 .formGroup select option {
-  background: #0d1b2e;
-  color: var(--text-primary);
+  background: var(--bg-card);
+  color: var(--ink);
 }
 
 .formGroup textarea {
