@@ -1,0 +1,45 @@
+.socialIcons {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+/* Dark: for placements on a dark background (e.g. the footer) */
+.dark {
+  color: rgba(250, 248, 243, 0.6);
+  border: 1px solid rgba(250, 248, 243, 0.15);
+  background: transparent;
+}
+
+.dark:hover {
+  color: var(--bg-page);
+  border-color: rgba(250, 248, 243, 0.4);
+}
+
+/* Light: for placements on the light page background (e.g. contact page) */
+.light {
+  color: var(--ink-muted);
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-card);
+}
+
+.light:hover {
+  color: var(--accent);
+  border-color: var(--border-strong);
+}
+
+@media (max-width: 480px) {
+  .socialIcons {
+    flex-wrap: wrap;
+  }
+}

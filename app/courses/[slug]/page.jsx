@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${course.name} Course | DS Inventek`,
     description: course.desc,
-    keywords: `robotics, ${course.name}, STEM courses, build robot Chennai, Arduino, Raspberry Pi, Chennai`,
+    keywords: `robotics, ${course.name}, STEM courses, robotics classes Chennai, robotics classes Puducherry, online robotics course India, Arduino, Raspberry Pi`,
     alternates: {
       canonical: `/courses/${course.id}`,
     },

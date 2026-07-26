@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${service.title} | DS Inventek`,
     description: service.desc,
-    keywords: `robotics, ${service.title}, school robotics, lab setup, STEM Chennai, Pondicherry`,
+    keywords: `robotics, ${service.title}, school robotics, lab setup Chennai, lab setup Puducherry, STEM South India, Pondicherry`,
     alternates: {
       canonical: `/services/${service.id}`,
     },
