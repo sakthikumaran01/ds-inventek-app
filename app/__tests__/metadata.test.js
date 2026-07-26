@@ -14,6 +14,7 @@ describe("page metadata", () => {
       import("../about/page.jsx"),
       import("../services/page.jsx"),
       import("../courses/page.jsx"),
+      import("../courses/robotics-sports-training/page.jsx"),
       import("../careers/page.jsx"),
       import("../contact/page.jsx"),
     ];
@@ -48,6 +49,7 @@ describe("page metadata", () => {
       import("../about/page.jsx"),
       import("../services/page.jsx"),
       import("../courses/page.jsx"),
+      import("../courses/robotics-sports-training/page.jsx"),
       import("../careers/page.jsx"),
       import("../contact/page.jsx"),
     ];

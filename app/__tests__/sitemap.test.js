@@ -25,7 +25,7 @@ describe("app/sitemap.js", () => {
 
   it("includes the core static routes", () => {
     const urls = sitemap().map((entry) => entry.url);
-    for (const route of ["/about", "/services", "/courses", "/careers", "/contact"]) {
+    for (const route of ["/about", "/services", "/courses", "/courses/robotics-sports-training", "/careers", "/contact"]) {
       expect(urls.some((url) => url.endsWith(route))).toBe(true);
     }
   });

@@ -1,7 +1,15 @@
 import content from "@/data/content.json";
 import { SITE_URL } from "@/lib/utils";
 
-const staticRoutes = ["", "/about", "/services", "/courses", "/careers", "/contact"];
+const staticRoutes = [
+  "",
+  "/about",
+  "/services",
+  "/courses",
+  "/courses/robotics-sports-training",
+  "/careers",
+  "/contact",
+];
 
 export default function sitemap() {
   const now = new Date();

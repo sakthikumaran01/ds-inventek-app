@@ -4,6 +4,13 @@
   gap: 1.5rem;
 }
 
+/* Modifier for when the Robotics Sports Training card joins the 3 leveled
+   courses in the unfiltered ("All") view — 4 equal columns so it sits in
+   the same row instead of wrapping alone onto a new one. */
+.coursesGridQuad {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .pathContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -90,7 +97,8 @@
 }
 
 @media (max-width: 1024px) {
-  .coursesGrid {
+  .coursesGrid,
+  .coursesGridQuad {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -100,7 +108,8 @@
 }
 
 @media (max-width: 768px) {
-  .coursesGrid {
+  .coursesGrid,
+  .coursesGridQuad {
     grid-template-columns: 1fr;
   }
 
