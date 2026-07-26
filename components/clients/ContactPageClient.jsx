@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import PageHero from "@/components/ui/PageHero";
 import ContactForm from "@/components/forms/ContactForm";
+import SocialIcons from "@/components/ui/SocialIcons";
 import styles from "@/app/contact/contact.module.css";
 
 const staggerContainer = {
@@ -123,10 +124,10 @@ export default function ContactPageClient({ content }) {
                       marginTop: "0.25rem",
                     }}
                   >
-                    {content.company.operatingHours.split("\n").map((line, i) => (
+                    {content.company.operatingHours.split("\n").map((line, i, lines) => (
                       <span key={i}>
                         {line}
-                        {i === 0 && <br />}
+                        {i < lines.length - 1 && <br />}
                       </span>
                     ))}
                   </div>
@@ -147,54 +148,8 @@ export default function ContactPageClient({ content }) {
                 </p>
               </motion.div>
 
-              <motion.div
-                className={styles.socialLinks}
-                style={{ marginTop: "1.5rem" }}
-                variants={fadeRight}
-              >
-                <motion.a
-                  href={content.company.socialLinks.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.socialLink}
-                  title="LinkedIn"
-                  whileHover={{ y: -3 }}
-                >
-                  in
-                </motion.a>
-                <motion.a
-                  href={content.company.socialLinks.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.socialLink}
-                  title="Instagram"
-                  aria-label="Instagram"
-                  whileHover={{ y: -3 }}
-                >
-                  <span aria-hidden="true">📷</span>
-                </motion.a>
-                <motion.a
-                  href={content.company.socialLinks.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.socialLink}
-                  title="YouTube"
-                  aria-label="YouTube"
-                  whileHover={{ y: -3 }}
-                >
-                  <span aria-hidden="true">▶</span>
-                </motion.a>
-                <motion.a
-                  href={content.company.socialLinks.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.socialLink}
-                  title="WhatsApp"
-                  aria-label="WhatsApp"
-                  whileHover={{ y: -3 }}
-                >
-                  <span aria-hidden="true">💬</span>
-                </motion.a>
+              <motion.div style={{ marginTop: "1.5rem" }} variants={fadeRight}>
+                <SocialIcons variant="light" />
               </motion.div>
 
               {/* Map embed */}

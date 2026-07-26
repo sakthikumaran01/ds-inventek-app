@@ -35,6 +35,11 @@ const fadeLeft = {
   },
 };
 
+// Founding Team section ("Six Champions. One Mission.") temporarily
+// hidden per request — JSX and content.json's `about.team` data are left
+// intact. To re-enable, set this back to true.
+const showFoundingTeam = false;
+
 export default function AboutPageClient({ content }) {
   const timeline = content.about.timeline;
   const team = content.about.team;
@@ -185,71 +190,75 @@ export default function AboutPageClient({ content }) {
         </div>
       </section>
 
-      <div className="divider"></div>
+      {showFoundingTeam && (
+        <>
+          <div className="divider"></div>
 
-      {/* Team */}
-      <section className="section cv-auto">
-        <div className="container">
-          <motion.p
-            className="section-eyebrow"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            {content.about.teamEyebrow}
-          </motion.p>
-          <motion.h2
-            className="section-title"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            {content.about.teamTitle}
-          </motion.h2>
-
-          <motion.div
-            className={styles.teamGrid}
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            {team.map((member, idx) => (
-              <motion.div
-                key={idx}
-                className={`glass-card ${styles.teamCard}`}
-                variants={fadeUp}
-                whileHover={{
-                  y: -10,
-                  boxShadow: "0 20px 40px rgba(0, 212, 255, 0.2)",
-                  transition: { duration: 0.3 },
-                }}
+          {/* Team */}
+          <section className="section cv-auto">
+            <div className="container">
+              <motion.p
+                className="section-eyebrow"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
               >
-                <motion.div
-                  className={styles.teamAvatar}
-                  style={{ background: member.gradient }}
-                  whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-                >
-                  {member.initials}
-                </motion.div>
-                <div className={styles.teamRole}>{member.role}</div>
-                <div className={styles.teamName}>{member.name}</div>
-                <p className={styles.teamBio}>{member.bio}</p>
-                <div className={styles.teamTags}>
-                  <span className={`${styles.teamTag} ${styles.tagExperience}`}>
-                    {member.experience}
-                  </span>
-                  <span className={`${styles.teamTag} ${styles.tagSpecialization}`}>
-                    {member.specialization}
-                  </span>
-                </div>
+                {content.about.teamEyebrow}
+              </motion.p>
+              <motion.h2
+                className="section-title"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                {content.about.teamTitle}
+              </motion.h2>
+
+              <motion.div
+                className={styles.teamGrid}
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+              >
+                {team.map((member, idx) => (
+                  <motion.div
+                    key={idx}
+                    className={`glass-card ${styles.teamCard}`}
+                    variants={fadeUp}
+                    whileHover={{
+                      y: -10,
+                      boxShadow: "0 20px 40px rgba(0, 212, 255, 0.2)",
+                      transition: { duration: 0.3 },
+                    }}
+                  >
+                    <motion.div
+                      className={styles.teamAvatar}
+                      style={{ background: member.gradient }}
+                      whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+                    >
+                      {member.initials}
+                    </motion.div>
+                    <div className={styles.teamRole}>{member.role}</div>
+                    <div className={styles.teamName}>{member.name}</div>
+                    <p className={styles.teamBio}>{member.bio}</p>
+                    <div className={styles.teamTags}>
+                      <span className={`${styles.teamTag} ${styles.tagExperience}`}>
+                        {member.experience}
+                      </span>
+                      <span className={`${styles.teamTag} ${styles.tagSpecialization}`}>
+                        {member.specialization}
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
               </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+            </div>
+          </section>
+        </>
+      )}
 
       <div className="divider"></div>
 

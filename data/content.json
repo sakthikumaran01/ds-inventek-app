@@ -5,7 +5,7 @@
     "phone": "+91 98946 64933",
     "phoneRaw": "+919894664933",
     "whatsappNumber": "919894664933",
-    "operatingHours": "Monday – Saturday: 9:00 AM – 6:00 PM\nSunday: Closed",
+    "operatingHours": "Monday – Sunday: 9:00 AM – 6:00 PM",
     "responseTimeLabel": "Response Time",
     "responseTimeText": "We typically respond within 24 hours on business days. For urgent inquiries, email us or chat via WhatsApp.",
     "addresses": {
@@ -21,9 +21,9 @@
       }
     },
     "socialLinks": {
-      "linkedin": "https://linkedin.com/company/ds-inventek",
+      "linkedin": "https://www.linkedin.com/company/downsouth-inventek",
       "instagram": "https://instagram.com/ds_inventek",
-      "youtube": "https://youtube.com/@dsinventek",
+      "youtube": "https://www.youtube.com/@DownSouthInventek",
       "whatsapp": "https://wa.me/919894664933"
     }
   },
@@ -58,13 +58,13 @@
   "meta": {
     "home": {
       "title": "World Champion Robotics Education | DS Inventek Chennai & Puducherry",
-      "description": "India's only DPIIT-recognized robotics education company founded by actual World Champions. Turnkey school labs, competition-grade courses, and faculty certification.",
-      "keywords": "robotics training Chennai, World Champion robotics India, STEM lab setup CBSE NEP 2020, combat robotics education, DPIIT robotics startup, Games of the Future champions"
+      "description": "India's only DPIIT-recognized robotics education company founded by actual World Champions. Turnkey school labs, competition-grade courses, and faculty certification — based in Chennai & Puducherry, serving students pan-India online.",
+      "keywords": "robotics training Chennai, robotics classes Puducherry, World Champion robotics India, STEM lab setup CBSE NEP 2020, combat robotics education, DPIIT robotics startup, Games of the Future champions"
     },
     "courses": {
       "title": "Competition-Grade Robotics Courses | DS Inventek",
-      "description": "Learn from World Champions. Build real hardware. Electronics foundation to autonomous AI robots. Online and in-person at Chennai & Puducherry.",
-      "keywords": "robotics courses Chennai, STM32 training India, ESP32 robotics, PID control course, autonomous robot building, STEM courses Puducherry, Arduino to STM32"
+      "description": "Learn from World Champions. Build real hardware. Electronics foundation to autonomous AI robots. Available online pan-India, and in-person at Chennai & Puducherry.",
+      "keywords": "robotics courses Chennai, online robotics courses India, STM32 training India, ESP32 robotics, PID control course, autonomous robot building, STEM courses Puducherry, Arduino to STM32"
     },
     "services": {
       "title": "Institutional Robotics Solutions & Lab Setup | DS Inventek",
@@ -82,9 +82,9 @@
       "keywords": "robotics instructor jobs Chennai, embedded systems developer India, STEM educator vacancy, edtech startup careers, World Champion robotics team"
     },
     "contact": {
-      "title": "Contact Us for Robotics Lab Setup & Courses | DS Inventek",
-      "description": "Get in touch with us to discuss school robotics curriculums, college lab setups, student workshops, and partnership opportunities. We respond within 24 hours.",
-      "keywords": "contact robotics India, partner school STEM lab, register robotics workshop Chennai, school lab setups Chennai, robotics course registration, Chennai robotics"
+      "title": "Contact Us — Robotics Lab Setup & Courses | Chennai & Puducherry",
+      "description": "Get in touch with our Chennai and Puducherry centres to discuss school robotics curriculums, college lab setups, student workshops, and partnership opportunities. We respond within 24 hours.",
+      "keywords": "contact robotics India, partner school STEM lab, register robotics workshop Chennai, school lab setups Puducherry, robotics course registration, Chennai and Puducherry robotics centres"
     }
   },
   "govBadges": {
@@ -125,7 +125,7 @@
       {
         "icon": "⚡",
         "title": "For Students & Parents",
-        "desc": "Your child learns directly from engineers who've competed at the world stage. Real hardware. Real skills. Real results.",
+        "desc": "Your child learns directly from engineers who've competed at the world stage. Real hardware. Real skills. Real results. Available online across South India and pan-India, with hardware kits shipped straight to your door.",
         "ctaText": "View Programs →",
         "ctaHref": "/courses"
       },
@@ -161,7 +161,7 @@
   "about": {
     "hero": {
       "title": "Built by Champions. Driven by Purpose.",
-      "subtitle": "We're not educators who learned robotics. We're combat robotics World Champions who chose to educate. There's a difference."
+      "subtitle": "We're not educators who learned robotics. We're combat robotics World Champions who chose to educate. There's a difference. Competing internationally as Team DS Robotics, our Kazan 2024 world title is the foundation DS Inventek was built on."
     },
     "mission": {
       "label": "Our Mission",
