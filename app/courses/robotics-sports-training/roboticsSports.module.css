@@ -1,0 +1,254 @@
+.wrapper {
+  color: var(--ink);
+}
+
+.heroSection {
+  position: relative;
+  padding: clamp(5rem, 11vw, 8rem) 0 clamp(2.5rem, 6vw, 4rem);
+  background: var(--bg-elevated);
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.navBreadcrumb {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  margin-bottom: 2rem;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.navBreadcrumb a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navBreadcrumb a:hover {
+  color: var(--accent);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+/* Plain pill eyebrow badge — matches services/[slug]'s audienceBadge
+   pattern, not the color-coded levelBadge used by leveled courses. */
+.eyebrowBadge {
+  display: inline-block;
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-inter), sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-serif), serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+.tagline {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin-bottom: 1.5rem;
+}
+
+.introText {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin-bottom: 2.25rem;
+}
+
+.ctaWrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Content Layout */
+.contentSection {
+  padding: 4rem 0 6rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  .ctaWrapper {
+    flex-direction: column;
+  }
+
+  .ctaWrapper a,
+  .ctaWrapper button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contentSection {
+    padding: 3rem 0 4rem;
+  }
+
+  .longDesc {
+    font-size: 0.95rem;
+  }
+
+  .eventsCard,
+  .trustCard {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .introText {
+    font-size: 1rem;
+  }
+
+  .eventsCard,
+  .trustCard {
+    padding: 1.25rem !important;
+  }
+}
+
+.sectionHeader {
+  font-family: var(--font-serif), serif;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+}
+
+.longDesc {
+  color: var(--ink-muted);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+}
+
+.trustCard {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-hairline) !important;
+  padding: 2rem !important;
+  border-radius: 12px;
+}
+
+.trustCard h4 {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.trustCard p {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-bottom: 1.25rem;
+}
+
+.trustStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+
+/* Right Column */
+.imageContainer {
+  position: relative;
+  height: clamp(170px, 22vw, 250px);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-hairline) !important;
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* Events list — simple bold-name + one-line description rows, since the
+   source copy is one-liners, not paragraph+checklist content. */
+.eventsCard {
+  padding: 2rem !important;
+  border-radius: 12px;
+}
+
+.eventsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.eventRow {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.eventRow:first-child {
+  padding-top: 0;
+}
+
+.eventRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.eventName {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.eventDesc {
+  color: var(--ink-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.moreEventsNote {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ink-faint);
+}

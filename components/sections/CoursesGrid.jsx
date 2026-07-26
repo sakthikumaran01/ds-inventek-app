@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import CourseCard from "@/components/cards/CourseCard";
 import styles from "@/app/courses/courses.module.css";
 
-export default function CoursesGrid({ courses, showFilter = false }) {
+export default function CoursesGrid({ courses, showFilter = false, extraItem = null }) {
   const [activeFilter, setActiveFilter] = useState("All");
 
   useEffect(() => {
@@ -36,7 +36,11 @@ export default function CoursesGrid({ courses, showFilter = false }) {
         </div>
       )}
 
-      <div className={styles.coursesGrid}>
+      <div
+        className={`${styles.coursesGrid} ${
+          activeFilter === "All" && extraItem ? styles.coursesGridQuad : ""
+        }`}
+      >
         {filteredCourses.map((course, idx) => (
           <CourseCard
             key={course.id || idx}
@@ -50,6 +54,9 @@ export default function CoursesGrid({ courses, showFilter = false }) {
             delay={`${(idx % 3) * 0.1}s`}
           />
         ))}
+        {/* Not a leveled course — only shown alongside the full,
+            unfiltered list, never mixed into a specific level filter. */}
+        {activeFilter === "All" && extraItem}
       </div>
     </div>
   );

@@ -66,6 +66,11 @@
       "description": "Learn from World Champions. Build real hardware. Electronics foundation to autonomous AI robots. Available online pan-India, and in-person at Chennai & Puducherry.",
       "keywords": "robotics courses Chennai, online robotics courses India, STM32 training India, ESP32 robotics, PID control course, autonomous robot building, STEM courses Puducherry, Arduino to STM32"
     },
+    "roboticsSports": {
+      "title": "Robotics Sports Training | DS Inventek",
+      "description": "Runs in parallel with the core curriculum, throughout the program. Robo Soccer, Robo Sumo, Robo War, Drone Racing, and more competitive robotics events.",
+      "keywords": "robotics sports training, robo soccer, robo sumo, robo war combat robotics, drone racing India, line follower robot, maze solver robot, rover challenge"
+    },
     "services": {
       "title": "Institutional Robotics Solutions & Lab Setup | DS Inventek",
       "description": "Turnkey robotics labs, NEP 2020-aligned curriculum, and faculty certification from World Champions. For schools, colleges, and corporate venues.",
@@ -610,6 +615,77 @@
         ],
         "image": "/images/course-balancing.png",
         "imageAlt": "Close-up of a green microcontroller board with colorful jumper wires on a workbench"
+      }
+    ]
+  },
+  "roboticsSports": {
+    "slug": "robotics-sports-training",
+    "eyebrow": "Team & Individual Events",
+    "title": "Robotics Sports Training",
+    "tagline": "Runs in parallel with the core curriculum, throughout the program.",
+    "overview": "Alongside the core electronics and robotics courses, every student trains across a full lineup of competitive robotics sports. Each event builds real-world engineering skill under real-world pressure — designing, building, tuning, testing, and competing — while developing teamwork, strategic thinking, and the confidence that comes from competing on a live field. New events are added to the program over time as the curriculum grows.",
+    "moreEventsNote": "…with more competitive robotics events added to the program over time.",
+    "image": "/images/course-robotics.png",
+    "events": [
+      {
+        "id": "robo-soccer",
+        "name": "Robo Soccer",
+        "description": "Team-based robots battle to control the ball and score goals, blending mechanical design with live strategy and driving skill.",
+        "image": "/images/course-robotics.png"
+      },
+      {
+        "id": "robo-race",
+        "name": "Robo Race",
+        "description": "Each student tunes and drives their own robot for the fastest clean lap, testing motor control and driving precision.",
+        "image": "/images/course-robotics.png"
+      },
+      {
+        "id": "robo-sumo",
+        "name": "Robo Sumo",
+        "description": "Two robots go head-to-head in a ring, using power, traction, and smart tactics to push the opponent out.",
+        "image": "/images/course-robotics.png"
+      },
+      {
+        "id": "line-follower",
+        "name": "Line Follower",
+        "description": "Autonomous robots read and follow a marked path using sensors, competing on speed and accuracy.",
+        "image": "/images/course-robotics.png"
+      },
+      {
+        "id": "maze-solver",
+        "name": "Maze Solver",
+        "description": "Robots autonomously map an unknown maze and find the shortest path to the goal, building on sensing and algorithmic logic.",
+        "image": "/images/course-robotics.png"
+      },
+      {
+        "id": "rover-challenge",
+        "name": "Rover Challenge",
+        "description": "All-terrain rovers navigate rough, unpredictable ground to complete objective-based tasks, testing mechanical toughness and driving skill.",
+        "image": "/images/course-robotics.png"
+      },
+      {
+        "id": "robo-war",
+        "name": "Robo War (Combat Robotics)",
+        "description": "Armored robots battle head-to-head with weapons like spinners and flippers until one is disabled — the flagship event, and the exact discipline DS Inventek's founders won their World Championship in.",
+        "image": "/images/course-robotics.png"
+      },
+      {
+        "id": "drone-racing",
+        "name": "Drone Racing",
+        "description": "Students pilot small racing drones through timed obstacle courses, mastering flight control and precision piloting.",
+        "image": "/images/course-robotics.png"
+      },
+      {
+        "id": "submarine-rov",
+        "name": "Submarine (Underwater ROV)",
+        "description": "Students build and pilot a tethered underwater robot through underwater tasks, learning buoyancy control and remote operation.",
+        "image": "/images/course-robotics.png"
+      },
+      {
+        "id": "pick-and-place",
+        "name": "Pick and Place",
+        "description": "Students build and program a robotic arm to accurately pick up and place objects at target locations — a core skill in industrial automation.",
+        "image": "/images/course-robotics.png"
       }
     ]
   },
