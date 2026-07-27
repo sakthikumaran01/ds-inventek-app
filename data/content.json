@@ -28,7 +28,7 @@
     }
   },
   "navigation": {
-    "ctaButton": { "text": "Get Started", "href": "/contact" },
+    "ctaButton": { "text": "Book a Demo", "href": "/contact?subject=demo" },
     "navLinks": [
       { "href": "/", "label": "Home" },
       { "href": "/services", "label": "Services" },

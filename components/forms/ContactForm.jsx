@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./ContactForm.module.css";
 
 export default function ContactForm() {
@@ -13,6 +13,15 @@ export default function ContactForm() {
     source: "",
   });
   const [submitted, setSubmitted] = useState(false);
+
+  // Pre-select "Book a Demo" when arriving via the navbar CTA
+  // (/contact?subject=demo), instead of landing on a blank dropdown.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("subject") === "demo") {
+      setFormData((prev) => ({ ...prev, subject: "Book a Demo" }));
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -88,10 +97,12 @@ export default function ContactForm() {
           <label htmlFor="subject">Subject *</label>
           <select id="subject" name="subject" value={formData.subject} onChange={handleChange} required>
             <option value="">Select a subject</option>
-            <option>General Inquiry</option>
-            <option>Service Enquiry</option>
+            <option>Book a Demo</option>
             <option>Course Enquiry</option>
-            <option>Partnership</option>
+            <option>Service Enquiry (Schools & Institutions)</option>
+            <option>Quotation Request</option>
+            <option>Careers</option>
+            <option>General Inquiry</option>
             <option>Other</option>
           </select>
         </div>

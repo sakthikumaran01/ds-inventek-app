@@ -7,7 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://dsinventek.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.dsinventek.com";
 
 const content = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "data", "content.json"), "utf8")
