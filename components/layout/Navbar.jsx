@@ -150,11 +150,11 @@ export default function Navbar() {
               style={{ marginTop: "1.5rem" }}
             >
               <Link
-                href="/contact"
+                href="/contact?subject=demo"
                 className="btn-primary"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Get Started
+                Book a Demo
               </Link>
             </motion.div>
           </motion.div>

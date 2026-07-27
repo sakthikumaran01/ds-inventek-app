@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import CourseCard from "@/components/cards/CourseCard";
 import styles from "@/app/courses/courses.module.css";
 
+const SPORTS_FILTER = "Sports Training";
+const FILTERS = ["All", "Level 1", "Level 2", "Level 3", SPORTS_FILTER];
+
 export default function CoursesGrid({ courses, showFilter = false, extraItem = null }) {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -16,7 +19,10 @@ export default function CoursesGrid({ courses, showFilter = false, extraItem = n
     return () => clearTimeout(timer);
   }, [activeFilter]);
 
-  const filteredCourses = activeFilter === "All"
+  const showExtraItem = (activeFilter === "All" || activeFilter === SPORTS_FILTER) && extraItem;
+  const filteredCourses = activeFilter === SPORTS_FILTER
+    ? []
+    : activeFilter === "All"
     ? courses
     : courses.filter(course => course.level === activeFilter);
 
@@ -24,7 +30,7 @@ export default function CoursesGrid({ courses, showFilter = false, extraItem = n
     <div className={styles.gridContainer}>
       {showFilter && (
         <div className={styles.filterBar}>
-          {["All", "Level 1", "Level 2", "Level 3"].map((level) => (
+          {FILTERS.map((level) => (
             <button
               key={level}
               onClick={() => setActiveFilter(level)}
@@ -54,9 +60,9 @@ export default function CoursesGrid({ courses, showFilter = false, extraItem = n
             delay={`${(idx % 3) * 0.1}s`}
           />
         ))}
-        {/* Not a leveled course — only shown alongside the full,
-            unfiltered list, never mixed into a specific level filter. */}
-        {activeFilter === "All" && extraItem}
+        {/* Not a leveled course — shown with the full, unfiltered list,
+            or alone when the Sports Training filter is active. */}
+        {showExtraItem}
       </div>
     </div>
   );
