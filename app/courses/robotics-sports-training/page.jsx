@@ -46,7 +46,7 @@ export default function RoboticsSportsTrainingPage() {
             <div className={styles.ctaWrapper}>
               <CourseDetailClient courseName={program.title} />
               <Link href="/contact" className="btn-ghost">
-                Ask a Question
+                Ask a question
               </Link>
             </div>
           </div>

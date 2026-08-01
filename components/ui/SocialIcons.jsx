@@ -1,4 +1,5 @@
 import content from "@/data/content.json";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import styles from "./SocialIcons.module.css";
 
 /**
@@ -53,7 +54,7 @@ export default function SocialIcons({ variant = "light" }) {
         title="WhatsApp"
         aria-label="WhatsApp"
       >
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.004 0C5.378 0 0 5.376 0 12.001c0 2.112.551 4.167 1.597 5.979L0 24l6.196-1.625c1.752.955 3.72 1.458 5.804 1.46h.004c6.627 0 12.002-5.377 12.002-12.003C24.006 5.376 18.63 0 12.004 0zm0 22.001h-.003c-1.815 0-3.593-.487-5.14-1.408l-.369-.219-3.821.996 1.018-3.709-.241-.383C2.524 16.033 2 14.07 2 12.001 2 6.478 6.486 2 12.004 2c5.518 0 10.002 4.478 10.002 10.001 0 5.522-4.484 10-10.002 10z"/></svg>
+        <WhatsAppIcon width={18} height={18} />
       </a>
     </div>
   );

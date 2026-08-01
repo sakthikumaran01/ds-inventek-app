@@ -128,7 +128,7 @@ export default function CareersPageClient({ content }) {
                 <form onSubmit={handleSubmit}>
                   <div className={styles.formRow}>
                     <div className={styles.formGroup}>
-                      <label htmlFor="name">Full Name *</label>
+                      <label htmlFor="name">Full name *</label>
                       <input
                         type="text"
                         id="name"
@@ -140,7 +140,7 @@ export default function CareersPageClient({ content }) {
                       />
                     </div>
                     <div className={styles.formGroup}>
-                      <label htmlFor="phone">Phone Number *</label>
+                      <label htmlFor="phone">Phone number *</label>
                       <input
                         type="tel"
                         id="phone"
@@ -154,7 +154,7 @@ export default function CareersPageClient({ content }) {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <label htmlFor="email">Email Address *</label>
+                    <label htmlFor="email">Email address *</label>
                     <input
                       type="email"
                       id="email"
@@ -167,7 +167,7 @@ export default function CareersPageClient({ content }) {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <label htmlFor="position">Position of Interest *</label>
+                    <label htmlFor="position">Position of interest *</label>
                     <select
                       id="position"
                       name="position"
@@ -183,7 +183,7 @@ export default function CareersPageClient({ content }) {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <label htmlFor="portfolioUrl">Resume / Profile Link (Google Drive / GitHub / LinkedIn)</label>
+                    <label htmlFor="portfolioUrl">Resume / profile link (Google Drive / GitHub / LinkedIn)</label>
                     <input
                       type="url"
                       id="portfolioUrl"
@@ -195,7 +195,7 @@ export default function CareersPageClient({ content }) {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <label htmlFor="skills">Key Skill Sets & Core Technologies *</label>
+                    <label htmlFor="skills">Key skill sets & core technologies *</label>
                     <textarea
                       id="skills"
                       name="skills"
@@ -208,7 +208,7 @@ export default function CareersPageClient({ content }) {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <label htmlFor="coverLetter">Cover Letter / Describe Yourself *</label>
+                    <label htmlFor="coverLetter">Cover letter / describe yourself *</label>
                     <textarea
                       id="coverLetter"
                       name="coverLetter"
@@ -221,7 +221,13 @@ export default function CareersPageClient({ content }) {
                   </div>
 
                   <button type="submit" disabled={submitting} className={`btn-primary ${styles.submitBtn}`}>
-                    {submitting ? "Submitting Application..." : "Submit Application →"}
+                    {submitting ? (
+                      <>
+                        <span className="btn-spinner" aria-hidden="true" /> Submitting application…
+                      </>
+                    ) : (
+                      "Submit application →"
+                    )}
                   </button>
                 </form>
               </div>

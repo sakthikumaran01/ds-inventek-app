@@ -17,7 +17,7 @@ export default function ServiceDetailClient({ serviceName }) {
         onClick={() => setModalOpen(true)}
         style={{ fontSize: "1.05rem", padding: "0.9rem 2.25rem" }}
       >
-        Get a Quotation →
+        Get a quotation →
       </button>
 
       <QuotationModal 

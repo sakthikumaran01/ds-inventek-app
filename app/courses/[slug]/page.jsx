@@ -81,7 +81,7 @@ export default function CourseDetailPage({ params }) {
             <div className={styles.ctaWrapper}>
               <CourseDetailClient courseName={course.name} />
               <Link href="/contact" className="btn-ghost">
-                Ask a Question
+                Ask a question
               </Link>
             </div>
           </div>

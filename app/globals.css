@@ -13,7 +13,7 @@
   /* ── TEXT */
   --ink: #1C1B18;
   --ink-muted: #6B675C;
-  --ink-faint: #9A9585;
+  --ink-faint: #6E6959;
 
   /* ── BORDERS */
   --border-hairline: #E7E2D6;
@@ -32,6 +32,23 @@
   --bp-md: 768px;   /* tablets / large phones */
   --bp-lg: 1024px;  /* small laptops */
   --bp-xl: 1440px;  /* large desktop monitors */
+}
+
+/* ── FOCUS STATES ──
+   Keyboard-only ring (mouse clicks never trigger :focus-visible). Two
+   layers so it reads clearly on both the light ivory background and the
+   hero's dark photo overlay: the --accent outline does the work on light
+   backgrounds, the opaque --bg-page box-shadow ring does the work on dark
+   ones (it's invisible on plain ivory backgrounds, since it matches). */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--bg-page);
 }
 
 /* Documented exception: CourseSlider.module.css uses a 1200px min-width
@@ -185,6 +202,35 @@ body {
   background: var(--ink-faint);
   border-color: var(--ink-faint);
   box-shadow: 0 2px 6px rgba(28, 27, 24, 0.14);
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-ghost:disabled,
+.btn-white:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── FORM SUBMIT SPINNER ──
+   Uses currentColor so it reads correctly on any button variant
+   (on-accent text on btn-primary, ink on btn-ghost/btn-white, etc). */
+.btn-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  opacity: 0.85;
+  animation: btn-spin 0.7s linear infinite;
+  flex: none;
+}
+
+@keyframes btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ── ANIMATIONS ── */

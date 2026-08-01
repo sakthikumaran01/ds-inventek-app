@@ -17,7 +17,7 @@ export default function CourseDetailClient({ courseName }) {
         onClick={() => setModalOpen(true)}
         style={{ fontSize: "1.05rem", padding: "0.9rem 2.25rem", border: "none", cursor: "pointer" }}
       >
-        Enroll Now →
+        Enroll now →
       </button>
 
       <EnrollmentModal 

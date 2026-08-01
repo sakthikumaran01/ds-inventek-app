@@ -162,7 +162,6 @@
 .formGroup input:focus,
 .formGroup select:focus,
 .formGroup textarea:focus {
-  outline: none;
   border-color: var(--accent);
 }
 
