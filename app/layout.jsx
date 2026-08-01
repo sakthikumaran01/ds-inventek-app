@@ -38,10 +38,6 @@ export const metadata = {
   authors: [{ name: "DS Inventek Team" }],
   creator: "DS Inventek",
   publisher: "DS Inventek",
-  icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
-  },
   openGraph: {
     title: "DS Inventek — Robotics & AI Education | World Champion Team",
     description: "India's leading robotics education company founded by World Champions. Providing hands-on STEM robotics courses, school/college lab setups, and interactive experience zones.",

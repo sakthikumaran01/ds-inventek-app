@@ -28,7 +28,7 @@
     }
   },
   "navigation": {
-    "ctaButton": { "text": "Book a Demo", "href": "/contact?subject=demo" },
+    "ctaButton": { "text": "Book a demo", "href": "/contact?subject=demo" },
     "navLinks": [
       { "href": "/", "label": "Home" },
       { "href": "/services", "label": "Services" },
@@ -117,8 +117,8 @@
         "year": "2024",
         "caption": "Combat Robotics · International Champions · 10+ Year Track Record"
       },
-      "primaryCta": { "text": "View Programs", "href": "/courses" },
-      "secondaryCta": { "text": "Request a Consultation", "href": "/contact" }
+      "primaryCta": { "text": "View programs", "href": "/courses" },
+      "secondaryCta": { "text": "Request a consultation", "href": "/contact" }
     },
     "stats": [
       { "num": "5,000", "label": "Students Mentored" },
@@ -131,14 +131,14 @@
         "icon": "⚡",
         "title": "For Students & Parents",
         "desc": "Your child learns directly from engineers who've competed at the world stage. Real hardware. Real skills. Real results. Available online across South India and pan-India, with hardware kits shipped straight to your door.",
-        "ctaText": "View Programs →",
+        "ctaText": "View programs →",
         "ctaHref": "/courses"
       },
       {
         "icon": "🏛️",
         "title": "For Schools & Institutions",
         "desc": "Give your institution a STEM edge with turnkey robotics labs, NEP 2020-aligned curriculum, and faculty certification from World Champions.",
-        "ctaText": "Request a Consultation →",
+        "ctaText": "Request a consultation →",
         "ctaHref": "/contact"
       }
     ],
@@ -155,13 +155,13 @@
     "cta": {
       "title": "The Future Belongs to Builders.",
       "subtitle": "5,000+ students have transformed from beginners to builders with DS Inventek. Your turn.",
-      "primaryText": "View Programs",
+      "primaryText": "View programs",
       "primaryHref": "/courses",
-      "secondaryText": "Request a Consultation",
+      "secondaryText": "Request a consultation",
       "secondaryHref": "/contact"
     },
-    "browseAllCourses": "Browse All Courses",
-    "viewAllServices": "View All Services"
+    "browseAllCourses": "Browse all courses",
+    "viewAllServices": "View all services"
   },
   "about": {
     "hero": {
@@ -289,9 +289,9 @@
     "cta": {
       "title": "Partner With Champions",
       "subtitle": "Whether you're a student seeking world-class training or an institution transforming STEM infrastructure — we're ready.",
-      "primaryText": "View Solutions →",
+      "primaryText": "View solutions →",
       "primaryHref": "/services",
-      "secondaryText": "Request a Consultation",
+      "secondaryText": "Request a consultation",
       "secondaryHref": "/contact"
     }
   },
@@ -352,9 +352,9 @@
     "cta": {
       "title": "Ready to Transform Your STEM Program?",
       "subtitle": "Schedule a consultation to explore which solution fits your institution's needs and budget.",
-      "primaryText": "Request a Consultation →",
+      "primaryText": "Request a consultation →",
       "primaryHref": "/contact",
-      "secondaryText": "View Programs",
+      "secondaryText": "View programs",
       "secondaryHref": "/courses"
     },
     "process": [
@@ -549,9 +549,9 @@
     "cta": {
       "title": "Ready to Build?",
       "subtitle": "Register your interest and we'll help you choose the right course for your skill level.",
-      "primaryText": "Request a Consultation →",
+      "primaryText": "Request a consultation →",
       "primaryHref": "/contact",
-      "secondaryText": "View Solutions",
+      "secondaryText": "View solutions",
       "secondaryHref": "/services"
     },
     "list": [

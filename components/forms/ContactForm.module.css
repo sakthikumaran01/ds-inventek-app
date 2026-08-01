@@ -68,7 +68,6 @@
   font-family: var(--font-inter), sans-serif;
   font-size: 0.9rem;
   transition: border-color 0.25s ease;
-  outline: none;
 }
 
 .formGroup input::placeholder,

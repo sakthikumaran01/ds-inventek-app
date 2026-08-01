@@ -154,7 +154,7 @@ export default function Navbar() {
                 className="btn-primary"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Book a Demo
+                Book a demo
               </Link>
             </motion.div>
           </motion.div>

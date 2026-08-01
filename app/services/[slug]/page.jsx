@@ -70,7 +70,7 @@ export default function ServiceDetailPage({ params }) {
             <div className={styles.ctaWrapper}>
               <ServiceDetailClient serviceName={service.title} />
               <Link href="/contact" className="btn-ghost">
-                Ask a Question
+                Ask a question
               </Link>
             </div>
           </div>
