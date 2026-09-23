@@ -130,7 +130,7 @@ export default function QuotationModal({ isOpen, onClose, selectedService = "Edu
             </div>
 
             <div className={styles.inputGroup}>
-              <label htmlFor="fullName">Full Name *</label>
+              <label htmlFor="fullName">Full name *</label>
               <input
                 type="text"
                 id="fullName"
@@ -145,7 +145,7 @@ export default function QuotationModal({ isOpen, onClose, selectedService = "Edu
             </div>
 
             <div className={styles.inputGroup}>
-              <label htmlFor="organisationName">Organisation / Institution Name</label>
+              <label htmlFor="organisationName">Organisation / institution name</label>
               <input
                 type="text"
                 id="organisationName"
@@ -159,7 +159,7 @@ export default function QuotationModal({ isOpen, onClose, selectedService = "Edu
 
             <div className={styles.grid}>
               <div className={styles.inputGroup}>
-                <label htmlFor="email">Email Address *</label>
+                <label htmlFor="email">Email address *</label>
                 <input
                   type="email"
                   id="email"
@@ -173,7 +173,7 @@ export default function QuotationModal({ isOpen, onClose, selectedService = "Edu
               </div>
 
               <div className={styles.inputGroup}>
-                <label htmlFor="phone">Phone Number *</label>
+                <label htmlFor="phone">Phone number *</label>
                 <input
                   type="tel"
                   id="phone"
@@ -190,7 +190,7 @@ export default function QuotationModal({ isOpen, onClose, selectedService = "Edu
 
             <div className={styles.grid}>
               <div className={styles.inputGroup}>
-                <label htmlFor="serviceInterest">Service Interest *</label>
+                <label htmlFor="serviceInterest">Service interest *</label>
                 <select
                   id="serviceInterest"
                   name="serviceInterest"
@@ -208,7 +208,7 @@ export default function QuotationModal({ isOpen, onClose, selectedService = "Edu
               </div>
 
               <div className={styles.inputGroup}>
-                <label htmlFor="budgetRange">Budget Range *</label>
+                <label htmlFor="budgetRange">Budget range *</label>
                 <select
                   id="budgetRange"
                   name="budgetRange"
@@ -226,7 +226,7 @@ export default function QuotationModal({ isOpen, onClose, selectedService = "Edu
             </div>
 
             <div className={styles.inputGroup}>
-              <label htmlFor="message">Message / Requirements *</label>
+              <label htmlFor="message">Message / requirements *</label>
               <textarea
                 id="message"
                 name="message"
@@ -247,7 +247,13 @@ export default function QuotationModal({ isOpen, onClose, selectedService = "Edu
             )}
 
             <button type="submit" disabled={isSubmitting} className={`btn-primary ${styles.submitBtn}`}>
-              {isSubmitting ? "Submitting..." : "Submit Quotation Request →"}
+              {isSubmitting ? (
+                <>
+                  <span className="btn-spinner" aria-hidden="true" /> Submitting…
+                </>
+              ) : (
+                "Submit quotation request →"
+              )}
             </button>
             <p className={styles.securePrompt}>
               <span aria-hidden="true">🔒</span> Confidential request · Response within 24 hours

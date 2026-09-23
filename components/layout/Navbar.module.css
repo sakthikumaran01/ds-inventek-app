@@ -4,22 +4,43 @@
   left: 0;
   right: 0;
   z-index: 100;
-  transition: background 0.3s, backdrop-filter 0.3s, border-color 0.3s, box-shadow 0.3s;
-  padding: 1rem 0;
+  background: rgba(250, 248, 243, 0.85);
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+  padding: calc(1rem + env(safe-area-inset-top)) 0 1rem;
 }
 
 .navbar.scrolled {
-  background: rgba(3, 11, 26, 0.85);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.1);
-  box-shadow: 0 1px 0 rgba(56, 189, 248, 0.05);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+/* Homepage only: transparent overlay on the hero photo until the user
+   scrolls past it — see isHome/isTransparent in Navbar.jsx. */
+.navbar.transparent {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.navbar.transparent .navLogo,
+.navbar.transparent .navLogo span,
+.navbar.transparent .navLink,
+.navbar.transparent .navLink.active,
+.navbar.transparent .hamburger {
+  color: var(--bg-page);
+}
+
+.navbar.transparent .navLink:hover {
+  color: rgba(250, 248, 243, 0.75);
+}
+
+.navbar.transparent .activeIndicator {
+  background: var(--bg-page);
 }
 
 .navInner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 max(2rem, env(safe-area-inset-right)) 0 max(2rem, env(safe-area-inset-left));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,28 +48,29 @@
 }
 
 .navLogo {
-  font-family: var(--font-orbitron), sans-serif;
+  font-family: var(--font-serif), serif;
   font-size: 1.2rem;
-  font-weight: 800;
-  color: #ffffff;
+  font-weight: 500;
+  color: var(--ink);
   text-decoration: none;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: all 0.3s ease;
+  transition: color 0.25s ease;
 }
 
 .navLogo:hover {
-  color: var(--primary-light);
+  color: var(--accent);
 }
 
 .navLogo span {
-  color: var(--primary-light);
+  color: var(--accent);
+  transition: color 0.25s ease;
 }
 
 .navLogo svg {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .logoIcon {
@@ -56,16 +78,14 @@
   height: 36px;
   object-fit: contain;
   border-radius: 6px;
-  background-color: #ffffff;
+  background-color: var(--bg-card);
   padding: 3px;
-  box-shadow: 0 0 12px rgba(14, 165, 233, 0.25);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  border: 1px solid var(--border-hairline);
+  transition: border-color 0.25s ease;
 }
 
 .navLogo:hover .logoIcon {
-  box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
-  transform: scale(1.05);
+  border-color: var(--border-strong);
 }
 
 .navLinks {
@@ -81,21 +101,21 @@
 
 .navLink {
   text-decoration: none;
-  color: #94a3b8;
+  color: var(--ink-muted);
   font-size: 0.88rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: all 0.25s;
+  transition: color 0.25s ease;
   position: relative;
   padding: 0.5rem 0;
 }
 
 .navLink:hover {
-  color: #f0f9ff;
+  color: var(--ink);
 }
 
 .navLink.active {
-  color: var(--primary-light);
+  color: var(--accent);
 }
 
 .activeIndicator {
@@ -104,23 +124,24 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  background: var(--accent);
   border-radius: 2px;
+  transition: background-color 0.25s ease;
 }
 
 .navLinks a {
   text-decoration: none;
-  color: var(--text-muted);
+  color: var(--ink-muted);
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.03em;
-  transition: all 0.3s;
+  transition: color 0.25s ease;
   position: relative;
 }
 
 .navLinks a:hover,
 .navLinks a.active {
-  color: var(--text-primary);
+  color: var(--ink);
 }
 
 .hamburger {
@@ -128,12 +149,12 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--text-primary);
-  transition: transform 0.3s ease;
+  color: var(--ink);
+  transition: opacity 0.2s ease, color 0.25s ease;
 }
 
 .hamburger:hover {
-  transform: scale(1.1);
+  opacity: 0.7;
 }
 
 .mobileMenu {
@@ -143,9 +164,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(3, 11, 26, 0.98);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  background: var(--bg-page);
   z-index: 99;
   flex-direction: column;
   align-items: center;
@@ -162,31 +181,33 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--text-muted);
-  transition: transform 0.3s ease;
+  color: var(--ink-muted);
+  transition: opacity 0.2s ease;
 }
 
 .mobileClose:hover {
-  transform: rotate(90deg);
+  opacity: 0.7;
 }
 
 .mobileLink {
-  font-family: var(--font-orbitron), sans-serif;
+  font-family: var(--font-serif), serif;
   font-size: 1.5rem;
-  color: #ffffff;
+  color: var(--ink);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.25s ease;
 }
 
 .mobileLink:hover {
-  color: var(--primary-light);
+  color: var(--accent);
 }
 
 .ctaButton {
+  /* Desktop-only (hidden on mobile below), so the 44px touch-target
+     minimum from .btn-primary doesn't apply — stay compact for the nav bar. */
+  min-height: auto;
   padding: 0.45rem 1.1rem;
   font-size: 0.8rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3);
+  border-radius: 6px;
 }
 
 @media (max-width: 768px) {

@@ -38,15 +38,14 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba(13, 27, 46, 0.8);
-    border: 1px solid rgba(56, 189, 248, 0.15);
-    color: var(--text-muted);
+    background: var(--bg-card);
+    border: 1px solid var(--border-hairline);
+    color: var(--ink-muted);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.25s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.25s ease, color 0.25s ease;
     font-size: 1rem;
     font-weight: 700;
     touch-action: manipulation;
@@ -55,9 +54,8 @@
 
   .controlBtn:hover,
   .controlBtn:active {
-    background: rgba(14, 165, 233, 0.1);
-    border-color: rgba(56, 189, 248, 0.35);
-    color: var(--primary-light);
+    border-color: var(--border-strong);
+    color: var(--accent);
   }
 
   .track {

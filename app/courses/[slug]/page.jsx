@@ -4,6 +4,8 @@ import Link from "next/link";
 import CourseDetailClient from "@/components/clients/CourseDetailClient";
 import styles from "./detail.module.css";
 import content from "@/data/content.json";
+import { SITE_URL } from "@/lib/utils";
+import { getCourseJsonLd, getBreadcrumbJsonLd } from "@/lib/structuredData";
 
 export async function generateStaticParams() {
   return content.courses.list.map((course) => ({
@@ -18,7 +20,10 @@ export async function generateMetadata({ params }) {
   return {
     title: `${course.name} Course | DS Inventek`,
     description: course.desc,
-    keywords: `robotics, ${course.name}, STEM courses, build robot Chennai, Arduino, Raspberry Pi, Chennai`,
+    keywords: `robotics, ${course.name}, STEM courses, robotics classes Chennai, robotics classes Puducherry, online robotics course India, Arduino, Raspberry Pi`,
+    alternates: {
+      canonical: `/courses/${course.id}`,
+    },
   };
 }
 
@@ -29,10 +34,24 @@ export default function CourseDetailPage({ params }) {
     notFound();
   }
 
+  const courseJsonLd = getCourseJsonLd(course);
+  const breadcrumbJsonLd = getBreadcrumbJsonLd([
+    { name: "Home", url: SITE_URL },
+    { name: "Courses", url: `${SITE_URL}/courses` },
+    { name: course.name, url: `${SITE_URL}/courses/${course.id}` },
+  ]);
+
   return (
     <div className={styles.wrapper}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className={styles.heroSection}>
-        <div className={styles.heroGrid}></div>
         <div className="container">
           <div className={styles.navBreadcrumb}>
             <Link href="/courses">Courses</Link>
@@ -62,7 +81,7 @@ export default function CourseDetailPage({ params }) {
             <div className={styles.ctaWrapper}>
               <CourseDetailClient courseName={course.name} />
               <Link href="/contact" className="btn-ghost">
-                Ask a Question
+                Ask a question
               </Link>
             </div>
           </div>
@@ -91,7 +110,7 @@ export default function CourseDetailPage({ params }) {
               <div className={`glass-card ${styles.imageContainer}`}>
                 <Image
                   src={course.image}
-                  alt={course.name}
+                  alt={course.imageAlt || course.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"
                   className={styles.image}

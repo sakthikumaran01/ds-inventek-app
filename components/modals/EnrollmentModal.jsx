@@ -121,7 +121,7 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
             </div>
 
             <div className={styles.inputGroup}>
-              <label htmlFor="fullName">Full Name *</label>
+              <label htmlFor="fullName">Full name *</label>
               <input
                 type="text"
                 id="fullName"
@@ -136,7 +136,7 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
 
             <div className={styles.grid}>
               <div className={styles.inputGroup}>
-                <label htmlFor="email">Email Address *</label>
+                <label htmlFor="email">Email address *</label>
                 <input
                   type="email"
                   id="email"
@@ -150,7 +150,7 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
               </div>
 
               <div className={styles.inputGroup}>
-                <label htmlFor="phone">Phone Number *</label>
+                <label htmlFor="phone">Phone number *</label>
                 <input
                   type="tel"
                   id="phone"
@@ -182,7 +182,7 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
 
             <div className={styles.grid}>
               <div className={styles.inputGroup}>
-                <label htmlFor="ageGroup">Age Group *</label>
+                <label htmlFor="ageGroup">Age group *</label>
                 <select
                   id="ageGroup"
                   name="ageGroup"
@@ -198,7 +198,7 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
               </div>
 
               <div className={styles.inputGroup}>
-                <label htmlFor="priorExperience">Prior Experience *</label>
+                <label htmlFor="priorExperience">Prior experience *</label>
                 <select
                   id="priorExperience"
                   name="priorExperience"
@@ -215,7 +215,7 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
             </div>
 
             <div className={styles.inputGroup}>
-              <label htmlFor="preferredBatch">Preferred Batch *</label>
+              <label htmlFor="preferredBatch">Preferred batch *</label>
               <select
                 id="preferredBatch"
                 name="preferredBatch"
@@ -237,7 +237,13 @@ export default function EnrollmentModal({ isOpen, onClose, course }) {
             )}
 
             <button type="submit" disabled={isSubmitting} className={`btn-primary ${styles.submitBtn}`}>
-              {isSubmitting ? "Processing..." : "Confirm Enrollment →"}
+              {isSubmitting ? (
+                <>
+                  <span className="btn-spinner" aria-hidden="true" /> Processing…
+                </>
+              ) : (
+                "Confirm enrollment →"
+              )}
             </button>
             <p className={styles.securePrompt}>
               <span aria-hidden="true">🔒</span> Secure enrollment · Confirmation within 24 hours

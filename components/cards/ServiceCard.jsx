@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "./ServiceCard.module.css";
+import { usePointerFine } from "@/hooks/usePointerFine";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
@@ -18,7 +19,9 @@ const cardVariants = {
   }
 };
 
-export default function ServiceCard({ icon, title, badge, desc, image, delay, id, features, ctaBadge, slug }) {
+export default function ServiceCard({ icon, title, badge, desc, image, imageAlt, delay, id, features, ctaBadge, slug }) {
+  const isPointerFine = usePointerFine();
+
   return (
     <motion.div
       variants={cardVariants}
@@ -26,7 +29,7 @@ export default function ServiceCard({ icon, title, badge, desc, image, delay, id
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay: parseFloat(delay) || 0 }}
-      whileHover={{ y: -8, scale: 1.02 }}
+      whileHover={isPointerFine ? { y: -4 } : undefined}
       className={styles.cardWrapper}
     >
       <Link
@@ -37,7 +40,7 @@ export default function ServiceCard({ icon, title, badge, desc, image, delay, id
         <div className={styles.cardImageContainer}>
           <Image
             src={image}
-            alt={title}
+            alt={imageAlt || title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className={styles.cardImage}
@@ -62,7 +65,7 @@ export default function ServiceCard({ icon, title, badge, desc, image, delay, id
         )}
 
         <div className={styles.serviceBtn}>
-          <span>Learn More</span>
+          <span>Learn more</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>

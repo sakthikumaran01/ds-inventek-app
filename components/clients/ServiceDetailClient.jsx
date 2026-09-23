@@ -1,7 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import QuotationModal from "@/components/modals/QuotationModal";
+import dynamic from "next/dynamic";
+
+const QuotationModal = dynamic(() => import("@/components/modals/QuotationModal"), {
+  ssr: false,
+});
 
 export default function ServiceDetailClient({ serviceName }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -13,7 +17,7 @@ export default function ServiceDetailClient({ serviceName }) {
         onClick={() => setModalOpen(true)}
         style={{ fontSize: "1.05rem", padding: "0.9rem 2.25rem" }}
       >
-        Get a Quotation →
+        Get a quotation →
       </button>
 
       <QuotationModal 

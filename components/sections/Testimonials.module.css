@@ -17,22 +17,22 @@
   display: flex;
   flex-direction: column;
   min-height: 250px;
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
 }
 
 .quoteIcon {
   font-size: 3rem;
   line-height: 1;
-  color: var(--primary-light);
+  color: var(--accent);
   opacity: 0.3;
   margin-bottom: -1rem;
-  font-family: Georgia, serif;
+  font-family: var(--font-serif), serif;
 }
 
 .quoteText {
   font-size: 0.95rem;
-  color: var(--text-muted);
+  color: var(--ink-muted);
   line-height: 1.7;
   margin-bottom: 2rem;
   flex-grow: 1;
@@ -49,27 +49,27 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--glass-strong);
-  border: 1px solid var(--glass-border);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  color: var(--primary-light);
-  font-family: var(--font-orbitron), sans-serif;
+  font-weight: 500;
+  color: var(--accent);
+  font-family: var(--font-serif), serif;
 }
 
 .name {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--ink);
   margin-bottom: 0.15rem;
 }
 
 .meta {
   font-size: 0.75rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono), monospace;
+  color: var(--ink-muted);
+  font-family: var(--font-inter), sans-serif;
 }
 
 .mobileMarquee {

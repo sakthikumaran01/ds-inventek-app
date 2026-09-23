@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import PageHero from "@/components/ui/PageHero";
 import CoursesGrid from "@/components/sections/CoursesGrid";
+import SportsProgramCard from "@/components/cards/SportsProgramCard";
 import Testimonials from "@/components/sections/Testimonials";
 import CtaBanner from "@/components/sections/CtaBanner";
 import styles from "@/app/courses/courses.module.css";
+import { getFaqJsonLd } from "@/lib/structuredData";
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -29,9 +31,14 @@ const fadeUp = {
 
 export default function CoursesPageClient({ content }) {
   const courses = content.courses.list;
+  const faqJsonLd = getFaqJsonLd(content.courses.faq.list);
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <PageHero
         title={content.courses.hero.title}
         subtitle={content.courses.hero.subtitle}
@@ -40,7 +47,11 @@ export default function CoursesPageClient({ content }) {
       {/* Courses Grid Container */}
       <section className="section">
         <div className="container">
-          <CoursesGrid courses={courses} showFilter={true} />
+          <CoursesGrid
+            courses={courses}
+            showFilter={true}
+            extraItem={<SportsProgramCard program={content.roboticsSports} />}
+          />
         </div>
       </section>
 
